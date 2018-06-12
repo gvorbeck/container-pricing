@@ -1,4 +1,4 @@
-New Application Solution and Solution Consumption License Charges Frequently Asked Questions
+### New Application Solution and Solution Consumption License Charges Frequently Asked Questions ###
 
 **Why is IBM introducing Solution Consumption License Charges?**
     Solution Consumption License Charges (SCLC) bases the charges for MLC software on the total MSUs consumed by a Container Pricing solution during a reporting period - instead of a peak rolling four-hour average. 
