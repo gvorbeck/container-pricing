@@ -3,8 +3,11 @@
 **Why is IBM introducing Solution Consumption License Charges?**
     
 Solution Consumption License Charges (SCLC) bases the charges for MLC software on the total MSUs consumed by a Container Pricing solution during a reporting period - instead of a peak rolling four-hour average. 
+
 SCLC utilizes the Container Pricing infrastructure to provide truly consumption based pricing for a solution. This delivers on the "pay as you go" pricing promised by public cloud providers, without the need for ongoing technical management required to manage instance charging in those environment.
+
 Additionally, by basing charges on total consumption, SCLC provides additional value over peak R4HA models for workloads that are unpredictable and/or subject to high spikes in utilization.
+
 These characteristics also enable SCLC as a simple and transparent mechanism to tie the cost of the workload to the actual business value delivered.
     
 **How is the MSU consumption measured by SCRT?** 
