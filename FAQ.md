@@ -19,7 +19,7 @@ New Application Solution and Solution Consumption License Charges Frequently Ask
    
 
 
-    ** How does this relate to the Container Pricing New Application Solution announced in November 2017? **
+**How does this relate to the Container Pricing New Application Solution announced in November 2017?**
     <tbd>
     
 **What is “new” application workload?**
@@ -28,8 +28,8 @@ New Application Solution and Solution Consumption License Charges Frequently Ask
 
 Competitive Differentiators
 
-    Container Pricing can scale from collocated solutions within existing LPARs, through to separate LPARs, up to multiple-LPAR solutions
-    Container Pricing does not directly impact the cost of unrelated workloads
-    Client has flexibility to determine where to deploy based on technical requirements and preference – not driven by pricing
-    z/OS enables solution-level metering and controls
-    The client is not responsible for monthly manual tagging and tracking
+Container Pricing can scale from collocated solutions within existing LPARs, through to separate LPARs, up to multiple-LPAR solutions
+Container Pricing does not directly impact the cost of unrelated workloads
+Client has flexibility to determine where to deploy based on technical requirements and preference – not driven by pricing
+z/OS enables solution-level metering and controls
+he client is not responsible for monthly manual tagging and tracking
