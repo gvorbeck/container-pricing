@@ -13,7 +13,9 @@ These characteristics also enable SCLC as a simple and transparent mechanism to 
 **How is the MSU consumption measured by SCRT?** 
 
 For each hour during a reporting period, SCRT will calculate the MSUs consumed by the LPARs and/or tenant resource groups (TRGs) that are configured to be part of the Container. This MSU calculation is based on the actual general purpose processor CPU time that the workloads consume. 
-SCRT will simply sum the hourly MSU consumption for the reporting period - this is reported as the "Total MSU Consumption" for the Container. 
+
+SCRT will simply sum the hourly MSU consumption for the reporting period - this is reported as the "Total MSU Consumption" for the Container.
+
 More details can be found here <insert techdoc link>
     
 **Which IBM servers are eligible?**
