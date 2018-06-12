@@ -26,7 +26,7 @@
     A New Application Solution is a new z/OS application not previously running on any mainframe server in the client's enterprise. In certain cases it can also include an existing z/OS application which undergoes significant enhancements. IBM must approve all New Application Solutions. Taking existing z/OS workload off the mainframe for a period of time and then moving it back on later will not qualify as “new” workload.
 
 
-Competitive Differentiators
+### Competitive Differentiators ###
 
 Container Pricing can scale from collocated solutions within existing LPARs, through to separate LPARs, up to multiple-LPAR solutions
 Container Pricing does not directly impact the cost of unrelated workloads
