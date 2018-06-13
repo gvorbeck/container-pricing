@@ -35,6 +35,12 @@ IPLA programs whose Value Units are based upon MSUs and are part of the Containe
 
 ### Calculating and Reporting Consumed MSU ###
     
+**What is the reporting process for Solution Consumption License Charges? **     
+
+There is no new tool or data collection process for SCLC. SCRT has been enhanced to report the MSU consumption for Container Pricing Solutions as of SCRT V25.2.
+
+No new SMF data need be collected for SCLC. The existing SMF records already collected for SCRT use contain all the data needed to support the SCLC metric.
+    
 **How is the MSU consumption measured by SCRT?** 
 
 For each hour during a reporting period, SCRT will calculate the MSUs consumed by the LPARs and/or tenant resource groups (TRGs) that are configured to be part of the Container. This MSU calculation is based on the actual general purpose processor CPU time that the workloads consume. 
