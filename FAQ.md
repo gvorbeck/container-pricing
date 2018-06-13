@@ -23,7 +23,7 @@ The New Application Solution is available for qualified solutions running on IBM
 For colocated New Application Solutions, z/OS V2R2 or above is required with the PTFs for APARs associated with fix category “IBM.Function.Pricing Infrastructure”.
 For separate LPAR Solutions, z/OS V2R1 or above is required.
     
-**What is “new” application workload?**
+**What is a "new” application workload?**
 
 A New Application Solution is a new z/OS application not previously running on any mainframe server in the client's enterprise. In certain cases it can also include an existing z/OS application which undergoes significant enhancements. IBM must approve all New Application Solutions. 
 
@@ -32,6 +32,9 @@ Taking existing z/OS workload off the mainframe for a period of time and then mo
 **How is IPLA product entitlement measured in the New Application Solution?**
 
 IPLA programs whose Value Units are based upon MSUs and are part of the Container solution software stack must be entitled to the peak rolling four-hour average of the Container Solution, as reported by SCRT. 
+
+**Can VUE products be used within the updated New Application Solution?**
+
 
 ### Calculating and Reporting Consumed MSU ###
     
