@@ -47,5 +47,5 @@ For each hour during a reporting period, SCRT will calculate the MSUs consumed b
 
 SCRT will simply sum the hourly MSU consumption for the reporting period - this is reported as the "Total MSU Consumption" for the Container.
 
-More details can be found here <insert techdoc link>
+More details can be found here *insert techdoc link*
     
