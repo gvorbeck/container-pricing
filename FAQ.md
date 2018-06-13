@@ -18,7 +18,7 @@ These characteristics also enable SCLC as a simple and transparent mechanism to 
 
 The New Application Solution is available for qualified solutions running on IBM z14 and z13 servers (including the z13s®).
     
-**What releases of z/OS are eligible?**
+**Which releases of z/OS are eligible?**
 
 For colocated New Application Solutions, z/OS V2R2 or above is required with the PTFs for APARs associated with fix category “IBM.Function.Pricing Infrastructure”.
 For separate LPAR Solutions, z/OS V2R1 or above is required.
