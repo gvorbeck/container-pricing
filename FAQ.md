@@ -35,7 +35,7 @@ IPLA programs whose Value Units are based upon MSUs and are part of the Containe
 
 ### Calculating and Reporting Consumed MSU ###
     
-**What is the reporting process for Solution Consumption License Charges? **     
+**What is the reporting process for Solution Consumption License Charges?**     
 
 There is no new tool or data collection process for SCLC. SCRT has been enhanced to report the MSU consumption for Container Pricing Solutions as of SCRT V25.2.
 
