@@ -1,4 +1,6 @@
-### New Application Solution and Solution Consumption License Charges Frequently Asked Questions ###
+## New Application Solution and Solution Consumption License Charges Frequently Asked Questions ##
+
+### Solution Consumption License Charges ###
 
 **Why is IBM introducing Solution Consumption License Charges?**
     
@@ -9,15 +11,9 @@ SCLC utilizes the Container Pricing infrastructure to provide truly consumption 
 Additionally, by basing charges on total consumption, SCLC provides additional value over peak R4HA models for workloads that are unpredictable and/or subject to high spikes in utilization.
 
 These characteristics also enable SCLC as a simple and transparent mechanism to tie the cost of the workload to the actual business value delivered.
-    
-**How is the MSU consumption measured by SCRT?** 
 
-For each hour during a reporting period, SCRT will calculate the MSUs consumed by the LPARs and/or tenant resource groups (TRGs) that are configured to be part of the Container. This MSU calculation is based on the actual general purpose processor CPU time that the workloads consume. 
+### Container Pricing New Application Solution ###
 
-SCRT will simply sum the hourly MSU consumption for the reporting period - this is reported as the "Total MSU Consumption" for the Container.
-
-More details can be found here <insert techdoc link>
-    
 **Which IBM servers are eligible?**
 
 The New Application Solution is available for qualified solutions running on IBM z14 and z13 servers (including the z13s®).
@@ -37,11 +33,13 @@ Taking existing z/OS workload off the mainframe for a period of time and then mo
 
 IPLA programs whose Value Units are based upon MSUs and are part of the Container solution software stack must be entitled to the peak rolling four-hour average of the Container Solution, as reported by SCRT. 
 
+### Calculating and Reporting Consumed MSU ###
+    
+**How is the MSU consumption measured by SCRT?** 
 
-### Competitive Differentiators ###
+For each hour during a reporting period, SCRT will calculate the MSUs consumed by the LPARs and/or tenant resource groups (TRGs) that are configured to be part of the Container. This MSU calculation is based on the actual general purpose processor CPU time that the workloads consume. 
 
-Container Pricing can scale from collocated solutions within existing LPARs, through to separate LPARs, up to multiple-LPAR solutions
-Container Pricing does not directly impact the cost of unrelated workloads
-Client has flexibility to determine where to deploy based on technical requirements and preference – not driven by pricing
-z/OS enables solution-level metering and controls
-he client is not responsible for monthly manual tagging and tracking
+SCRT will simply sum the hourly MSU consumption for the reporting period - this is reported as the "Total MSU Consumption" for the Container.
+
+More details can be found here <insert techdoc link>
+    
