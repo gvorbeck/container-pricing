@@ -12,6 +12,10 @@ Additionally, by basing charges on total consumption, SCLC provides additional v
 
 These characteristics also enable SCLC as a simple and transparent mechanism to tie the cost of the workload to the actual business value delivered.
 
+**Will SCLC receive the TTO benefit?**
+The existing TTO will not be applied to SCLC. 
+
+
 ### Container Pricing New Application Solution ###
 
 **Which IBM servers are eligible?**
