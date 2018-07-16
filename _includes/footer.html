@@ -1,0 +1,18 @@
+{% comment %}
+INCLUDE: FOOTER
+- This block is used for the site's footer and outputs a navigation links and
+help links.
+- Adding Items to the "help-links" variable in the site's config YAML will
+increase/decrease the amount of Help Links this include outputs.
+{% endcomment %}
+<footer class="page__footer footer">
+    <ul class="footer__help-links">
+        {% for item in site.help-links %}
+        <li class="footer__help-link">
+            <a href="{{ item.link }}" title="{{ item.title }}">{{ item.title }}</a>
+        </li>
+        {% endfor %}
+    </ul>
+</footer>
+<script type="text/javascript" src="{{"/assets/jquery-3.3.1.min.js" | absolute_url }}"></script>
+<script type="text/javascript" src="{{"/assets/site.js" | absolute_url }}"></script>

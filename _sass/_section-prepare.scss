@@ -1,0 +1,185 @@
+// #pc-section--prepare {
+//   background: $color--purple-light;
+//
+//   header {
+//
+//     @include media(m) {
+//       margin-bottom: 0;
+//     }
+//
+//     img {
+//
+//       @include media(s) {
+//         width: 60px;
+//       }
+//
+//       @include media(m) {
+//         width: 75px;
+//       }
+//
+//       @include media(l) {
+//         width: 90px;
+//       }
+//     }
+//   }
+//
+//   & > div {
+//     @include media(m) {
+//       margin-left: 170px;
+//     }
+//   }
+//
+//   h2 {
+//     @include media(m) {
+//       @include font-settings(18,24);
+//     }
+//   }
+//
+//   ol {
+//     margin-top: 40px;
+//   }
+//
+//   h1 span {
+//     background: #FFFFFF;
+//   }
+// }
+//
+// // "NEEDS" INFO
+// #pc--needs {
+//   margin: 20px 0 40px;
+//   display: flex;
+//
+//   & > ul {
+//     display: flex;
+//
+//     @include media(s) {
+//       margin-right: 10px;
+//     }
+//
+//     @include media(sm) {
+//       flex-direction: column;
+//     }
+//
+//     @include media(m) {
+//       margin-right: 15px;
+//     }
+//
+//     @include media(l) {
+//       flex-wrap: wrap;
+//       width: 260px;
+//       margin-right: 50px;
+//       height: 100%;
+//     }
+//
+//     li {
+//       @include media(s) {
+//         width: 90px;
+//         height: 90px;
+//
+//         & + li {
+//           margin-top: 10px;
+//         }
+//       }
+//
+//       @include media(m) {
+//         width: 105px;
+//         height: 105px;
+//
+//         & + li {
+//           margin-top: 15px;
+//         }
+//       }
+//
+//       @include media(l) {
+//         width: 120px;
+//         height: 120px;
+//
+//         &:nth-child(even) {
+//           margin-left: 20px;
+//         }
+//
+//         &:nth-child(n + 3) {
+//           margin-top: 20px;
+//         }
+//       }
+//     }
+//   }
+//
+//   button {
+//     font-family: $font--normal;
+//     background-color: #FFFFFF;
+//     border: 1px solid #979797;
+//     border-radius: 0;
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     justify-content: center;
+//     width: 100%;
+//     height: 100%;
+//     outline: none;
+//
+//     &.selected {
+//       border-color: #B180F5;
+//       border-width: 2px;
+//       color: #B180F5;
+//     }
+//
+//     @include media(s) {
+//       @include font-settings(12, 16);
+//     }
+//
+//     @include media(ml) {
+//       @include font-settings(16, 24);
+//     }
+//
+//     img {
+//       margin: 0 auto 10px;
+//
+//       @include media(s) {
+//         width: 40px;
+//       }
+//
+//       @include media(ml) {
+//         width: 50px;
+//       }
+//     }
+//   }
+//
+//   section {
+//     background-color: #A870F5;
+//     margin: 0;
+//     padding: 0;
+//     display: none;
+//
+//     @include media(s) {
+//       padding: 30px 20px;
+//     }
+//
+//     @include media(ml) {
+//       padding: 30px 40px;
+//     }
+//
+//     @include media(l) {
+//       width: 430px;
+//     }
+//
+//     &.selected {
+//       display: block;
+//     }
+//
+//     h1 {
+//       font-family: $font--bold;
+//       margin-bottom: 10px;
+//     }
+//
+//     ul {
+//       border-bottom: 1px solid #000000;
+//       padding: 10px 0 10px;
+//       margin-bottom: 10px;
+//     }
+//
+//     li + li {
+//       margin-top: 10px;
+//     }
+//   }
+// }

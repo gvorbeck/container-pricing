@@ -1,0 +1,16 @@
+{% comment %}
+INCLUDE: HEADER
+- This include is used for the site's header and outputs a hamburger navigation
+and site/page titles.
+{% endcomment %}
+<header class="page__header header">
+    <h1 class="header__title">{{ site.title }}</h1>
+    {% if page.page-slug == 'home' %}<p class="header__subtitle">{{ site.description }}</p>{% endif %}
+    {% if page.page-slug != 'home' %}
+        <div>HMB MNU</div>
+        <h2 class="header__subtitle">{{ page.page-title | markdownify | remove: '<p>' | remove: '</p>' }}</h2>
+        {% if page.page-logo %}
+          <img class="header__logo" alt="{{ page.page-title | remove: '_' }}" src="{{ page.page-logo }}">
+        {% endif %}
+    {% endif %}
+</header>

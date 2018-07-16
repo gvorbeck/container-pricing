@@ -1,0 +1,32 @@
+---
+layout: default
+---
+{% comment %}
+LAUYOUT: SOLUTION MODEL
+PARENT: DEFAULT
+- This is the layout for Solution Homepages. It outputs a series of Solution
+Sections that will link to Solution Section Pages.
+- Adding Section Items to the "page-section" variable in a Solution Homepage's
+YAML will increase/decrease the amount of sections this layout outputs.
+- Because liquid includes cannot contain parameters directly from YAML, each
+parameter is captured as a liquid variable and then passed to the liquid include
+{% endcomment %}
+{% for section in page.page-sections %}
+    {% capture section_image %}
+        {{- section.image -}}
+    {% endcapture %}
+    {% capture section_title %}
+        {{- section.title -}}
+    {% endcapture %}
+    {% capture section_intro %}
+        {{ section.text | markdownify }}
+    {% endcapture %}
+    {% capture section_button %}
+        {{- section.button -}}
+    {% endcapture %}
+    {% capture section_link %}
+      {{- section.link -}}
+    {% endcapture %}
+
+    {% include inc-solution-section.html title=section_title intro=section_intro button=section_button image=section_image link=section_link %}
+{% endfor %}

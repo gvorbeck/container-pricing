@@ -1,0 +1,15 @@
+---
+layout: default
+---
+
+{% for section in page.page-sections %}
+    <div class="step__section {{ section.type }}">
+        {% if section.title %}
+            <h3>{{ section.title }}</h3>
+        {% endif %}
+        {{ section.text | markdownify }}
+        {% if section.outro-link %}
+          <a href="{{ site.baseurl }}/{{ page.solution-parent}}/{{ section.outro-link.href }}" title="{{ section.outro-link.text | remove: '_' }}">{{ section.outro-link.text | markdownify | remove: '<p>' | remove: '</p>' }}</a>
+        {% endif %}
+    </div>
+{% endfor %}

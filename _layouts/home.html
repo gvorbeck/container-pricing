@@ -1,0 +1,42 @@
+---
+layout: default
+---
+{% comment %}
+LAUYOUT: HOME
+PARENT: DEFAULT
+- This is the layout for the Guides Homepage. It outputs a banner, a changelog
+(whats-new), and a list of available Solutions (dive).
+- Adding Items to the "whats-new" variable in Home's YAML will increase/decrease
+the amount of Changes this layout outputs.
+- Adding Items to the "dive" variable in Home's YAML will increase/decrease
+the amount of Solutions this layout outputs.
+{% endcomment %}
+<div class="content__section banner">
+    <div>line 1</div>
+    <div>line 2</div>
+    <div>line 3</div>
+</div>
+<section class="content__section whats-new">
+    <h1 class="whats-new__title">{{ page.whats-new.title }}</h1>
+    <ul class="whats-new__items">
+        {% for item in page.whats-new.items %}
+        <li class="whats-new__item">
+            <p><span class="whats-new__as-of">{{ item.as-of }}</span> {{ item.text }}</p>
+        </li>
+        {% endfor %}
+    </ul>
+</section>
+<section class="content__section dive">
+    <h1 class="dive__title">{{ page.dive.title }}</h1>
+    <ul class="dive__items">
+        {% for item in page.dive.items %}
+        <li class="dive__item">
+            <a href="{{ item.link }}/" title="{{ item.title }}">
+                <img class="dive__image" alt="{{ item.title }}" src="assets/{{ item.image }}">
+                <h2 class="dive__item-title">{{ item.title }}</h2>
+                <p class="dive__text">{{ item.text }}</p>
+            </a>
+        </li>
+        {%  endfor %}
+    </ul>
+</section>
