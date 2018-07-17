@@ -4,9 +4,9 @@ INCLUDE: SOLUTION SECTION
 intro text, a link, and link button.
 - Links will go to solution section pages (ex: Learn, Meet, etc)
 {% endcomment %}
-<section class="{{ page.page-main }}__section">
-    <img class="{{ page.page-main }}__image" alt="{{ include.title }}" src="{{ site.baseurl }}/assets/{{ include.image }}">
-    <h1 class="{{ page.page-main }}__title">{{ include.title }}</h1>
+<section class="content__block">
+    <img class="content__image" alt="{{ include.title }}" src="{{ site.baseurl }}/assets/{{ include.image }}">
+    <h1 class="content__title">{{ include.title }}</h1>
     {{ include.intro }}
-    <a class="{{ page.page-main }}__link" href="{{ include.link }}" title="{{ include.button }}">{{ include.button }}</a>
+    <a class="content__link" href="{{ include.link }}" title="{{ include.button }}">{{ include.button }}</a>
 </section>
