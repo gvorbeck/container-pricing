@@ -4,12 +4,47 @@ layout: default
 
 {% for section in page.page-sections %}
     <div class="step__section {{ section.type }}">
+
         {% if section.title %}
             <h3>{{ section.title }}</h3>
         {% endif %}
+
         {{ section.text | markdownify }}
+
+        {% if section.tab-selector %}
+          <div class="step__tabs tab-selector">
+              <ul class="tab-selector__tab-list">
+                  {% for tab in section.tab-selector %}
+                    <li class="tab-selector__tab-item">
+                        <button class="tab-selector__button">{{ tab.title }}</button>
+                    </li>
+                  {% endfor %}
+              </ul>
+              <ul class="tab-selector__content-list">
+                  {% for content in section.tab-selector %}
+                    <li class="tab-selector__content-item">
+                        <h4 class="tab-selector__title">{{ content.title }}</h4>
+                        {{ content.text | markdownify }}
+                    </li>
+                  {% endfor %}
+              </ul>
+          </div>
+        {% endif %}
+
+        {% if section.type == 'accordion' %}
+          <ul class="step__accordion accordion__wrapper">
+            {% for item in section.items %}
+            <li class="accordion__item">
+              <button class="accordion__button"><h4 class="accordion__title">{{ item.title }}</h4></button>
+              <div class="accordion__content">{{ item.text | markdownify }}</div>
+            </li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+
         {% if section.outro-link %}
           <a href="{{ site.baseurl }}/{{ page.solution-parent}}/{{ section.outro-link.href }}" title="{{ section.outro-link.text | remove: '_' }}">{{ section.outro-link.text | markdownify | remove: '<p>' | remove: '</p>' }}</a>
         {% endif %}
+
     </div>
 {% endfor %}
