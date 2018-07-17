@@ -3,10 +3,10 @@
 
     {% include head.html %}
 
-    <body class="page page__{{ page.page-slug }}">
+    <body class="page page__{{ page.slug }} {{ page.layout }}">
         {% include header.html %}
 
-        <main class="page__main {{ page.page-main }}">
+        <main class="page__main content">
             {{content}}
         </main>
 
