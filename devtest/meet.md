@@ -1,10 +1,14 @@
 ---
 layout: solution-step
+title: Meet your _customer_
+permalink: /devtest/meet/
+weight: 02
+slug: meet
 
-page-title: Meet your _customer_
-solution-parent: devtest
-page-slug: meet
-page-main: step
+page-title: Meet your _customer_BAR
+solution-parent: devtestBAR
+page-slug: meetBAR
+page-main: stepBAR
 
 page-logo: image2.jpg
 

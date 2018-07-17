@@ -1,10 +1,14 @@
 ---
 layout: solution-step
+title: Learn about _the solution_
+permalink: devtest/learn/
+weight: 01
+slug: learn
 
-page-title: Learn about _the solution_
-solution-parent: devtest
-page-slug: learn
-page-main: step
+#page-title: Learn about _the solution_
+solution-parent: devtestBAR
+page-slug: learnBAR
+page-main: stepBAR
 
 page-logo: image1.jpg
 
