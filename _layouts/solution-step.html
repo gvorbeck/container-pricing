@@ -3,16 +3,16 @@ layout: default
 ---
 
 {% for section in page.page-sections %}
-    <div class="step__section {{ section.type }}">
+    <div class="content__block {{ section.type }}">
 
         {% if section.title %}
-            <h3>{{ section.title }}</h3>
+            <h3 class="content__title">{{ section.title }}</h3>
         {% endif %}
 
         {{ section.text | markdownify }}
 
         {% if section.tab-selector %}
-          <div class="step__tabs tab-selector">
+          <div class="content__tabs tab-selector">
               <ul class="tab-selector__tab-list">
                   {% for tab in section.tab-selector %}
                     <li class="tab-selector__tab-item">
@@ -32,7 +32,7 @@ layout: default
         {% endif %}
 
         {% if section.type == 'accordion' %}
-          <ul class="step__accordion accordion__wrapper">
+          <ul class="content__accordion accordion__wrapper">
             {% for item in section.items %}
             <li class="accordion__item">
               <button class="accordion__button"><h4 class="accordion__title">{{ item.title }}</h4></button>
