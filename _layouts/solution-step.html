@@ -42,8 +42,21 @@ layout: default
           </ul>
         {% endif %}
 
-        {% if section.outro-link %}
-          <a href="{{ site.baseurl }}/{{ page.solution-parent}}/{{ section.outro-link.href }}" title="{{ section.outro-link.text | remove: '_' }}">{{ section.outro-link.text | markdownify | remove: '<p>' | remove: '</p>' }}</a>
+        {% if section.type == 'outro' %}
+            {% comment %}
+              Programmatically determine next Step link.
+              1) Break page's permalink down to find the Solution this page is a part of.
+              2) Increment page's weight.
+              3a) Search for pages that have the same Solution in their permalink.
+              3b) AND have the incremented weight as their value.
+            {% endcomment %}
+            {% assign link_chunks = page.permalink | split: '/' %}
+            {% assign page_weight = page.weight | plus: 1 %}
+            {% for page in site.pages %}
+                {% if page.permalink contains link_chunks[0] and page.weight == page_weight %}
+                    <a href="{{ site.baseurl }}{{ page.permalink }}" title="{{ page.title | remove: '_' }}">{{ page.title | markdownify | remove: '<p>' | remove: '</p>' }}</a>
+                {% endif %}
+            {% endfor %}
         {% endif %}
 
     </div>
