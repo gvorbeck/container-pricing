@@ -35,7 +35,7 @@ TO-DO: use type for content__block class names, like with solution step pages.
             {% for page in site.pages %}
                 {% if page.layout == 'solution-home' %}
                   <li class="solutions__item">
-                      <a class="solutions__link" title="{{page.title}}" href="{{page.permalink}}">
+                      <a class="solutions__link" title="{{page.title}}" href="{{site.baseurl}}{{page.permalink}}">
                           <img class="solutions__image" alt="{{page.title}}" src="{{site.baseurl}}/assets/{{page.thumbnail}}">
                           <h2 class="solutions__title">{{- page.title -}}</h2>
                           <div class="solutions__excerpt">{{- page.excerpt | markdownify -}}</div>
