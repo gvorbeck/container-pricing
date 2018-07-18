@@ -14,31 +14,36 @@ the amount of Solutions this layout outputs.
 TO-DO: use type for content__block class names, like with solution step pages.
 {% endcomment %}
 <div class="content__block banner">
-    <div>line 1</div>
-    <div>line 2</div>
-    <div>line 3</div>
+    {% for banner in page.banners %}
+        <ul class="banner__list size-{{ banner.size }}">
+            {% for image in banner.images %}
+            <li class="banner__item">
+                <img alt="{{image}}" src="{{ site.baseurl }}/assets/{{image}}">
+            </li>
+            {% endfor %}
+        </ul>
+    {% endfor %}
 </div>
-<section class="content__block whats-new">
-    <h1 class="whats-new__title">{{ page.whats-new.title }}</h1>
-    <ul class="whats-new__items">
-        {% for item in page.whats-new.items %}
-        <li class="whats-new__item">
-            <p><span class="whats-new__as-of">{{ item.as-of }}</span> {{ item.text }}</p>
-        </li>
-        {% endfor %}
-    </ul>
-</section>
-<section class="content__block dive">
-    <h1 class="dive__title">{{ page.dive.title }}</h1>
-    <ul class="dive__items">
-        {% for item in page.dive.items %}
-        <li class="dive__item">
-            <a href="{{ item.link }}/" title="{{ item.title }}">
-                <img class="dive__image" alt="{{ item.title }}" src="assets/{{ item.image }}">
-                <h2 class="dive__item-title">{{ item.title }}</h2>
-                <p class="dive__text">{{ item.text }}</p>
-            </a>
-        </li>
-        {%  endfor %}
-    </ul>
-</section>
+{% for section in page.page-sections %}
+    <section class="content__block">
+        <h1 class="content__title">{{ section.title }}</h1>
+        {% if section.text %}
+            <div class="content__text">{{ section.text | markdownify }}</div>
+        {% endif %}
+        {% if section.type == 'page-listing' %}
+          <ul class="content__solutions solutions">
+            {% for page in site.pages %}
+                {% if page.layout == 'solution-home' %}
+                  <li class="solutions__item">
+                      <a class="solutions__link" title="{{page.title}}" href="{{page.permalink}}">
+                          <img class="solutions__image" alt="{{page.title}}" src="{{site.baseurl}}/assets/{{page.thumbnail}}">
+                          <h2 class="solutions__title">{{- page.title -}}</h2>
+                          <div class="solutions__excerpt">{{- page.excerpt | markdownify -}}</div>
+                      </a>
+                  </li>
+                {% endif %}
+            {% endfor %}
+          </ul>
+        {% endif %}
+    </section>
+{% endfor %}
