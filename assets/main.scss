@@ -2,11 +2,26 @@
 ---
 @import "meyer-reset";
 @import "vars";
+@import "mixins";
 @import "fonts";
 
 body {
     font-family: $font--normal;
     font-size: 100%;
+}
+
+em {
+    font-style: italic;
+}
+
+strong {
+    font-weight: bold;
+}
+
+.page__ {
+    &header {
+        padding: 0 0 1.875rem;
+    }
 }
 
 @import "homepage";
