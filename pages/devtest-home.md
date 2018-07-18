@@ -1,7 +1,7 @@
 ---
 layout: solution-home
 title: Application Development and Test Solution
-permalink: devtest/
+permalink: /devtest/
 weight: 00
 slug: devtest
 

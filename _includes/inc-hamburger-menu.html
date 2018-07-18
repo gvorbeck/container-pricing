@@ -1,16 +1,44 @@
 <div class="header__navigation hamburger">
     <input type="checkbox" id="hamburger-input" class="hamburger__input">
     <label for="hamburger-input" class="hamburger__label">foo</label>
-    <ul class="hamburger__list">
-
-        <!--
-        {% for page in site.pages %}
-    {% if page.layout != nil %}
-    {% if page.layout != 'feed' %}
-    {{ page.page-title }}
-    {% endif %}
-    {% endif %}
-    {% endfor %}
--->
+    <ul class="hamburger__list solutions-list">
+        {% comment %}
+          1. Assign a variable to hold all Solution Home pages.
+          2. Assign a variable to hold all Solution Step pages and sort them by their "weight" parameter.
+          3. For each Solution Home, split its permalink to find its group ID (ex: devtest).
+          4. For each Solution Step, split its permalink to find its group ID.
+          5. If the two group IDs match, create a list item for it.
+        {% endcomment %}
+        {%- assign solution_homes = (site.pages | where: "layout", "solution-home") -%}
+        {%- assign solution_steps = (site.pages | where: "layout", "solution-step" | sort: "weight") -%}
+        {%- for solution in solution_homes -%}
+            <li class="solutions-list__item">
+                <ul class="solution-list">
+                    <li class="solution-list__item"><a title="{{- solution.title -}}" href="{{- site.baseurl -}}{{- solution.permalink -}}">{{- solution.title -}}</a></li>
+            {%- assign solution_name = solution.permalink | remove_first: "/" | split: "/" -%}
+            {%- for step in solution_steps -%}
+                {%- assign step_solution_name = step.permalink | remove_first: "/" | split: "/" -%}
+                {%- if step_solution_name[0] == solution_name[0] -%}
+                    <li class="solution-list__item {% if page.url == step.permalink %}current{% endif %}">
+                        <a title="{{- step.title | remove: '_' -}}" href="{{- site.baseurl -}}{{- step.permalink -}}">
+                            <span class="solution-list__order">{{node.url}} 0{{- step.weight -}}</span> {{- step.title | remove: "_" -}}
+                        </a>
+                    </li>
+                {%- endif -%}
+            {%- endfor -%}
+                </ul>
+            </li>
+        {%- endfor -%}
     </ul>
 </div>
+
+{% comment %}
+- find all pages that use solution-home as their layout
+- for each one, split its permalink parameter
+  - then for each step page, split its permalink parameter
+
+- find all pages that use solution-step as their layout
+- split those pages permalink parameters
+- print the pages whose permalink[0] matches.
+
+{% endcomment %}

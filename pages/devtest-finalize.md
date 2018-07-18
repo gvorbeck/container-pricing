@@ -1,7 +1,7 @@
 ---
 layout: solution-step
 title: Finalize the _deal_
-permalink: devtest/finalize/
+permalink: /devtest/finalize/
 weight: 05
 slug: finalize
 

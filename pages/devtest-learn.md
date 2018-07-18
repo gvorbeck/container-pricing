@@ -1,7 +1,7 @@
 ---
 layout: solution-step
 title: Learn about _the solution_
-permalink: devtest/learn/
+permalink: /devtest/learn/
 weight: 01
 slug: learn
 

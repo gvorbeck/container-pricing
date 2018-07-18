@@ -1,7 +1,7 @@
 ---
 layout: solution-step
 title: Seal the _deal_
-permalink: devtest/seal/
+permalink: /devtest/seal/
 weight: 04
 slug: seal
 
