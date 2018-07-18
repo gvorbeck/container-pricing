@@ -1,10 +1,9 @@
 ---
 layout: solution-step
-
-page-title: Seal the _deal_
-solution-parent: devtest
-page-slug: prepare
-page-main: step
+title: Seal the _deal_
+permalink: devtest/seal/
+weight: 04
+slug: seal
 
 page-logo: image3.jpg
 

@@ -1,10 +1,9 @@
 ---
 layout: solution-step
-
-page-title: Finalize the _deal_
-solution-parent: devtest
-page-slug: finalize
-page-main: step
+title: Finalize the _deal_
+permalink: devtest/finalize/
+weight: 05
+slug: finalize
 
 page-logo: image3.jpg
 

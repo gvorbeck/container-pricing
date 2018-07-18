@@ -1,10 +1,9 @@
 ---
 layout: solution-step
-
-page-title: Prepare your _offering_
-solution-parent: devtest
-page-slug: prepare
-page-main: step
+title: Prepare your _offering_
+permalink: /devtest/prepare/
+weight: 03
+slug: prepare
 
 page-logo: image3.jpg
 
