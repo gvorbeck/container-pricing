@@ -5,9 +5,9 @@ permalink: devtest/
 weight: 00
 slug: devtest
 
-#page-title: Application Development and Test SolutionFOO
-#page-slug: devtestFOO
-#page-main: solutionFOO
+thumbnail: image1.jpg
+excerpt: |
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae augue ligula. Vestibulum consequat malesuada pulvinar. Quisque molestie ipsum vel malesuada porttitor.
 
 page-sections:
 - title: "Learn about the solution"
