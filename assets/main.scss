@@ -24,4 +24,17 @@ strong {
     }
 }
 
+.content__block {
+    margin: 1.875rem 0;
+    padding: 0 1.875rem;
+
+    & + & {
+        padding-top: 30px;
+    }
+
+    ul {
+        list-style-type: disc;
+    }
+}
+
 @import "homepage";
