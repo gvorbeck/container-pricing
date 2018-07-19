@@ -25,7 +25,7 @@ TO-DO: use type for content__block class names, like with solution step pages.
     {% endfor %}
 </div>
 {% for section in page.page-sections %}
-    <section class="content__block">
+    <section class="content__block {{ section.component }}">
         <h1 class="content__title">{{ section.title }}</h1>
         {% if section.text %}
             <div class="content__text">{{ section.text | markdownify }}</div>
