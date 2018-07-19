@@ -2,3 +2,14 @@
     font-size: 2rem;
     font-weight: bold;
 }
+
+@mixin header-2() {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+@mixin pseudo($display: block, $pos: absolute, $content: '') {
+    content: $content;
+    display: $display;
+    position: $pos;
+}
