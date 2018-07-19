@@ -5,10 +5,12 @@ permalink: /devtest/
 weight: 00
 slug: devtest
 
-thumbnail: image1.jpg
+# HOMEPAGE CONTENT
+thumbnail: visual_devtest.png
 excerpt: |
   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae augue ligula. Vestibulum consequat malesuada pulvinar. Quisque molestie ipsum vel malesuada porttitor.
 
+# DEVTEST
 page-sections:
 - title: "Learn about the solution"
   text: |

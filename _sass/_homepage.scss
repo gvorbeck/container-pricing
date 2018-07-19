@@ -41,6 +41,13 @@
                 }
             }
 
+            // DIVE INTO A SOLUTION
+            &.dive {
+
+                ul {
+                    list-style-type: none;
+                }
+            }
         }
 
         &title {
@@ -57,6 +64,28 @@
                 left: 0;
                 background-color: $color--8c;
             }
+        }
+    }
+
+    .solutions {
+
+        &__item + .solutions__item {
+            margin-top: 1.875rem;
+        }
+
+        &__image {
+            max-height: 4.3125rem;
+        }
+
+        &__link {
+            text-decoration: none;
+            color: #000000;
+            display: block;
+        }
+
+        &__title {
+            font-weight: bold;
+            margin: 0.9375rem 0;
         }
     }
 }

@@ -4,10 +4,12 @@ INCLUDE: HEADER
 and site/page titles.
 {% endcomment %}
 <header class="page__header header">
+    {% if page.layout != 'home' %}<div class="header__nav-wrapper">{% endif %}
     <h1 class="header__title">{{ site.title }}</h1>
     {% if page.layout == 'home' %}<p class="header__subtitle">{{ site.description }}</p>{% endif %}
     {% if page.layout != 'home' %}
         {% include inc-hamburger-menu.html %}
+        </div>
         <h2 class="header__subtitle">{{ page.title | markdownify | remove: '<p>' | remove: '</p>' }}</h2>
         {% if page.page-logo %}
           <img class="header__logo" alt="{{ page.title | remove: '_' }}" src="{{ page.page-logo }}">

@@ -5,7 +5,7 @@ permalink: /lorem/
 weight: 00
 slug: lorem
 
-thumbnail: image1.jpg
+thumbnail: visual_newapp.png
 excerpt: |
   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae augue ligula. Vestibulum consequat malesuada pulvinar. Quisque molestie ipsum vel malesuada porttitor.
 
