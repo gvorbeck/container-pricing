@@ -94,7 +94,7 @@ body:not(.page__home) .page__header {
 
             &:checked ~ .hamburger__list {
                 // display: block;
-                left: 0;
+                right: 0;
             }
         }
 
@@ -102,9 +102,9 @@ body:not(.page__home) .page__header {
             // display: none;
             position: absolute;
             top: 2.4375rem;
-            left: -100%;
+            right: -100%;
             width: 100%;
-            transition: left 10s;
+            transition: right 0.5s;
             background-color: $color--8c;
             padding: 0.9375rem 1.875rem 1.875rem;
             box-sizing: border-box;
