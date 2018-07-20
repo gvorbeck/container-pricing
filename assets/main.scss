@@ -96,6 +96,10 @@ body:not(.page__home) .page__header {
                 // display: block;
                 right: 0;
             }
+
+            &:checked ~ .hamburger__list .hamburger__item {
+                opacity: 1;
+            }
         }
 
         .hamburger__list {
@@ -119,8 +123,13 @@ body:not(.page__home) .page__header {
             }
         }
 
-        .hamburger__item + .hamburger__item {
-            margin-top: 1.875rem;
+        .hamburger__item {
+            opacity: 0;
+            transition: opacity 0.75s ease-in;
+
+            & + .hamburger__item {
+                margin-top: 1.875rem;
+            }
         }
 
         .solution-list {
