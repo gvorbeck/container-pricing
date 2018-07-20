@@ -1,0 +1,23 @@
+.solution-home {
+
+    .header__subtitle {
+        @include header-2();
+        line-height: 2rem;
+        padding: 0 1.875rem;
+    }
+
+    .content__block {
+
+        &:nth-child(5n+2) {
+            background-color: $color--eb;
+        }
+
+        &:nth-child(5n+3) {
+            background-color: $color--8c;
+        }
+
+        &:nth-child(5n+5) {
+            background-color: $color--a8;
+        }
+    }
+}

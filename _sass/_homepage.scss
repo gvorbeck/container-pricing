@@ -22,11 +22,11 @@
 
     .banner {
         background-color: $color--bc;
-        margin: 0;
+        margin-bottom: 1.875rem;
         padding: 0;
 
         & + .content__block {
-            margin-top: 0;
+            // padding-top: 1.875rem;
         }
     }
 
