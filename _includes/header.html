@@ -5,7 +5,7 @@ and site/page titles.
 {% endcomment %}
 <header class="page__header header">
     {% if page.layout != 'home' %}<div class="header__nav-wrapper">{% endif %}
-    <h1 class="header__title">{{ site.title }}</h1>
+    <h1 class="header__title"><a href="{{ site.baseurl }}/" title="{{ site.title }}">{{ site.title }}</a></h1>
     {% if page.layout == 'home' %}<p class="header__subtitle">{{ site.description }}</p>{% endif %}
     {% if page.layout != 'home' %}
         {% include inc-hamburger-menu.html %}
