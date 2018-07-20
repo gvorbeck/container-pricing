@@ -6,18 +6,32 @@
         padding: 0 1.875rem;
     }
 
-    .content__block {
+    .content__ {
 
-        &:nth-child(5n+2) {
-            background-color: $color--eb;
+        &block {
+            display: flex;
+            flex-direction: column;
+
+            &:nth-child(5n+2) {
+                background-color: $color--eb;
+            }
+
+            &:nth-child(5n+3) {
+                background-color: $color--8c;
+            }
+
+            &:nth-child(5n+5) {
+                background-color: $color--a8;
+            }
+
+            &:nth-child(even) {
+                align-items: flex-end;
+                text-align: right;
+            }
         }
 
-        &:nth-child(5n+3) {
-            background-color: $color--8c;
-        }
-
-        &:nth-child(5n+5) {
-            background-color: $color--a8;
+        &image {
+            max-width: 7.1875rem;
         }
     }
 }
