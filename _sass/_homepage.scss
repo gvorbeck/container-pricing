@@ -7,6 +7,11 @@
         &__title {
             @include header-2();
             margin-bottom: 0.9375rem;
+
+            a {
+                color: #000000;
+                text-decoration: none;
+            }
         }
 
         &__subtitle {
