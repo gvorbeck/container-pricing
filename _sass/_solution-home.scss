@@ -11,27 +11,58 @@
         &block {
             display: flex;
             flex-direction: column;
+            position: relative;
+            overflow: hidden;
 
-            &:nth-child(5n+2) {
-                background-color: $color--eb;
+            $section-colors: '#FFFFFF' $color--eb $color--8c '#FFFFFF' $color--a8;
+            $after-colors: $color--a8 '#FFFFFF' $color--eb $color--8c '#FFFFFF';
+
+            @for $i from 1 through 5 {
+                &:nth-child(5n+#{$i}) {
+                    background-color: #{nth($section-colors, $i)};
+
+                    &::after {
+                        background-color: #{nth($after-colors, $i)};
+                    }
+                }
             }
 
-            &:nth-child(5n+3) {
-                background-color: $color--8c;
-            }
-
-            &:nth-child(5n+5) {
-                background-color: $color--a8;
+            &::after {
+                @include pseudo();
+                width: 120%;
+                height: 250px;
+                left: calc(50% - 60%);
+                top: -204px;
+                transform: rotate(-7deg);
             }
 
             &:nth-child(even) {
                 align-items: flex-end;
                 text-align: right;
+
+                &::after {
+                    right: calc(50% - 60%);
+                    left: auto;
+                    transform: rotate(7deg);
+                }
+            }
+
+            &:first-child::after {
+                display: none;
+            }
+
+            * {
+                z-index: 2;
             }
         }
 
         &image {
             max-width: 7.1875rem;
+        }
+
+        &title {
+            margin: 15px 0;
+            @include header-4;
         }
     }
 }
