@@ -4,8 +4,8 @@
         background-color: $color--bc;
         padding: 1.875rem 1.875rem 2rem;
 
-        &__title {
-            @include header-2();
+        .header__title  {
+            @include header-2;
             margin-bottom: 0.9375rem;
 
             a {
@@ -14,49 +14,22 @@
             }
         }
 
-        &__subtitle {
+        .header__subtitle {
             font-weight: bold;
             color: #FFFFFF;
         }
     }
 
-    .banner {
-        background-color: $color--bc;
-        margin-bottom: 1.875rem;
-        padding: 0;
+    .content {
 
-        & + .content__block {
-            // padding-top: 1.875rem;
-        }
-    }
-
-    .content__ {
-
-        &block {
-
-            // WHAT'S NEW
-            &.whats-new {
-
-                ul {
-                    padding: 0 1.0625rem;
-                }
-
-                li + li {
-                    margin-top: 0.9375rem;
-                }
-            }
-
-            // DIVE INTO A SOLUTION
-            &.dive {
-
-                ul {
-                    list-style-type: none;
-                }
-            }
+        .banner {
+            background-color: $color--bc;
+            margin-bottom: 1.875rem;
+            padding: 0;
         }
 
-        &title {
-            @include header-2();
+        .content__title {
+            @include header-2;
             position: relative;
             padding-bottom: 1.5625rem;
             margin-bottom: 0.9375rem;
@@ -70,27 +43,31 @@
                 background-color: $color--8c;
             }
         }
-    }
 
-    .solutions {
+        .dive {
+            .solutions {
+                list-style-type: none;
+                margin: 0;
 
-        &__item + .solutions__item {
-            margin-top: 1.875rem;
-        }
+                .solutions__item + .solutions__item {
+                    margin-top: 1.875rem;
+                }
 
-        &__image {
-            max-height: 4.3125rem;
-        }
+                .solutions__image {
+                    max-height: 4.3125rem;
+                }
 
-        &__link {
-            text-decoration: none;
-            color: #000000;
-            display: block;
-        }
+                .solutions__link {
+                    text-decoration: none;
+                    color: #000000;
+                    display: block;
+                }
 
-        &__title {
-            font-weight: bold;
-            margin: 0.9375rem 0;
+                .solutions__title {
+                    font-weight: bold;
+                    margin: 0.9375rem 0;
+                }
+            }
         }
     }
 }

@@ -1,23 +1,25 @@
 .solution-home {
 
-    .header__subtitle {
-        @include header-2();
-        line-height: 2rem;
-        padding: 0 1.875rem;
+    .header {
+
+        .header__subtitle {
+            @include header-2;
+        }
     }
 
-    .content__ {
+    .content {
 
-        &block {
+        .content__block {
             display: flex;
             align-items: flex-start;
             flex-direction: column;
             position: relative;
             overflow: hidden;
+            margin-bottom: 0;
+            padding-bottom: 1.875rem;
 
             $section-colors: '#FFFFFF' $color--eb $color--8c '#FFFFFF' $color--a8;
             $after-colors: $color--a8 '#FFFFFF' $color--eb $color--8c '#FFFFFF';
-
             @for $i from 1 through 5 {
                 &:nth-child(5n+#{$i}) {
                     background-color: #{nth($section-colors, $i)};
@@ -26,7 +28,7 @@
 
                         .button {
                             color: #FFFFFF;
-                            @include button($color: #FFFFFF);
+                            @include button('white');
                         }
                     }
 
@@ -65,12 +67,12 @@
             }
         }
 
-        &image {
+        .content__image {
             max-width: 7.1875rem;
         }
 
-        &title {
-            margin: 15px 0;
+        .content__title {
+            margin: 0.9375rem 0;
             @include header-4;
         }
     }

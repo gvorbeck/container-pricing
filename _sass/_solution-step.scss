@@ -1,0 +1,28 @@
+.solution-step {
+
+    .header {
+
+        .header__subtitle {
+            @include header-1;
+            display: flex;
+            align-items: flex-end;
+
+            em {
+                font-style: normal;
+                display: inline-block;
+                background-color: $color--a8;
+                color: #FFFFFF;
+                padding: 0.375rem;
+                line-height: 1;
+            }
+        }
+
+        .header__logo {
+            max-width: 4.25rem;
+        }
+    }
+
+    .content {
+
+    }
+}

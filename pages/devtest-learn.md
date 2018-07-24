@@ -5,12 +5,7 @@ permalink: /devtest/learn/
 weight: 01
 slug: learn
 
-#page-title: Learn about _the solution_
-solution-parent: devtestBAR
-page-slug: learnBAR
-page-main: stepBAR
-
-page-logo: image1.jpg
+page-logo: visual_learn.png
 
 page-sections:
 # PAGE SECTION CHEATSHEET
@@ -40,7 +35,7 @@ page-sections:
 
     We're empowering our clients to adopt agile practices by eliminating the fear of cost increase.
 
-    ![alt text]( /cpricing/devtest/assets/image1.jpg "Logo Title Text 1")
+    ![Dev Ops]( /cpricing/salesguides/assets/images/visual_devops.png)
 - type: emphasis
   title: Watch these videos first
   text: |

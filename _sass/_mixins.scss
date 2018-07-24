@@ -1,24 +1,57 @@
 @mixin header-1() {
     font-size: 2rem;
+    line-height: 2.625rem;
     font-weight: bold;
 }
 
 @mixin header-2() {
     font-size: 1.5rem;
+    line-height: 2rem;
     font-weight: bold;
 }
 
 @mixin header-4() {
     font-size: 1.25rem;
+    line-height: 1.6875rem;
     font-weight: bold;
 }
 
-@mixin button($color: #000000) {
-    border: 1px solid $color;
-    color: $color;
+@mixin button($color: 'black') {
     text-decoration: none;
     padding: 0.3125rem 0.625rem;
     margin-top: 0.9375rem;
+    border-width: 0.0625rem;
+    border-style: solid;
+
+    @if $color == 'white' {
+        border-color: #FFFFFF;
+        color: #FFFFFF;
+
+        &:hover {
+            color: $color--eb;
+            border-color: $color--eb;
+        }
+
+        &:active {
+            border-color: $color--eb;
+            background-color: $color--eb;
+            color: #000000;
+        }
+    } @else {
+        border-color: #000000;
+        color: #000000;
+
+        &:hover {
+            border-color: $color--8c;
+            color: $color--8c;
+        }
+
+        &:active {
+            border-color: $color--8c;
+            background-color: $color--8c;
+            color: #FFFFFF;
+        }
+    }
 }
 
 @mixin pseudo($display: block, $pos: absolute, $content: '') {
