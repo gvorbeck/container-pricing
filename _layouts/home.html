@@ -18,7 +18,7 @@ TO-DO: use type for content__block class names, like with solution step pages.
         <ul class="banner__list size-{{ banner.size }}">
             {% for image in banner.images %}
             <li class="banner__item">
-                <img alt="{{image}}" src="{{ site.baseurl }}/assets/{{image}}">
+                <img alt="{{image}}" src="{{ site.baseurl }}/assets/images/banner/{{ banner.size }}/{{ image }}">
             </li>
             {% endfor %}
         </ul>

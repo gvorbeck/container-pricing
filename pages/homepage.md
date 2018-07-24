@@ -8,9 +8,9 @@ slug: home
 banners:
   - size: small
     images:
-    - image1.jpg
-    - image2.jpg
-    - image3.jpg
+    - line-1.png
+    - line-2.png
+    - line-3.png
   - size: medium
     images:
     - image1.jpg
