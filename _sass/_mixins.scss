@@ -13,6 +13,14 @@
     font-weight: bold;
 }
 
+@mixin button($color: #000000) {
+    border: 1px solid $color;
+    color: $color;
+    text-decoration: none;
+    padding: 0.3125rem 0.625rem;
+    margin-top: 0.9375rem;
+}
+
 @mixin pseudo($display: block, $pos: absolute, $content: '') {
     content: $content;
     display: $display;

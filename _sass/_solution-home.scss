@@ -10,6 +10,7 @@
 
         &block {
             display: flex;
+            align-items: flex-start;
             flex-direction: column;
             position: relative;
             overflow: hidden;
@@ -20,6 +21,14 @@
             @for $i from 1 through 5 {
                 &:nth-child(5n+#{$i}) {
                     background-color: #{nth($section-colors, $i)};
+                    @if $i == 3 or $i == 5 {
+                        color: #FFFFFF;
+
+                        .button {
+                            color: #FFFFFF;
+                            @include button($color: #FFFFFF);
+                        }
+                    }
 
                     &::after {
                         background-color: #{nth($after-colors, $i)};

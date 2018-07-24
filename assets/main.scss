@@ -63,6 +63,10 @@ strong {
     p + p {
         margin-top: 0.9375rem;
     }
+
+    .button {
+        @include button();
+    }
 }
 
 // HOMEPAGE-SPECIFIC RULES
@@ -78,8 +82,8 @@ body:not(.page__home) .page__header {
         }
 
         &__title {
-            height: 2.5rem;
-            line-height: 2.5rem;
+            height: 3.5rem;
+            line-height: 3.5rem;
             padding: 0 0.9375rem;
             background-color: #FFFFFF;
             border-bottom: 0.0625rem solid #000000;
@@ -101,7 +105,7 @@ body:not(.page__home) .page__header {
             display: none;
 
             &:checked ~ .hamburger__list {
-                top: 2.4375rem;
+                top: 3.4375rem;
 
 
 
@@ -122,37 +126,38 @@ body:not(.page__home) .page__header {
         }
 
         label {
-            width: 20px;
-            height: 20px;
+            width: 1.75rem;
+            height: 1.75rem;
             display: block;
             position: absolute;
-            top: 10px;
-            right: 15px;
+            top: 0.875rem;
+            right: 0.9375rem;
             z-index: 4;
         }
 
         .hamburger__icon {
             position: relative;
-            margin-top: calc(50% - 1px);
+            margin-top: calc(50% - 0.0625rem);
 
             &,
             &::before,
             &::after {
                 width: 100%;
-                height: 2px;
-                border-radius: 10px;
+                height: 0.125rem;
+                border-radius: 0.625rem;
                 background-color: $color--8c;
                 transition: all 0.5s ease-out;
             }
 
+            $distance: .5;
             &::before,
             &::after {
                 @include pseudo();
-                top: -6px;
+                top: - ($distance) + rem;
             }
 
             &::after {
-                top: 6px;
+                top: ($distance) + rem;
             }
         }
 
@@ -170,13 +175,13 @@ body:not(.page__home) .page__header {
         .hamburger__item {
 
             & + .hamburger__item {
-                margin-top: 30px;
+                margin-top: 1.875rem;
             }
         }
 
         .solution-list__item {
-            margin-left: 10px;
-            padding-left: 12px;
+            margin-left: 0.625rem;
+            padding-left: 0.75rem;
             opacity: 0;
             transition: all 0.85s ease-in-out;
 
@@ -186,17 +191,17 @@ body:not(.page__home) .page__header {
             }
 
             & + .solution-list__item {
-                margin-top: 30px;
+                margin-top: 1.875rem;
             }
 
             &:nth-child(2) {
-                margin-top: 15px;
+                margin-top: 0.9375rem;
             }
 
             &.current {
                 font-weight: bold;
-                border-left: 2px solid #FFFFFF;
-                padding-left: 10px;
+                border-left: 0.125rem solid #FFFFFF;
+                padding-left: 0.625rem;
 
                 &:first-child {
                     border-left: none;
@@ -210,7 +215,7 @@ body:not(.page__home) .page__header {
             }
 
             span {
-                margin-right: 15px;
+                margin-right: 0.9375rem;
             }
         }
     }
