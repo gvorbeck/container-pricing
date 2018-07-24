@@ -24,5 +24,81 @@
 
     .content {
 
+        .content__block {
+
+            p > img {
+                margin-top: 0.9375rem;
+            }
+
+            &.emphasis {
+                background-color: $color--eb;
+                padding-top: 1.875rem;
+                padding-bottom: 1.875rem;
+            }
+
+            &.outro {
+
+                .content__title {
+                    font-size: 1rem;
+                    margin-bottom: 0.9375rem;
+                    line-height: 1;
+                }
+
+                .outro__next-link {
+                    margin-top: 1.875rem;
+                    display: block;
+                    padding-right: 1.9375rem;
+                    text-align: right;
+                    font-weight: bold;
+                    color: #000000;
+                    text-decoration: none;
+                    position: relative;
+
+                    em {
+                        background-color: $color--a8;
+                        color: #FFFFFF;
+                        padding: 0.1875rem;
+                        line-height: 1;
+                        font-style: normal;
+                    }
+
+                    &::before,
+                    &::after {
+                        @include pseudo;
+                        right: 0;
+                    }
+
+                    &::before {
+                        width: 10px;
+                        height: 10px;
+                        border-style: solid;
+                        border-color: #000000;
+                        border-top-width: 2px;
+                        border-right-width: 2px;
+                        border-bottom-width: 0;
+                        border-left-width: 0;
+                        transform: rotate(45deg);
+                        top: 4px;
+                    }
+
+                    &::after {
+                        width: 16px;
+                        height: 2px;
+                        background-color: #000000;
+                        top: calc(50% - 1px);
+                    }
+                }
+            }
+        }
+
+        .content__title {
+            @include header-2;
+            margin-bottom: 0.9375rem;
+        }
+
+        h4 {
+            font-weight: bold;
+            margin: 0.9375rem 0;
+        }
     }
 }

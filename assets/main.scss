@@ -229,12 +229,6 @@ body:not(.page__home) .page__header {
     img {
         max-width: 100%;
     }
-
-    &.emphasis {
-        background-color: $color--eb;
-        padding-top: 1.875rem;
-        padding-bottom: 1.875rem;
-    }
 }
 
 @import "homepage";

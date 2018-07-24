@@ -5,12 +5,7 @@ permalink: /devtest/meet/
 weight: 02
 slug: meet
 
-page-title: Meet your _customer_BAR
-solution-parent: devtestBAR
-page-slug: meetBAR
-page-main: stepBAR
-
-page-logo: image2.jpg
+page-logo: visual_meet.png
 
 page-sections:
 # PAGE SECTION CHEATSHEET

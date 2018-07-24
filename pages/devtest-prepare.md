@@ -5,7 +5,7 @@ permalink: /devtest/prepare/
 weight: 03
 slug: prepare
 
-page-logo: image3.jpg
+page-logo: visual_prepare.png
 
 page-sections:
 # PAGE SECTION CHEATSHEET

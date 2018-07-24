@@ -54,7 +54,7 @@ layout: default
             {% assign page_weight = page.weight | plus: 1 %}
             {% for page in site.pages %}
                 {% if page.permalink contains link_chunks[0] and page.weight == page_weight %}
-                    <a href="{{ site.baseurl }}{{ page.permalink }}" title="{{ page.title | remove: '_' }}">{{ page.title | markdownify | remove: '<p>' | remove: '</p>' }}</a>
+                    <a class="outro__next-link" href="{{ site.baseurl }}{{ page.permalink }}" title="{{ page.title | remove: '_' }}">{{ page.title | markdownify | remove: '<p>' | remove: '</p>' }}</a>
                 {% endif %}
             {% endfor %}
         {% endif %}

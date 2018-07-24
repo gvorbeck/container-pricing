@@ -5,7 +5,7 @@ permalink: /devtest/finalize/
 weight: 05
 slug: finalize
 
-page-logo: image3.jpg
+page-logo: visual_finalize.png
 
 page-sections:
 # PAGE SECTION CHEATSHEET

@@ -5,7 +5,7 @@ permalink: /devtest/seal/
 weight: 04
 slug: seal
 
-page-logo: image3.jpg
+page-logo: visual_seal.png
 
 page-sections:
 # PAGE SECTION CHEATSHEET
