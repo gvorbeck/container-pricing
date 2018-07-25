@@ -19,6 +19,7 @@ banners:
     images:
     - image1.jpg
 
+# PAGE CONTENT
 page-sections:
 - title: What's new
   component: whats-new
