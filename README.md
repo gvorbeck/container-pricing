@@ -5,7 +5,7 @@ The new home of Container Pricing solutions.
 * [Code organization](#code-org)
 * [YAML setup](#yaml-setup)
     * [Homepage](#yaml-homepage)
-    * [Solution Homages](#yaml-solution-homepage)
+    * [Solution Homepages](#yaml-solution-homepage)
     * [Step Pages](#yaml-step-pages)
 * [Links to Documentation](#docs)
 
