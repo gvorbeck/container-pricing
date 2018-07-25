@@ -20,17 +20,22 @@ strong {
     font-weight: bold;
 }
 
+a {
+    text-decoration: none;
+    color: $color--8c;
+}
+
 
 // UNIVERSAL PAGE RULES
-.page__ {
+.page {
 
     // SITE HEADER
-    &header {
+    .page__header {
         padding: 0 0 1.875rem;
     }
 
     // SITE FOOTER
-    &footer {
+    .page__footer {
         background-color: $color--8c;
         padding: 1.875rem;
 
@@ -57,7 +62,7 @@ body:not(.page__home) .page__header {
 
     .header {
 
-        &__nav-wrapper {
+        .header__nav-wrapper {
             position: relative;
         }
 
@@ -226,8 +231,10 @@ body:not(.page__home) .page__header {
         @include button;
     }
 
-    img {
+    p img {
         max-width: 100%;
+        display: block;
+        margin: 0 auto;
     }
 }
 

@@ -58,19 +58,19 @@ page-sections:
 
     PDF of the complete Announcement letter, designed to be easier for clients to read.
 
-    [Download PDF](https://www.google.com)
+    [Download PDF](https://www.google.com){: .document}
 
     #### Solution setup demo ####
 
     Demonstration of the end to end process of contacting and setting up an solution in a dedicated LPAR.
 
-    [Watch demo](https://www.google.com)
+    [Watch demo](https://www.google.com){: .video}
 
     #### ID setup walkthrough ####
 
     Demonstration of the end to end process of contacting and setting up an solution in a dedidcated LPAR.
 
-    [View walkthrough](https://www.google.com)
+    [View walkthrough](https://www.google.com){: .document}
 - type: outro
   title: "Next Steps:"
   text: |

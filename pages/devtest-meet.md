@@ -28,7 +28,7 @@ page-sections:
   text: |
     Frame the conversation around removing the limitations on DevTest that are currently imposed due to cost to allow our customers to focus on the value of having a modern, agile, DevOps environment on the platform.
 
-    ![alt text]( /cpricing/devtest/assets/image1.jpg "Logo Title Text 1")
+    ![Frame]( /cpricing/salesguides/assets/images/visual_frame.png)
 
     For example, the loss of developer productivity when they are unable to work because the system is capped; the cost of replacing skilled developers that switch careers to work on  more 'modern' development platforms; the opportunity cost of longer development cycles leading to slower feature releases; the cost of fixing bugs that make it through to production; etc.
 - type: alert
@@ -68,13 +68,13 @@ page-sections:
 
     VIDEO PLACEHOLDER
 
-    _Executive summary_
+    #### Executive summary ####
 
     Sales enablement training of the executive summary of Container Pricing for IBM Z.
 
     VIDEO PLACEHOLDER
 
-    _Executive overview_
+    #### Executive overview ####
 
     Sales enablement training of the executive overview of Container Pricing for IBM Z.
 - type: alert
