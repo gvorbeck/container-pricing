@@ -22,7 +22,7 @@ The CPGS uses a standard [Jekyll](https://jekyllrb.com) setup. Our code is mostl
 
 * __\_includes/__ - When code is repeated in many places it is placed within this directory. Headers, Footers, and Menus that should not be coded more than once but are needed in multiple places can be referenced in a layout by including it from here.
 
-* __\_sass/__ - Here you can find all the unprocessed SASS stylesheets. Any new CSS code should be entered here and __not__ in the `main.scss` file found in _assets/
+* __\_sass/__ - Here you can find all the unprocessed SASS stylesheets. Any new CSS code should be entered here and __not__ in any `.css` file. 
 
 
 <a name="yaml-setup"></a>
