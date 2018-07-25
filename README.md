@@ -37,16 +37,16 @@ layout: home
 permalink: /
 slug: home
 ```
-These are admin settings and changing them is not recommended. `layout` tells Jekyll which layout template to use (here we are using the "home" layout). `permalink` tells the Jekyll what URL this page uses (__CAUTION:__ Changing this value can cause this page to crash). Finally, `slug` is a CSS class that gets entered into the page and allows CSS to know what styles to apply to this page.
+These are admin settings and changing them is not recommended. `layout` tells Jekyll which layout template to use (here we are using the "home" layout). `permalink` tells Jekyll what URL this page uses (__CAUTION:__ Changing this value can cause this page to crash). Finally, `slug` is a CSS class that gets entered into the page and allows CSS to know what styles to apply to this page.
 
 Next, `banners` is the parameter that controls the homepage's "pathway" banner. It has three lists inside it that are for mobile/tablet/desktop versions (controlled by the `size` parameter).
 
-Finally, the `page-sections` parameter. The homepage has two sections, the "What's new" and "Dive into a solution" sections. Each page section on the homepage behaves differently as they are both design to show very different content, unlike page sections found in other parts of the site.
+Finally, the `page-sections` parameter. The homepage has two sections, the __What's new__ and __Dive into a solution__ sections. Each page section on the homepage behaves differently as they are both designed to show very different content, unlike page sections found in other parts of the site.
 
 #### What's new
-Of the three paramters, (`title`, `component`, `text`) `component` is the only one best left alone. `title` and `text` are pretty self-explanatory, but `text` is formatted to allow markdown-format content. In fact, __any paramter that starts with the first line as a pipe (|) is markdown-ready__.
+Of the three parameters (`title`, `component`, `text`), `component` is the only one best left alone as it is used for CSS styling. `title` and `text` are pretty self-explanatory, but `text` is formatted to allow markdown-format content. In fact, __any paramter that starts with the first line as a pipe (|) is markdown-ready__.
 
 #### Dive into a solution
-This page section is largely automated or controlled elsewhere. CPGS searches for any page using the template `solution-home` and lists them here. Devtest's homepage is a good example. It uses the correct layout template and so the "Dive" section lists it here. 
+This page section is largely automated or controlled elsewhere. CPGS searches for any page using the layout `solution-home` and lists them here. Devtest's homepage is a good example. It uses the correct layout template and so the "Dive" section lists it here. 
 
-On the homepage, each solution listed in the "Dive" section has a thumbnail icon, a title, and a brief excerpt. All three of these items are contained within that solution's homepage markdown file (ex: _pages/devtest-home.md) within the parameters `title`, `thumbnail`, and `excerpt`. Editing these solution homepage parameters will reflect on the CGPS homepage when the site rebuilds.
+On the homepage, each solution listed in the __Dive__ section has a thumbnail icon, a title, and a brief excerpt. All three of these items are contained within that solution's homepage markdown file (ex: _pages/devtest-home.md) within the parameters `title`, `thumbnail`, and `excerpt`. Editing these solution homepage parameters will reflect on the CGPS homepage when the site rebuilds.
