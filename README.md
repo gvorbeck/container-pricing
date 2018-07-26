@@ -50,3 +50,25 @@ Of the three parameters (`title`, `component`, `text`), `component` is the only 
 This page section is largely automated or controlled elsewhere. CPGS searches for any page using the layout `solution-home` and lists them here. Devtest's homepage is a good example. It uses the correct layout template and so the "Dive" section lists it here. 
 
 On the homepage, each solution listed in the __Dive__ section has a thumbnail icon, a title, and a brief excerpt. All three of these items are contained within that solution's homepage markdown file (ex: _pages/devtest-home.md) within the parameters `title`, `thumbnail`, and `excerpt`. Editing these solution homepage parameters will reflect on the CGPS homepage when the site rebuilds.
+
+<a name="yaml-solution-homepage"></a>
+### Solution Homepage(s) YAML Setup
+Solutions listed on the CPGS will each have their own respective homepage for listing the steps associated with completing their processes. The YAML for a Solution Homepage starts similarly to the CPGS Homepage, which some important differences:
+```
+layout: solution-home
+title: Application Development and Test Solution
+permalink: /devtest/
+weight: 00
+slug: devtest
+```
+Again, the `layout` parameter tells Jekyll to use the `solution-home` layout template for this page. This parameter value is what causes this solution to be listed on the homepage, since the homepage looks for all the pages with `solution-home` as their layout template before listing the results on the __Dive into a solution__ section.
+
+`title` is the title of the solution. The CPGS homepage's markdown file did not have this as it uses the site's title (found in `_config.yml`) for its title.
+
+`permalink` and `slug` work exactly as described above in the homepage markdown file and changing them in inadvised.
+
+The `weight` parameter is part of the infrastructure that populates the CPGS navigation menu. Solution Homepages should always have a `weight` value of `0`. Any other value will break the CPGS navigation menu.
+
+As described in the Hompage YAML Setup section, the following parameters of `thumbnail` and `excerpt` are only output on the CPGS homepage and control whaty is seen in the __Dive into a solution__ section.
+
+Finally the list of `page-sections`. These are the various steps for the solution the user is on. Their paramters should be pretty self-explanatory.
