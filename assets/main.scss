@@ -23,6 +23,10 @@ strong {
 a {
     text-decoration: none;
     color: $color--8c;
+
+    &:active {
+        outline: none;
+    }
 }
 
 
@@ -234,7 +238,6 @@ body:not(.page__home) .page__header {
     p img {
         max-width: 100%;
         display: block;
-        margin: 0 auto;
     }
 }
 

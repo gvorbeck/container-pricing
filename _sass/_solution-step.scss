@@ -27,7 +27,7 @@
         .content__block {
 
             p > img {
-                margin-top: 0.9375rem;
+                margin: 1.875rem 0;
             }
 
             &.emphasis {
@@ -109,5 +109,94 @@
             font-weight: bold;
             margin: 0.9375rem 0;
         }
+
+        .tab-selector {
+            display: flex;
+            margin-top: 30px;
+            width: 100%;
+
+            .tab-selector__tab-list,
+            .tab-selector__content-list {
+                list-style-type: none;
+                margin: 0;
+            }
+
+            .tab-selector__tab-list {
+                margin-right: 10px;
+            }
+
+            .tab-selector__content-list {
+                background-color: $color--a8;
+                padding: 15px 10px;
+                word-break: break-word;
+                color: #FFFFFF;
+            }
+
+            .tab-selector__tab-item {
+
+                button {
+                    background-color: #FFFFFF;
+                    width: 90px;
+                    height: 90px;
+                    border-radius: 2px;
+                    border: none;
+                    outline: none;
+                    font-size: 0.75rem;
+
+                    &.selected {
+                        background-color: $color--a8;
+                        color: #FFFFFF;
+                        font-weight: bold;
+                    }
+                }
+            }
+
+            .tab-selector__content-item {
+                display: none;
+                margin: 0;
+
+                &:first-child {
+                    display: block;
+                }
+            }
+
+            .tab-selector__title {
+                @include header-4;
+                margin-top: 0;
+            }
+        }
+        // .tab-selector {
+        //     display: grid;
+        //     grid-template-columns: 90px 1fr;
+        //     grid-auto-rows: 90px;
+        //     grid-row-gap: 15px;
+        //     grid-column-gap: 10px;
+        //     margin: 0;
+        //     list-style-type: none;
+        //     position: relative;
+        //
+        //     li {
+        //         margin: 0;
+        //     }
+        //
+        //     .tab-selector__tab-item {
+        //         grid-column: 1 / 2;
+        //
+        //         button {
+        //             background-color: #FFFFFF;
+        //             border: none;
+        //             width: 100%;
+        //             height: 100%;
+        //         }
+        //     }
+        //
+        //     .tab-selector__content-item {
+        //         grid-column: 2 / 3;
+        //         grid-row: 1 / auto;
+        //         background-color: $color--a8;
+        //         position: absolute;
+        //         word-break: break-word;
+        //     }
+        // }
     }
 }

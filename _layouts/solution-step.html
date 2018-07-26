@@ -16,7 +16,7 @@ layout: default
               <ul class="tab-selector__tab-list">
                   {% for tab in section.tab-selector %}
                     <li class="tab-selector__tab-item">
-                        <button class="tab-selector__button">{{ tab.title }}</button>
+                        <button class="tab-selector__button {% if forloop.first == true %}selected{% endif %}">{{ tab.title }}</button>
                     </li>
                   {% endfor %}
               </ul>

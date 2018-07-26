@@ -30,7 +30,7 @@ page-sections:
   text: |
     Once you have the required SCRT reports, you must engage Techline (through your normal process).
 
-    ![alt text]( /cpricing/devtest/assets/image1.jpg )
+    ![Techline]( /cpricing/salesguides/assets/images/visual_techline.png )
 
     Techline has been trained to fulfill the the required steps to construct a container.
 - type: emphasis
