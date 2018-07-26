@@ -6,6 +6,13 @@ weight: 02
 slug: meet
 
 page-logo: visual_meet.png
+excerpt: |
+  Customize these materials as they relate to your client (can be shared via email, phone, or in-person.)
+
+  Tip: Include someone who understands the impacts of Dev/Test costs in the conversation.
+
+  Note: Do not position this offering as ‘free’. It may require additional IPLA entitlement or hardware capacity at a discount.
+button: Start customizing
 
 page-sections:
 # PAGE SECTION CHEATSHEET

@@ -1,29 +1,19 @@
 ---
+# ADMIN SETTINGS
 layout: solution-step
 title: Learn about _the solution_
 permalink: /devtest/learn/
 weight: 01
 slug: learn
 
+# SOLUTION HOMEPAGE CONTENT
 page-logo: visual_learn.png
+excerpt: |
+  Learn how to help customers with severely capped Dev/Test environments expand their capacity by alleviating cost limitations. Alleviating costs will allow developers to increase productivity and leverage modern, agile, DevOps on Z.
+button: Learn more
 
+# PAGE CONTENT
 page-sections:
-# PAGE SECTION CHEATSHEET
-
-## type: intro, alert, emphasis, [missing]
-#### intro - This is the first block of content on a Solution Step page. It does not have a title (the 'page-title' parameter above handles this).
-#### alert - This will create a white box with a purple background and purple text. This is a convenient way to warn a reader to something important in this process
-#### emphasis - This creates a purple box with black text. It is a useful way to highlight content that may have an interactive component or needs to stand out.
-#### [missing] - If no "type" parameter is listed, this page section will be a normal, borderless area of content.
-
-## title: [text]
-#### This is a space for a large <h3> title (ex: "Continue Learning" on /cpricing/salesguides/devtest/learn/). This will be inserted at the top of this Page Section.
-#### NOTE: For smaller, inline <h4> titles, type those inside the "text" parameter with "#### " and " ####" around them. They will be populated with the rest of the Page Section text.
-
-## text: |
-#    [text]
-#### This area starts with a space an pipe character ("|") and immediately goes to a new line. This tells Jekyll to treat this parameter as markdown. Every line after the "|" needs to be indented twice in order for YAML to know that you are not trying to start a new parameter. Enter content formatted as markdown (specifically kramdown).
-
 - type: intro
   text: |
     Many clients are operating with severely capped Development and Test environments compromising best practices.

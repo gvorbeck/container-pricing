@@ -6,6 +6,9 @@ weight: 04
 slug: seal
 
 page-logo: visual_seal.png
+excerpt: |
+  Access and complete the contract for your customer to review, sign, and send back.
+button: Start contract
 
 page-sections:
 # PAGE SECTION CHEATSHEET

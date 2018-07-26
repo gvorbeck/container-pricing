@@ -6,6 +6,9 @@ weight: 03
 slug: prepare
 
 page-logo: visual_prepare.png
+excerpt: |
+  Get the checklist of all the items you need to put together a Dev/ Test quote. Understand all the steps to calculating a quote: Set the baseline, calculate the IPLA entitlements, complete and submit the approval spreadsheet.
+button: Dive deeper
 
 page-sections:
 # PAGE SECTION CHEATSHEET

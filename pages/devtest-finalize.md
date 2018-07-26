@@ -6,6 +6,9 @@ weight: 05
 slug: finalize
 
 page-logo: visual_finalize.png
+excerpt: |
+  Work with techline to populate a Solution ID that your customer will use to identify the container in the reporting. Work with techline to start billing the customer.
+button: Learn more
 
 page-sections:
 # PAGE SECTION CHEATSHEET
