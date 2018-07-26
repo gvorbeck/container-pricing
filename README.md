@@ -29,6 +29,19 @@ The CPGS uses a standard [Jekyll](https://jekyllrb.com) setup. Our code is mostl
 ## YAML setup
 The YAML for CPGS 2.0 is a lot more dynamic. This allows the editor many more options for how content gets entered and displayed on the site, however there is a greater potential for error - so here I will explain these pages' layouts and intricacies.
 
+For terminology's sake, I will refer to four different page types while I discuss this site's YAML implementation:
+* __Homepage__ - This is the CPGS homepage (ex: https://pages.github.ibm.com/cpricing/salesguides/)
+* __Solution Homepage(s)__ - These are the landing pages for each Solution (ex: https://pages.github.ibm.com/cpricing/salesguides/devtest/)
+* __Solution Step__ pages - These are the pages devoted to individual steps within a Solution (ex: https://pages.github.ibm.com/cpricing/salesguides/devtest/learn/)
+* __Help__ pages - 404, FAQs, and Contact Us pages.
+
+In general these page's YAML will be set up with the following sections:
+* __Admin Settings__ - YAML parameters that are related to the development and functioning of the site. Changing these parameter's values will greatly alter how several parts of the site work. Edit these carefully.
+
+* __Parent-page Content__ - Many pages feed eachother in CPGS 2.0. For instance the Homepage gets the content for the __Dive into a solution__ section directly from the Solution Homepage's markdown file. This is done to keep content together and not spread around several files. An editor should not have to remember that changing the content for devtest is _also_ required within the Homepage's markdown. Instead, the homepage gets all its info for devtest _directly_ from the devtest Solution Homepage markdown file. Simple.
+
+* __Page Content__ - This is where you'll find the parameters for content appearing directly on the page. Most editorial work will be done here.
+
 <a name="yaml-homepage"></a>
 ### Homepage YAML Setup
 __\_pages/homepage.md__ - This is the CPGS homepage. Its YAML begins as such:
