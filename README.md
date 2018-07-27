@@ -105,3 +105,8 @@ For the layout template, the `solution-step` value tells Jekyll to build this pa
 The `title` parameter takes advantage of markdown formatting to set where the colored background appears on the title (On the __Learn about the solution__ title, "the solution" is in white surrounded by a pink background - coming directly from the `_` characters in this parameter).
 
 The `weight` parameter is set to `01` to show the order in which this page should be listed in the navigation/hamburger menu. Make sure not to duplicate numbers here or the nav menu will get very complicated to read.
+
+#### Parent-page Content
+On the Solution Homepages, each step in the process has a `logo`, `excerpt`, and `button`. That content is found here. Changing anything here will not show up on the Solution Step page. Instead this content feeds directly to the Step's Solution Hompage.
+
+#### Page Content
