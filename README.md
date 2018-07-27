@@ -44,25 +44,26 @@ In general these page's YAML will be set up with the following sections:
 
 <a name="yaml-homepage"></a>
 ### Homepage YAML Setup
-__\_pages/homepage.md__ - This is the CPGS homepage. Its YAML begins as such:
+__\_pages/homepage.md__ - This is the CPGS homepage markdown file.
+
+#### Admin Settings
 ```
 layout: home
 permalink: /
 slug: home
 ```
-These are admin settings and changing them is not recommended. `layout` tells Jekyll which layout template to use (here we are using the "home" layout). `permalink` tells Jekyll what URL this page uses (__CAUTION:__ Changing this value can cause this page to crash). Finally, `slug` is a CSS class that gets entered into the page and allows CSS to know what styles to apply to this page.
+These settings control the page's layout template, url, and CSS slug. Be careful when changing these settings.
 
-Next, `banners` is the parameter that controls the homepage's "pathway" banner. It has three lists inside it that are for mobile/tablet/desktop versions (controlled by the `size` parameter).
+#### Banner
+The homepage banner is controlled via the `banner` parameter. The various `size` parameters are for the different width layouts.
 
-Finally, the `page-sections` parameter. The homepage has two sections, the __What's new__ and __Dive into a solution__ sections. Each page section on the homepage behaves differently as they are both designed to show very different content, unlike page sections found in other parts of the site.
+#### Page content
 
-#### What's new
-Of the three parameters (`title`, `component`, `text`), `component` is the only one best left alone as it is used for CSS styling. `title` and `text` are pretty self-explanatory, but `text` is formatted to allow markdown-format content. In fact, __any paramter that starts with the first line as a pipe (|) is markdown-ready__.
+For the __What's new__ section, the `title` parameter is self-explanatory. The `component` parameters for both __What's new__ and __Dive into a solution__ are for CSS styles and template logic. Changing the value of this parameter will remove most of the styles or content of that section, so it is not recommended.
 
-#### Dive into a solution
-This page section is largely automated or controlled elsewhere. CPGS searches for any page using the layout `solution-home` and lists them here. Devtest's homepage is a good example. It uses the correct layout template and so the "Dive" section lists it here. 
+The __What's new__ `page-section` has a markdown `text` parameter for updates.
 
-On the homepage, each solution listed in the __Dive__ section has a thumbnail icon, a title, and a brief excerpt. All three of these items are contained within that solution's homepage markdown file (ex: _pages/devtest-home.md) within the parameters `title`, `thumbnail`, and `excerpt`. Editing these solution homepage parameters will reflect on the CGPS homepage when the site rebuilds.
+The __Dive into a solution__ section content is retrieved from Solution Homepage markdown files, so there isn't much here.
 
 <a name="yaml-solution-homepage"></a>
 ### Solution Homepage(s) YAML Setup
