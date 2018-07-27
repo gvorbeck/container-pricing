@@ -66,8 +66,8 @@ The __What's new__ `page-section` has a markdown `text` parameter for updates.
 The __Dive into a solution__ section content is retrieved from Solution Homepage markdown files, so there isn't much here.
 
 <a name="yaml-solution-homepage"></a>
-### Solution Homepage(s) YAML Setup
-__\_pages/[SOLUTION]-home.md__ - These are the landing/homepages for individual solutions. (ex: `_pages/devtest-home.md`)
+### Solution Homepages' YAML Setup
+__\_pages/[SOLUTION]-home.md__ - These are the landing/homepages for individual solutions (ex: `_pages/devtest-home.md`).
 
 #### Admin Settings
 ```
@@ -87,3 +87,21 @@ The `weight` parameter is part of the infrastructure that populates the CPGS nav
 
 #### Parent-page Content
 The last parameters on Solution Homepages are `thumbnail` and `excerpt`. These are only output on the CPGS Homepage and control what is seen in the __Dive into a solution__ section.
+
+<a name="yaml-step-pages"></a>
+### Solution Step Pages' YAML Setup
+__\_pages/[SOLUTION]-[SHORT-TITLE].md__ - These are the pages for each Solution Step (ex: `_pages/devtest-learn.md`).
+
+#### Admin Settings
+```
+layout: solution-step
+title: Learn about _the solution_
+permalink: /devtest/learn/
+weight: 01
+slug: learn
+```
+For the layout template, the `solution-step` value tells Jekyll to build this page out as a Solution Step. It, the `permalink`, and `slug` parameters are the same as before.
+
+The `title` parameter takes advantage of markdown formatting to set where the colored background appears on the title (On the __Learn about the solution__ title, "the solution" is in white surrounded by a pink background - coming directly from the `_` characters in this parameter).
+
+The `weight` parameter is set to `01` to show the order in which this page should be listed in the navigation/hamburger menu. Make sure not to duplicate numbers here or the nav menu will get very complicated to read.
