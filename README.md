@@ -12,7 +12,7 @@ The new home of Container Pricing solutions.
 <a name="code-org"></a>
 ## Code Organization
 The CPGS uses a standard [Jekyll](https://jekyllrb.com) setup. Our code is mostly laid out in 6 places:
-* __pages/__ - This is where content for every standard page of the CPGS is located (excluding the 404 page found in the root directory as `404.html`. Inside here are a series of `.md` ([Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)) files, named in a way that helps the editor/developer know which page of the site it controls. The names of these files do not affect any URLs or functionality of the live site.
+* __pages/__ - This is where content for every standard page of the CPGS is located (excluding the 404 page found in the root directory as `404.html`). Inside here are a series of `.md` ([Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)) files, named in a way that helps the editor/developer know which page of the site it controls. The names of these files do not affect any URLs or functionality of the live site.
 
 * __\_config.yml__ - Global parameters like the site's title, description, email address, etc. are housed here. __EDIT THIS FILE CAREFULLY!__ Changes to the `baseurl` or `url` parameters can crash the site so be careful to maintain YAML syntax so that Jekyll knows how to rebuild the site when you are done editing this file.
 
