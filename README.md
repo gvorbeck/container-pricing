@@ -79,11 +79,11 @@ slug: devtest
 ```
 Again, the `layout` parameter controls the layout template for this page. This parameter value is what causes this solution to be listed on the CPGS Homepage, since the Homepage looks for all other pages with `solution-home` as their layout template before listing the results on the __Dive into a solution__ section.
 
-`title` is the title of the solution. The CPGS homepage's markdown file did not have this as it uses the site's title (found in `_config.yml`) for its title.
+`title` is the title of the solution. The CPGS Homepage's markdown file did not have this as it uses the site's title (found in `_config.yml`) for its title.
 
-`permalink` and `slug` work exactly as described above in the homepage markdown file.
+`permalink` and `slug` work exactly as described above in the CPGS Homepage markdown file.
 
-The `weight` parameter is part of the infrastructure that populates the CPGS navigation/hamburger menu. Solution Homepages should always have a `weight` value of `0`. Any other value will break the CPGS navigation menu.
+The `weight` parameter is part of the infrastructure that populates the CPGS navigation/hamburger menu. Solution Homepages should always have a `weight` value of `00`. Any other value will break the CPGS navigation menu.
 
 #### Parent-page Content
 The last parameters on Solution Homepages are `thumbnail` and `excerpt`. These are only output on the CPGS Homepage and control what is seen in the __Dive into a solution__ section.
