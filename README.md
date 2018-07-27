@@ -38,7 +38,7 @@ For terminology's sake, I will refer to four different page types while I discus
 In general these page's YAML will be set up with the following sections:
 * __Admin Settings__ - YAML parameters that are related to the development and functioning of the site. Changing these parameter's values will greatly alter how several parts of the site work. Edit these carefully.
 
-* __Parent-page Content__ - Many pages feed eachother in CPGS 2.0. For instance the Homepage gets the content for the __Dive into a solution__ section directly from the Solution Homepage's markdown file. This is done to keep content together and not spread around several files. An editor should not have to remember that changing the content for devtest is _also_ required within the Homepage's markdown. Instead, the homepage gets all its info for devtest _directly_ from the devtest Solution Homepage markdown file. Simple.
+* __Parent-page Content__ - Many pages feed eachother in CPGS 2.0. For instance, the Homepage gets the content for the __Dive into a solution__ section directly from the Solution Homepage's markdown file. This is done to keep content together and not spread around several files. An editor should not have to remember that changing the content for devtest is _also_ required within the Homepage's markdown. Instead, the homepage gets all its info for devtest _directly_ from the devtest Solution Homepage markdown file. Simple.
 
 * __Page Content__ - This is where you'll find the parameters for content appearing directly on the page. Most editorial work will be done here.
 
@@ -55,7 +55,7 @@ slug: home
 These settings control the page's layout template, url, and CSS slug. Be careful when changing these settings.
 
 #### Banner
-The homepage banner is controlled via the `banner` parameter. The various `size` parameters are for the different width layouts.
+The homepage banner is controlled via the `banner` parameter. The various `size` sub-parameters are for the different width layouts.
 
 #### Page content
 
