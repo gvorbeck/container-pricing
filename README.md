@@ -67,7 +67,9 @@ The __Dive into a solution__ section content is retrieved from Solution Homepage
 
 <a name="yaml-solution-homepage"></a>
 ### Solution Homepage(s) YAML Setup
-Solutions listed on the CPGS will each have their own respective homepage for listing the steps associated with completing their processes. The YAML for a Solution Homepage starts similarly to the CPGS Homepage, which some important differences:
+__\_pages/[SOLUTION]-home.md__ - These are the landing/homepages for individual solutions. (ex: `_pages/devtest-home.md`)
+
+#### Admin Settings
 ```
 layout: solution-home
 title: Application Development and Test Solution
@@ -75,14 +77,13 @@ permalink: /devtest/
 weight: 00
 slug: devtest
 ```
-Again, the `layout` parameter tells Jekyll to use the `solution-home` layout template for this page. This parameter value is what causes this solution to be listed on the homepage, since the homepage looks for all the pages with `solution-home` as their layout template before listing the results on the __Dive into a solution__ section.
+Again, the `layout` parameter controls the layout template for this page. This parameter value is what causes this solution to be listed on the CPGS Homepage, since the Homepage looks for all other pages with `solution-home` as their layout template before listing the results on the __Dive into a solution__ section.
 
 `title` is the title of the solution. The CPGS homepage's markdown file did not have this as it uses the site's title (found in `_config.yml`) for its title.
 
-`permalink` and `slug` work exactly as described above in the homepage markdown file and changing them in inadvised.
+`permalink` and `slug` work exactly as described above in the homepage markdown file.
 
-The `weight` parameter is part of the infrastructure that populates the CPGS navigation menu. Solution Homepages should always have a `weight` value of `0`. Any other value will break the CPGS navigation menu.
+The `weight` parameter is part of the infrastructure that populates the CPGS navigation/hamburger menu. Solution Homepages should always have a `weight` value of `0`. Any other value will break the CPGS navigation menu.
 
-As described in the Hompage YAML Setup section, the following parameters of `thumbnail` and `excerpt` are only output on the CPGS homepage and control whaty is seen in the __Dive into a solution__ section.
-
-Finally the list of `page-sections`. These are the various steps for the solution the user is on. Their paramters should be pretty self-explanatory.
+#### Parent-page Content
+The last parameters on Solution Homepages are `thumbnail` and `excerpt`. These are only output on the CPGS Homepage and control what is seen in the __Dive into a solution__ section.
