@@ -30,7 +30,7 @@ TO-DO: use type for content__block class names, like with solution step pages.
         {% if section.text %}
             <div class="content__text">{{ section.text | markdownify }}</div>
         {% endif %}
-        {% if section.type == 'page-listing' %}
+        {% if section.component == 'dive' %}
           <ul class="content__solutions solutions">
             {% for page in site.pages %}
                 {% if page.layout == 'solution-home' %}
