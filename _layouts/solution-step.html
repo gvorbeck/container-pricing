@@ -35,7 +35,7 @@ layout: default
           <ul class="content__accordion accordion__wrapper">
             {% for item in section.items %}
             <li class="accordion__item">
-              <button class="accordion__button"><h4 class="accordion__title">{{ item.title }}</h4></button>
+              <button class="accordion__button {% if forloop.first == true %}open{% endif %}"><h4 class="accordion__title">{{ item.title }}</h4></button>
               <div class="accordion__content">{{ item.text | markdownify }}</div>
             </li>
             {% endfor %}
