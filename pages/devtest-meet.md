@@ -49,41 +49,25 @@ page-sections:
 
     Use this presentation first.  If they are already familiar with Container Pricing you can skim through this presentation with them.
 
-    [Download PPT](https://www.google.com)
+    [Download PPT](https://www.google.com){: .presentation}
 
     #### Executive overview ####
 
     Use this presentation for the majority of the meeting. Take questions as opportunities to add value to the presentation.
 
-    [Download PPT](https://google.com)
+    [Download PPT](https://google.com){: .presentation}
 
     #### DevTest charts ####
 
     Customize the presentation to reflect your clients environment.  You can change the peak hours, or the size of the machines.
 
-    [Download excel](https://google.com)
+    [Download excel](https://google.com){: .spreadsheet}
 
     #### DevTest contract #####
 
     Become familiar with the contract. You may want to leave a copy of this contract with your client as guidance.
 
-    [Download contract](https://google.com)
-- type: emphasis
-  title: Watch these videos first
-  text: |
-    These sales training videos with walk your through the two key Container Pricing presentations you would give your clients.
-
-    VIDEO PLACEHOLDER
-
-    #### Executive summary ####
-
-    Sales enablement training of the executive summary of Container Pricing for IBM Z.
-
-    VIDEO PLACEHOLDER
-
-    #### Executive overview ####
-
-    Sales enablement training of the executive overview of Container Pricing for IBM Z.
+    [Download contract](https://google.com){: .document}
 - type: alert
   text: |
     Your goal for this first meeting is for the client to agree to send you their SCRT reports so that you can move to the next step.
