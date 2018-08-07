@@ -110,3 +110,10 @@ The `weight` parameter is set to `01` to show the order in which this page shoul
 On the Solution Homepages, each step in the process has a `logo`, `excerpt`, and `button`. That content is found here. Changing anything here will not show up on the Solution Step page. Instead this content feeds directly to the Step's Solution Hompage.
 
 #### Page Content
+The content for Solution Step pages is contained within the `page-sections` parameter. Each item in `page-sections` controls a block of the content. These "content blocks" can be presented in several ways:
+* `type: accordion` - This creates collapsed content sections that can be expanded to reveal content. Content blocks set as accordions need a sub-parameter named `items` to hold a list of accordion folds, each with their own respective `title` and `text` parameters. (See `/pages/devtest-finalize.md` for example).
+* `type: alert` - This will create a white box with a purple border and purple text. This is a convenient way to warn a reader to something important in this process.
+* `type: emphasis` - This creates a purple box with black text. It is a useful way to highlight content that may have an interactive component or needs to stand out.
+* `type: intro` - This is the first block of content on a Solution Step page. It does not have a title (the `title` parameter in the Admin Settings section handles this). 
+* `type: outro` - This is the last block of content on a Solution Step page.
+* [no type listed] - If no `type` parameter is listed, this page section will be a normal, borderless area of content.
