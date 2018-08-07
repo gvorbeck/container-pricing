@@ -69,7 +69,7 @@ page-sections:
 
     You will need the completed CPS spreadsheet and completed contract addendum.
 
-    ![alt text]( /cpricing/devtest/assets/image1.jpg )
+    ![Hi Zach](/cpricing/salesguides/assets/images/visual_zachemail.png)
 
     Please email those two documents to Zach Miller at [zmiller@us.ibm.com](mailto:zmiller@us.ibm.com) copying [cpricing@us.ibm.com](mailto:cpricing@us.ibm.com) for final approval.
 - type: outro

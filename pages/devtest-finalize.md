@@ -35,7 +35,7 @@ page-sections:
     text: |
       The signed contract, pricing approval and completed CPS spreadsheet needs to be sent to the Q2C team (formally called STS) and Techline for processing.
 
-      ![alt text]( /cpricing/devtest/assets/image1.jpg )
+      ![Hi Patricia](/cpricing/salesguides/assets/images/visual_patemail.png)
 
       First, send the documents to Patricia Hadbavna from Q2C, copying the Container Pricing team to ensure a smooth process:
       * [phadbavn@sk.ibm.com](mailto:phadbavn@sk.ibm.com)
@@ -73,5 +73,5 @@ page-sections:
   text: |
     You've completed the deal.
 
-    ![alt text]( /cpricing/devtest/assets/image1.jpg )
+    ![Congratulations](/cpricing/salesguides/assets/images/visual_congrats.png)
 ---
