@@ -31,13 +31,13 @@ page-sections:
   text: |
     These sales training videos with walk your through the two key Container Pricing presentations you would give your clients.
 
-    VIDEO PLACEHOLDER
+    [![Video Thumbnail](/cpricing/salesguides/assets/images/video-thumb.png)](https://example.com){: .video-thumb}
 
     #### Executive summary ####
 
     Sales enablement training of the executive summary of Container Pricing for IBM Z.
 
-    VIDEO PLACEHOLDER
+    [![Video Thumbnail](/cpricing/salesguides/assets/images/video-thumb.png)](https://example.com){: .video-thumb}
 
     #### Executive overview ####
 
