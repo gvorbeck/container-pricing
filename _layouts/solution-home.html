@@ -28,7 +28,7 @@ parameter is captured as a liquid variable and then passed to the liquid include
             {{- step.button -}}
         {%- endcapture -%}
         {%- capture section_link -%}
-            {{- site.baseurl -}}/{{- step.permalink -}}
+            {{- site.baseurl -}}{{- step.permalink -}}
         {%- endcapture -%}
         {%- include inc-solution-section.html title=section_title intro=section_intro button=section_button image=section_image link=section_link -%}
     {%- endif -%}
