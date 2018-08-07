@@ -59,6 +59,7 @@
                     cursor: pointer;
                     outline: none;
                     position: relative;
+                    text-align: left;
 
                     &::before {
                         @include pseudo;
