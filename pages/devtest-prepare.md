@@ -11,23 +11,6 @@ excerpt: |
 button: Dive deeper
 
 page-sections:
-# PAGE SECTION CHEATSHEET
-
-## type: intro, outro, alert, emphasis, [missing]
-#### intro - This is the first block of content on a Solution Step page.
-#### outro - This is the last block of content on a Solution Step page and included a navigation link to the next step.
-#### alert - This will create a white box with a purple background and purple text. This is a convenient way to warn a reader to something important in this process
-#### emphasis - This creates a purple box with black text. It is a useful way to highlight content that may have an interactive component or needs to stand out.
-#### [missing] - If no "type" parameter is listed, this page section will be a normal, borderless area of content.
-
-## title: [text]
-#### This is a space for a large <h3> title (ex: "Continue Learning" on /cpricing/salesguides/devtest/learn/). This will be inserted at the top of this Page Section.
-#### NOTE: For smaller, inline <h4> titles, type those inside the "text" parameter with "#### " and " ####" around them. They will be populated with the rest of the Page Section text.
-
-## text: |
-#    [text]
-#### This area starts with a space an pipe character ("|") and immediately goes to a new line. This tells Jekyll to treat this parameter as markdown. Every line after the "|" needs to be indented twice in order for YAML to know that you are not trying to start a new parameter. Enter content formatted as markdown (specifically kramdown).
-
 - type: intro
   title: Engage techline
   text: |
@@ -96,8 +79,4 @@ page-sections:
   title: "Next Steps:"
   text: |
     Once you have built your internal team and collected these items, you may need to iterate through the next step a few times as part of the client negotiations.
-
-  outro-link:
-    text: Seal the _deal_
-    href: seal/
 ---

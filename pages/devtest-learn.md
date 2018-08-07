@@ -65,7 +65,4 @@ page-sections:
   title: "Next Steps:"
   text: |
     Customize these presentations and meet with your client. Include a senior representation from development who understands the pain points caused by severely capped DevTest environments.
-  outro-link:
-    text: Meet with _your client_
-    href: meet/
 ---

@@ -15,22 +15,6 @@ excerpt: |
 button: Start customizing
 
 page-sections:
-# PAGE SECTION CHEATSHEET
-
-## type: intro, alert, emphasis, [missing]
-#### intro - This is the first block of content on a Solution Step page. It does not have a title (the 'page-title' parameter above handles this).
-#### alert - This will create a white box with a purple background and purple text. This is a convenient way to warn a reader to something important in this process
-#### emphasis - This creates a purple box with black text. It is a useful way to highlight content that may have an interactive component or needs to stand out.
-#### [missing] - If no "type" parameter is listed, this page section will be a normal, borderless area of content.
-
-## title: [text]
-#### This is a space for a large <h3> title (ex: "Continue Learning" on /cpricing/salesguides/devtest/learn/). This will be inserted at the top of this Page Section.
-#### NOTE: For smaller, inline <h4> titles, type those inside the "text" parameter with "#### " and " ####" around them. They will be populated with the rest of the Page Section text.
-
-## text: |
-#    [text]
-#### This area starts with a space an pipe character ("|") and immediately goes to a new line. This tells Jekyll to treat this parameter as markdown. Every line after the "|" needs to be indented twice in order for YAML to know that you are not trying to start a new parameter. Enter content formatted as markdown (specifically kramdown).
-
 - type: intro
   text: |
     Frame the conversation around removing the limitations on DevTest that are currently imposed due to cost to allow our customers to focus on the value of having a modern, agile, DevOps environment on the platform.
@@ -80,9 +64,5 @@ page-sections:
 - type: outro
   title: "Next Steps:"
   text: |
-    By this point, your client should be very excited about getting their very own DevTest container. You are now ready to move to the below 'Prepare' stage, where you will work with Techline to build their container
-
-  outro-link:
-    text: Prepare your _offering_
-    href: prepare/
+    By this point, your client should be very excited about getting their very own DevTest container. You are now ready to move to the below 'Prepare' stage, where you will work with Techline to build their container.
 ---
