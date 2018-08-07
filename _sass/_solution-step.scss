@@ -45,6 +45,56 @@
                 padding: 0.9375rem;
             }
 
+            &.accordion {
+
+                .accordion__wrapper {
+                    list-style-type: none;
+                    margin: 0;
+                }
+
+                .accordion__button {
+                    padding: 0 0 0 1.625rem;
+                    border: none;
+                    background: none;
+                    cursor: pointer;
+                    outline: none;
+                    position: relative;
+
+                    &::before {
+                        @include pseudo;
+                        width: 8px;
+                        height: 8px;
+                        border-right: 2px solid #000000;
+                        border-bottom: 2px solid #000000;
+                        transform: rotate(-45deg);
+                        transition: all 0.5s ease-out;
+                        top: 0.1875rem;
+                        left: 0;
+                    }
+
+                    &.open::before {
+                        border-color: $color--a8;
+                        transform: rotate(45deg);
+                        top: 0;
+                    }
+                }
+
+                .accordion__title {
+                    font-size: 1rem;
+                    line-height: 1;
+                    margin: 0;
+                }
+
+                .accordion__content {
+                    display: none;
+                    padding: 0.9375rem 0 0;
+                }
+
+                .accordion__item:first-child .accordion__content {
+                    display: block;
+                }
+            }
+
             &.outro {
 
                 .content__title {
