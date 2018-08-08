@@ -28,11 +28,12 @@ page-sections:
 - title: What's new
   component: whats-new
   text: |
-    * _12/24/18_ - Aliquam sed leo vitae arcu fermentum fermentum bibendum vel lectus. Vestibulum dictum nulla nulla, a ultricies sem sodales nec. Maecenas blandit ante vel nunc maximus malesuada.
-    * _10/20/84_ - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vel faucibus mi. Nam felis velit, sodales eget semper sed, convallis efficitur nunc.
-    
+    * _March 12, 2018_ Aliquam sed leo vitae arcu fermentum fermentum bibendum vel lectus. Vestibulum dictum nulla nulla, a ultricies sem sodales nec. Maecenas blandit ante vel nunc maximus malesuada.
+    * _10/20/84_ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vel faucibus mi. Nam felis velit, sodales eget semper sed, convallis efficitur nunc.
+
 #   EXAMPLE:
-#    * _5/16/12_ - Curabitur consequat purus at lorem porta, eu vulputate dolor consectetur. Vestibulum sodales sagittis felis, nec viverra ex fringilla non.
+#    Placing underscores around the date allows CSS styles to position them around the content.
+#    * _5/16/12_ Curabitur consequat purus at lorem porta, eu vulputate dolor consectetur. Vestibulum sodales sagittis felis, nec viverra ex fringilla non.
 
   # DIVE INTO A SOLUTION
 - title: Dive into a solution

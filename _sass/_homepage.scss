@@ -66,6 +66,20 @@
             }
         }
 
+        .whats-new {
+            li {
+                position: relative;
+                padding-bottom: 1.625rem;
+            }
+
+            em {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                line-height: 1;
+            }
+        }
+
         .dive {
             .solutions {
                 list-style-type: none;
