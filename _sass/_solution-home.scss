@@ -45,7 +45,6 @@
             }
 
             $section-colors: '#FFFFFF' $color--eb $color--8c '#FFFFFF' $color--a8;
-            // $after-colors: $color--a8 '#FFFFFF' $color--eb $color--8c '#FFFFFF';
             @for $i from 1 through 5 {
                 $a: 1;
                 @if $i != 1 {
@@ -54,9 +53,6 @@
 
                 &:nth-child(5n+#{$i}) {
                     background-color: #{nth($section-colors, $i)};
-                    @if $i != 1 {
-                        border-top: 1px solid #{nth($section-colors, $a)};
-                    }
                     @if $i == 3 or $i == 5 {
                         color: #FFFFFF;
 
