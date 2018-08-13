@@ -15,12 +15,12 @@ banners:
   # TABLET BANNER
   - size: medium
     images:
-    - image1.jpg
-    - image2.jpg
+    - line-1.png
+    - line-2.png
   # DESKTOP BANNER
   - size: large
     images:
-    - image1.jpg
+    - image1.png
 
 # PAGE CONTENT
 page-sections:

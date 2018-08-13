@@ -37,6 +37,18 @@
                         display: block;
                     }
                 }
+
+                @include media(m) {
+                    &.size-medium {
+                        display: block;
+                    }
+                }
+
+                @include media(l) {
+                    &.size-large {
+                        display: block;
+                    }
+                }
             }
 
             .banner__item {
@@ -55,6 +67,7 @@
             position: relative;
             padding-bottom: 1.5625rem;
             margin-bottom: 0.9375rem;
+            line-height: 1;
 
             &::after {
                 @include pseudo;
@@ -103,6 +116,38 @@
                     font-weight: bold;
                     margin: 0.9375rem 0;
                 }
+            }
+        }
+    }
+
+    @include media(ml) {
+
+        .header {
+            padding: 2.5rem 2.5rem 4rem;
+
+            .header__title {
+                @include header-1;
+            }
+
+            .header__subtitle {
+                @include header-2;
+                line-height: 1.75rem;
+            }
+        }
+
+        .content {
+
+            .banner {
+                margin-bottom: 3.125rem;
+            }
+
+            .content__title {
+                @include header-1;
+                line-height: 1;
+            }
+
+            .whats-new li {
+                padding-bottom: 1.9375rem;
             }
         }
     }
