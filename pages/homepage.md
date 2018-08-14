@@ -20,7 +20,7 @@ banners:
   # DESKTOP BANNER
   - size: large
     images:
-    - image1.png
+    - line-1.png
 
 # PAGE CONTENT
 page-sections:
