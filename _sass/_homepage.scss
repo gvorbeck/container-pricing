@@ -199,7 +199,7 @@
                     grid-row-start: 1;
                 }
 
-                .solutions__excerpt {
+                .solutions__excerpt p {
                     @include header(3);
                     line-height: rem(30px);
                 }
