@@ -1,27 +1,35 @@
-@mixin header-1() {
-    font-size: 2rem;
-    line-height: 2.625rem;
-    font-weight: bold;
+@function rem($size) {
+  $remSize: $size / 16px;
+  @return #{$remSize}rem;
 }
 
-@mixin header-2() {
-    font-size: 1.5rem;
-    line-height: 2rem;
-    font-weight: bold;
-}
+@mixin header($size) {
+    $headerMap: (
+        1: rem(32px),
+        2: rem(24px),
+        3: rem(20px),
+        4: rem(20px)
+    );
+    @if map-has-key($headerMap, $size) {
+        font-size: map-get($headerMap, $size);
+    } @else {
+        font-size: rem(16px);
+    }
 
-@mixin header-4() {
-    font-size: 1.25rem;
-    line-height: 1.875rem;
-    font-weight: bold;
+    @if $size == 3 {
+        font-weight: normal;
+    } @else {
+        font-weight: bold;
+    }
 }
 
 @mixin button($color: 'black') {
     text-decoration: none;
-    padding: 0.3125rem 0.625rem;
-    margin-top: 0.9375rem;
-    border-width: 0.0625rem;
+    padding: rem(5px) rem(10px);
+    margin-top: rem(15px);
+    border-width: rem(1px);
     border-style: solid;
+    display: inline-block;
 
     @if $color == 'white' {
         border-color: #FFFFFF;
@@ -51,6 +59,11 @@
             background-color: $color--8c;
             color: #FFFFFF;
         }
+    }
+
+    @include media(m) {
+        @include header(3);
+        margin-top: rem(30px);
     }
 }
 

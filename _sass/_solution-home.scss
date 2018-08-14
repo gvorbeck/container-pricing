@@ -3,7 +3,8 @@
     .header {
 
         .header__subtitle {
-            @include header-2;
+            @include header(2);
+            line-height: rem(32px);
         }
     }
 
@@ -16,7 +17,6 @@
             flex-direction: column;
             position: relative;
             margin-bottom: 0;
-            padding-bottom: 1.875rem;
 
             &:nth-child(even) {
                 align-items: flex-end;
@@ -25,7 +25,7 @@
 
             &:nth-child(n+2)::before {
                 @include pseudo;
-                top: -0.03125rem;
+                top: rem(-0.5px);
                 right: 0;
                 width: 100vw;
                 height: $dimension;
@@ -41,7 +41,8 @@
                 clip-path: polygon(
                     100% 0,
                     0 0,
-                    0 100%);
+                    0 100%
+                );
             }
 
             $section-colors: '#FFFFFF' $color--eb $color--8c '#FFFFFF' $color--a8;
@@ -70,16 +71,18 @@
 
             & > span {
                 position: relative;
+                display: flex;
+                flex-direction: column;
             }
         }
 
         .content__image {
-            max-width: 7.1875rem;
+            max-width: rem(115px);
         }
 
         .content__title {
-            margin: 0.9375rem 0;
-            @include header-4;
+            margin: rem(15px) 0;
+            @include header(4);
         }
     }
 
@@ -89,7 +92,7 @@
         .content {
 
             .content__block {
-                $dimension: 1.875rem;
+                $dimension: rem(30px);
                 overflow: hidden;
 
                 & > span {
@@ -113,7 +116,7 @@
                 }
 
                 &::after {
-                    $dimension: 0.3125rem;
+                    $dimension: rem(5px);
                     @include pseudo;
                     width: $dimension;
                     height: 9999px;
