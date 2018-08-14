@@ -60,7 +60,7 @@ page-sections:
 
     Your goal for this first meeting is for the client to agree to send you their SCRT reports so that you can move to the next step.
 
-    [Download template](https://google.com)
+    [Download template](https://google.com){: .document}
 - type: outro
   title: "Next Steps:"
   text: |
