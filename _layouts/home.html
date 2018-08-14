@@ -35,11 +35,12 @@ TO-DO: use type for content__block class names, like with solution step pages.
             {% for page in site.pages %}
                 {% if page.layout == 'solution-home' %}
                   <li class="solutions__item">
-                      <a class="solutions__link" title="{{page.title}}" href="{{site.baseurl}}{{page.permalink}}">
-                          <img class="solutions__image" alt="{{page.title}}" src="{{site.baseurl}}/assets/images/{{page.thumbnail}}">
-                          <h2 class="solutions__title">{{- page.title -}}</h2>
-                          <div class="solutions__excerpt">{{- page.excerpt | markdownify -}}</div>
-                      </a>
+                    <img class="solutions__image" alt="{{page.title}}" src="{{site.baseurl}}/assets/images/{{page.thumbnail}}">
+                    <div>
+                        <h2 class="solutions__title">{{- page.title -}}</h2>
+                        <div class="solutions__excerpt">{{- page.excerpt | markdownify -}}</div>
+                        <a class="content__link button" href="{{site.baseurl}}{{page.permalink}}" title="{{page.title}}">Start exploring</a>
+                    </div>
                   </li>
                 {% endif %}
             {% endfor %}
