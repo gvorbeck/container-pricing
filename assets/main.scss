@@ -309,6 +309,11 @@ body:not(.page__home) .page__header {
             background-position: 0 -4.625rem;
         }
     }
+
+    @include media(ml) {
+        $dimension: 3.75rem;
+        padding: 0 $dimension;
+    }
 }
 
 @import "homepage";

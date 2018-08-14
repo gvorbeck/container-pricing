@@ -121,34 +121,55 @@
     }
 
     @include media(ml) {
+        $dimension: 3.75rem;
 
         .header {
-            padding: 2.5rem 2.5rem 4rem;
+            padding: $dimension;
 
             .header__title {
                 @include header-1;
+                margin-bottom: $dimension / 2;
             }
 
             .header__subtitle {
-                @include header-2;
-                line-height: 1.75rem;
+                @include header-4;
             }
         }
 
         .content {
 
             .banner {
-                margin-bottom: 3.125rem;
-            }
-
-            .content__title {
-                @include header-1;
-                line-height: 1;
-            }
-
-            .whats-new li {
-                padding-bottom: 1.9375rem;
+                margin-bottom: $dimension;
             }
         }
+
+        // .header {
+        //     padding: 2.5rem 2.5rem 4rem;
+        //
+        //     .header__title {
+        //         @include header-1;
+        //     }
+        //
+        //     .header__subtitle {
+        //         @include header-2;
+        //         line-height: 1.75rem;
+        //     }
+        // }
+        //
+        // .content {
+        //
+        //     .banner {
+        //         margin-bottom: 3.125rem;
+        //     }
+        //
+        //     .content__title {
+        //         @include header-1;
+        //         line-height: 1;
+        //     }
+        //
+        //     .whats-new li {
+        //         padding-bottom: 1.9375rem;
+        //     }
+        // }
     }
 }
