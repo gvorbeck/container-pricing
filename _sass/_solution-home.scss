@@ -11,39 +11,9 @@
     .content {
 
         .content__block {
-            $dimension: 12vw;
             display: flex;
-            align-items: flex-start;
             flex-direction: column;
             position: relative;
-            margin-bottom: 0;
-
-            &:nth-child(even) {
-                align-items: flex-end;
-                text-align: right;
-            }
-
-            &:nth-child(n+2)::before {
-                @include pseudo;
-                top: rem(-0.5px);
-                right: 0;
-                width: 100vw;
-                height: $dimension;
-                background: red;
-                clip-path: polygon(
-                    0 0,
-                    100% 0,
-                    100% 100%
-                );
-            }
-
-            &:nth-child(odd)::before {
-                clip-path: polygon(
-                    100% 0,
-                    0 0,
-                    0 100%
-                );
-            }
 
             $section-colors: '#FFFFFF' $color--eb $color--8c '#FFFFFF' $color--a8;
             @for $i from 1 through 5 {
@@ -51,7 +21,6 @@
                 @if $i != 1 {
                     $a: $i - 1;
                 }
-
                 &:nth-child(5n+#{$i}) {
                     background-color: #{nth($section-colors, $i)};
                     @if $i == 3 or $i == 5 {
@@ -63,72 +32,136 @@
                         }
                     }
 
-                    &::before {
+                    & .content__image-wrapper::before {
                         background-color: #{nth($section-colors, $a)};
                     }
                 }
             }
 
-            & > span {
-                position: relative;
-                display: flex;
-                flex-direction: column;
+            &:nth-child(even) {
+                text-align: right;
+
+                @include media(ml) {
+                    flex-direction: row-reverse;
+                }
             }
-        }
 
-        .content__image {
-            max-width: rem(115px);
-        }
-
-        .content__title {
-            margin: rem(15px) 0;
-            @include header(4);
-        }
-    }
-
-    @include media(ml) {
-        .header {}
-
-        .content {
-
-            .content__block {
-                $dimension: rem(30px);
+            @include media(ml) {
                 overflow: hidden;
+                flex-direction: row;
+                justify-content: center;
 
-                & > span {
-                    width: 50%;
-
-                    &::before {
-                        @include pseudo;
-                        top: 0;
-                        left: calc( -1 * #{($dimension / 2)});
-                        width: $dimension;
-                        height: $dimension;
-                        background-color: #000000;
-                        border-radius: 50%;
-
-                    }
+                & > div,
+                .content__image-wrapper {
+                    width: rem(294px);
+                    margin-top: rem(80px);
                 }
 
-                &:nth-child(odd) > span::before {
-                    left: auto;
-                    right: calc( -1 * #{($dimension / 2)});
+                & > div * {
+                    @include header(3);
+                    line-height: rem(30px);
+                }
+
+                &::before,
+                &::after {
+                    @include pseudo;
+                }
+
+                &::before {
+                    $dimension: rem(30px);
+                    width: $dimension;
+                    height: $dimension;
+                    border-radius: 50%;
+                    background: #000000;
+                    top: rem(80px);
+                    left: calc(50% - (#{$dimension }/ 2));
+                    z-index: 1;
+                }
+
+                &:first-child {
+
+                    & > div,
+                    & > span {
+                        margin-top: 0;
+                    }
+
+                    &::before {
+                        top: 0;
+                    }
                 }
 
                 &::after {
                     $dimension: rem(5px);
-                    @include pseudo;
                     width: $dimension;
-                    height: 9999px;
-                    left: calc(50vw - #{($dimension / 2)});
+                    height: rem(9999px);
+                    background: #000000;
                     top: 0;
-                    background-color: #000000;
+                    left: calc(50% - (#{$dimension }/ 2));
+                    z-index: 1;
                 }
-
                 &:last-child::after {
-                    display: none;
+                    height: rem(90px);
                 }
             }
+        }
+
+        .content__image-wrapper {
+
+            @include media(ml) {
+                text-align: right;
+                margin-right: rem(65px);
+            }
+        }
+        .content__block:nth-child(even) .content__image-wrapper {
+
+            @include media(ml) {
+                margin-right: 0;
+                margin-left: rem(65px);
+                text-align: left;
+
+                & .content__image {
+                    margin: 0 0 0 rem(30px);
+                }
+            }
+        }
+
+        .content__block:nth-child(n+2) {
+
+            .content__image-wrapper::before {
+                @include pseudo;
+                width: 100vw;
+                height: rem(60px);
+                top: 0;
+                left: 0;
+                clip-path: polygon(
+                    0 0,
+                    100% 0,
+                    100% 100%
+                );
+            }
+        }
+        .content__block:nth-child(odd) .content__image-wrapper::before {
+            clip-path: polygon(
+                100% 0,
+                0 0,
+                0 100%
+            );
+        }
+
+        .content__image {
+            max-width: rem(100px);
+            margin-bottom: rem(15px);
+            position: relative;
+
+            @include media(ml) {
+                max-width: rem(150px);
+                margin: 0 rem(30px) 0 0;
+            }
+        }
+
+        div .content__title {
+            @include header(4);
+            line-height: 1;
         }
     }
 }
