@@ -31,7 +31,13 @@ a {
 
 .page {
 
-    .page__header {}
+    .page__header,
+    .page__main,
+    .page__footer {
+        max-width: rem(1440px);
+        margin: 0 auto;
+        box-sizing: border-box;
+    }
 
     .content__block {
         padding: 0 rem(30px) rem(60px);
@@ -95,12 +101,12 @@ a {
             }
 
             &::before {
-                $dimension: 1.25rem;
+                $dimension: rem(20px);
                 box-sizing: border-box;
                 width: $dimension;
                 height: $dimension;
                 border-style: solid;
-                border-width: ($dimension / 2) 0 ($dimension / 2) ($dimension * 0.865);
+                border-width: ($dimension / 2) 0 ($dimension / 2) (#{$dimension} * 0.865);
                 border-color: transparent transparent transparent #000000;
                 left: calc(50% - 5px);
                 top: #{calc(50% - (#{$dimension} / 2))};
