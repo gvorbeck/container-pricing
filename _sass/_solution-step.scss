@@ -30,6 +30,7 @@
 
         .content__block {
 
+            // EMPHASIS CONTENT BLOCK
             &.emphasis {
                 background-color: $color--eb;
                 padding-top: rem(30px);
@@ -40,6 +41,7 @@
                 }
             }
 
+            // ALERT CONTENT BLOCK
             &.alert {
                 border: rem(2px) solid $color--8c;
                 color: $color--8c;
@@ -48,6 +50,7 @@
                 padding: rem(15px);
             }
 
+            // ACCORDION CONTENT BLOCK
             &.accordion {
 
                 .accordion__wrapper {
@@ -99,6 +102,7 @@
                 }
             }
 
+            // OUTRO CONTENT BLOCK
             &.outro {
 
                 .content__title {
