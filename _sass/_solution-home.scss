@@ -15,6 +15,82 @@
             flex-direction: column;
             position: relative;
 
+            &:first-child {
+
+                @include media(ml) {
+
+                    .content__image-wrapper,
+                    .content__text-wrapper {
+                        margin-top: 0;
+                    }
+
+                    &::before {
+                        top: 0;
+                    }
+                }
+            }
+
+            &:last-child {
+
+                @include media(ml) {
+
+                    &::after {
+                        height: rem(90px);
+                    }
+                }
+            }
+
+            &:nth-child(even) {
+                text-align: right;
+
+                @include media(ml) {
+                    flex-direction: row-reverse;
+                }
+
+                .content__image-wrapper {
+
+                    @include media(ml) {
+                        margin-right: 0;
+                        margin-left: rem(65px);
+                        text-align: left;
+                    }
+                }
+
+                .content__image {
+
+                    @include media(ml) {
+                        margin: 0 0 0 rem(30px);
+                    }
+                }
+            }
+
+            &:nth-child(n+2) {
+
+                .content__image-wrapper::before {
+                    @include pseudo;
+                    width: 100vw;
+                    height: rem(60px);
+                    top: 0;
+                    left: 0;
+                    clip-path: polygon(
+                        0 0,
+                        100% 0,
+                        100% 100%
+                    );
+                }
+            }
+
+            &:nth-child(odd) {
+
+                .content__image-wrapper::before {
+                    clip-path: polygon(
+                        100% 0,
+                        0 0,
+                        0 100%
+                    );
+                }
+            }
+
             $section-colors: '#FFFFFF' $color--eb $color--8c '#FFFFFF' $color--a8;
             @for $i from 1 through 5 {
                 $a: 1;
@@ -38,33 +114,16 @@
                 }
             }
 
-            &:nth-child(even) {
-                text-align: right;
-
-                @include media(ml) {
-                    flex-direction: row-reverse;
-                }
-            }
-
             @include media(ml) {
                 overflow: hidden;
                 flex-direction: row;
                 justify-content: center;
 
-                & > div,
-                .content__image-wrapper {
-                    width: rem(294px);
-                    margin-top: rem(80px);
-                }
-
-                & > div * {
-                    @include header(3);
-                    line-height: rem(30px);
-                }
-
                 &::before,
                 &::after {
                     @include pseudo;
+                    z-index: 1;
+                    background-color: #000000;
                 }
 
                 &::before {
@@ -72,36 +131,26 @@
                     width: $dimension;
                     height: $dimension;
                     border-radius: 50%;
-                    background: #000000;
+                    left: calc(50% - (#{$dimension} / 2));
                     top: rem(80px);
-                    left: calc(50% - (#{$dimension }/ 2));
-                    z-index: 1;
-                }
-
-                &:first-child {
-
-                    & > div,
-                    & > span {
-                        margin-top: 0;
-                    }
-
-                    &::before {
-                        top: 0;
-                    }
                 }
 
                 &::after {
                     $dimension: rem(5px);
                     width: $dimension;
                     height: rem(9999px);
-                    background: #000000;
+                    left: calc(50% - (#{$dimension} / 2));
                     top: 0;
-                    left: calc(50% - (#{$dimension }/ 2));
-                    z-index: 1;
                 }
-                &:last-child::after {
-                    height: rem(90px);
-                }
+            }
+        }
+
+        .content__image-wrapper,
+        .content__text-wrapper {
+
+            @include media(ml) {
+                width: rem(294px);
+                margin-top: rem(80px);
             }
         }
 
@@ -112,40 +161,20 @@
                 margin-right: rem(65px);
             }
         }
-        .content__block:nth-child(even) .content__image-wrapper {
+
+        .content__text-wrapper {
 
             @include media(ml) {
-                margin-right: 0;
-                margin-left: rem(65px);
-                text-align: left;
+                padding-top: rem(5px);
+            }
 
-                & .content__image {
-                    margin: 0 0 0 rem(30px);
+            * {
+
+                @include media(ml) {
+                    @include header(3);
+                    line-height: rem(30px);
                 }
             }
-        }
-
-        .content__block:nth-child(n+2) {
-
-            .content__image-wrapper::before {
-                @include pseudo;
-                width: 100vw;
-                height: rem(60px);
-                top: 0;
-                left: 0;
-                clip-path: polygon(
-                    0 0,
-                    100% 0,
-                    100% 100%
-                );
-            }
-        }
-        .content__block:nth-child(odd) .content__image-wrapper::before {
-            clip-path: polygon(
-                100% 0,
-                0 0,
-                0 100%
-            );
         }
 
         .content__image {
@@ -159,7 +188,7 @@
             }
         }
 
-        div .content__title {
+        .content__title {
             @include header(4);
             line-height: 1;
         }

@@ -5,10 +5,10 @@ intro text, a link, and link button.
 - Links will go to solution section pages (ex: Learn, Meet, etc)
 {% endcomment %}
 <section class="content__block">
-    <span class="content__image-wrapper">
+    <div class="content__image-wrapper">
         <img class="content__image" alt="{{ include.title }}" src="{{ site.baseurl }}/assets/images/{{ include.image }}">
-    </span>
-    <div>
+    </div>
+    <div class="content__text-wrapper">
         <h1 class="content__title">{{ include.title }}</h1>
         {{ include.intro }}
         <a class="content__link button button--small" href="{{ include.link }}" title="{{ include.button }}">{{ include.button }}</a>
