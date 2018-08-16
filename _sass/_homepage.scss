@@ -104,10 +104,10 @@
             .content__text {
                 line-height: rem(20px);
 
-                @include media(ml) {
-                    @include header(3);
-                    line-height: rem(30px);
-                }
+                // @include media(ml) {
+                //     @include header(3);
+                //     line-height: rem(30px);
+                // }
 
                 ul {
                     margin-left: rem(17px);
@@ -199,10 +199,10 @@
                     grid-row-start: 1;
                 }
 
-                .solutions__excerpt p {
-                    @include header(3);
-                    line-height: rem(30px);
-                }
+                // .solutions__excerpt p {
+                //     @include header(3);
+                //     line-height: rem(30px);
+                // }
             }
         }
     }

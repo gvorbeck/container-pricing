@@ -62,8 +62,17 @@ a {
         p {
             line-height: rem(20px);
 
+            @include media(ml) {
+                @include header(3);
+                line-height: rem(30px);
+            }
+
             & > img {
                 margin-top: rem(15px);
+
+                @include media(ml) {
+                    margin-top: rem(30px);
+                }
             }
 
             &:last-child > img {
@@ -75,8 +84,19 @@ a {
             list-style-type: disc;
             margin-left: rem(17px);
 
+            li {
+                @include media(ml) {
+                    @include header(3);
+                    line-height: rem(30px);
+                }
+            }
+
             li + li {
                 margin-top: rem(15px);
+
+                @include media(ml) {
+                    margin-top: rem(30px);
+                }
             }
         }
 

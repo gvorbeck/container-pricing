@@ -9,7 +9,7 @@ layout: default
             <h3 class="content__title">{{ section.title }}</h3>
         {% endif %}
 
-        {{ section.text | markdownify }}
+        <div class="content__text">{{ section.text | markdownify }}</div>
 
         {% if section.tab-selector %}
           <div class="content__tabs tab-selector">
@@ -40,6 +40,10 @@ layout: default
             </li>
             {% endfor %}
           </ul>
+        {% endif %}
+
+        {% if section.image %}
+            <img class="content__illustration" alt="{{ section.title }}" src="{{ site.baseurl }}/assets/images/{{ section.image }}">
         {% endif %}
 
         {% if section.type == 'outro' %}

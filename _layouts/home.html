@@ -26,25 +26,27 @@ TO-DO: use type for content__block class names, like with solution step pages.
 </div>
 {% for section in page.page-sections %}
     <section class="content__block {{ section.component }}">
-        <h1 class="content__title">{{ section.title }}</h1>
-        {% if section.text %}
-            <div class="content__text">{{ section.text | markdownify }}</div>
-        {% endif %}
-        {% if section.component == 'dive' %}
-          <ul class="content__solutions solutions">
-            {% for page in site.pages %}
-                {% if page.layout == 'solution-home' %}
-                  <li class="solutions__item">
-                    <img class="solutions__image" alt="{{page.title}}" src="{{site.baseurl}}/assets/images/{{page.thumbnail}}">
-                    <div>
-                        <h2 class="solutions__title">{{- page.title -}}</h2>
-                        <div class="solutions__excerpt">{{- page.excerpt | markdownify -}}</div>
-                        <a class="content__link button" href="{{site.baseurl}}{{page.permalink}}" title="{{page.title}}">Start exploring</a>
-                    </div>
-                  </li>
-                {% endif %}
-            {% endfor %}
-          </ul>
-        {% endif %}
+        <header class="content__header">
+            <h1 class="content__title">{{ section.title }}</h1>
+        </header>
+        <div class="content__text">
+            {{ section.text | markdownify }}
+            {% if section.component == 'dive' %}
+              <ul class="content__solutions solutions">
+                {% for page in site.pages %}
+                    {% if page.layout == 'solution-home' %}
+                      <li class="solutions__item">
+                        <img class="solutions__image" alt="{{page.title}}" src="{{site.baseurl}}/assets/images/{{page.thumbnail}}">
+                        <div>
+                            <h2 class="solutions__title">{{- page.title -}}</h2>
+                            <div class="solutions__excerpt">{{- page.excerpt | markdownify -}}</div>
+                            <a class="content__link button" href="{{site.baseurl}}{{page.permalink}}" title="{{page.title}}">Start exploring</a>
+                        </div>
+                      </li>
+                    {% endif %}
+                {% endfor %}
+              </ul>
+            {% endif %}
+        </div>
     </section>
 {% endfor %}

@@ -167,14 +167,6 @@
             @include media(ml) {
                 padding-top: rem(5px);
             }
-
-            * {
-
-                @include media(ml) {
-                    @include header(3);
-                    line-height: rem(30px);
-                }
-            }
         }
 
         .content__image {

@@ -38,11 +38,38 @@
 
         .content__block {
 
+            &.intro:first-child {
+
+                @include media(ml) {
+                    display: flex;
+                    align-items: flex-start;
+
+                    .content__text {
+                        min-width: rem(313px);
+
+                        h1, h2, h3, h4, h5, h6 {
+                            @include header(2);
+                            margin-bottom: rem(30px);
+                        }
+                    }
+
+                    .content__illustration {
+                        max-width: rem(275px);
+                        margin-left: rem(60px);
+                    }
+                }
+            }
+
             // EMPHASIS CONTENT BLOCK
             &.emphasis {
                 background-color: $color--eb;
                 padding-top: rem(30px);
                 padding-bottom: rem(30px);
+
+                @include media(ml) {
+                    padding-top: rem(60px);
+                    padding-bottom: rem(60px);
+                }
 
                 &:not(:last-child) {
                     margin-bottom: rem(60px);
@@ -98,6 +125,10 @@
                     font-size: 1rem;
                     line-height: 1;
                     margin: 0;
+
+                    @include media(ml) {
+                        @include header(4);
+                    }
                 }
 
                 .accordion__content {
@@ -170,6 +201,11 @@
         .content__title {
             @include header(2);
             margin-bottom: rem(15px);
+
+            @include media(ml) {
+                @include header(1);
+                margin-bottom: rem(30px);
+            }
         }
 
         h4 {
@@ -232,5 +268,12 @@
                 margin-top: 0;
             }
         }
+    }
+
+    &.page__finalize .emphasis:last-child img {
+        margin-top: rem(45px);
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
     }
 }
