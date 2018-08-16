@@ -9,6 +9,10 @@
 
             h2 {
                 margin-right: rem(15px);
+
+                @include media(ml) {
+                    margin-right: rem(30px);
+                }
             }
 
             em {
@@ -22,7 +26,11 @@
         }
 
         .header__logo {
-            max-width: rem(68px);
+            max-width: rem(65px);
+
+            @include media(ml) {
+                max-width: rem(80px);
+            }
         }
     }
 
@@ -103,7 +111,7 @@
             }
 
             // OUTRO CONTENT BLOCK
-            &.outro {
+            &.outro:last-child {
 
                 .content__title {
                     font-size: 1rem;
@@ -120,12 +128,12 @@
                     color: #000000;
                     text-decoration: none;
                     position: relative;
+                    line-height: rem(26px);
 
                     em {
                         background-color: $color--a8;
                         color: #FFFFFF;
                         padding: rem(3px);
-                        line-height: 1;
                         font-style: normal;
                     }
 
@@ -136,8 +144,9 @@
                     }
 
                     &::before {
-                        width: rem(10px);
-                        height: rem(10px);
+                        $dimension: rem(10px);
+                        width: $dimension;
+                        height: $dimension;
                         border-style: solid;
                         border-color: #000000;
                         border-top-width: rem(2px);
@@ -145,14 +154,14 @@
                         border-bottom-width: 0;
                         border-left-width: 0;
                         transform: rotate(45deg);
-                        top: 4px;
+                        top: calc(50% - (#{$dimension} / 2));
                     }
 
                     &::after {
                         width: rem(16px);
                         height: rem(2px);
                         background-color: #000000;
-                        top: calc(50% - #{rem(1px)});
+                        top: 50%;
                     }
                 }
             }
