@@ -16,10 +16,9 @@ button: Start customizing
 
 page-sections:
 - type: intro
+  image: visual_frame.png
   text: |
     Frame the conversation around removing the limitations on DevTest that are currently imposed due to cost to allow our customers to focus on the value of having a modern, agile, DevOps environment on the platform.
-
-    ![Frame]( /cpricing/salesguides/assets/images/visual_frame.png)
 
     For example, the loss of developer productivity when they are unable to work because the system is capped; the cost of replacing skilled developers that switch careers to work on  more 'modern' development platforms; the opportunity cost of longer development cycles leading to slower feature releases; the cost of fixing bugs that make it through to production; etc.
 - type: alert

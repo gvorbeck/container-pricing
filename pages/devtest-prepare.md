@@ -12,11 +12,10 @@ button: Dive deeper
 
 page-sections:
 - type: intro
-  title: Engage techline
+  image: visual_techline.png
   text: |
+    ### Engage techline
     Once you have the required SCRT reports, you must engage Techline (through your normal process).
-
-    ![Techline]( /cpricing/salesguides/assets/images/visual_techline.png )
 
     Techline has been trained to fulfill the the required steps to construct a container.
 - type: emphasis

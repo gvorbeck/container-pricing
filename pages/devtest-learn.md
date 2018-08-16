@@ -15,6 +15,7 @@ button: Learn more
 # PAGE CONTENT
 page-sections:
 - type: intro
+  image: visual_devops.png
   text: |
     Many clients are operating with severely capped Development and Test environments compromising best practices.
 
@@ -24,8 +25,6 @@ page-sections:
     * Bypassing critical pre-production testing.
 
     We're empowering our clients to adopt agile practices by eliminating the fear of cost increase.
-
-    ![Dev Ops]( /cpricing/salesguides/assets/images/visual_devops.png)
 - type: emphasis
   title: Watch these videos first
   text: |
