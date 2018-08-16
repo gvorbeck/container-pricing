@@ -356,6 +356,10 @@ body:not(.page__home) .page__header {
 
     .header__subtitle {
         margin: 0 rem(30px) rem(30px);
+
+        @include media(ml) {
+            margin: 0 rem(60px) rem(60px);
+        }
     }
 }
 
