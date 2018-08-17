@@ -113,12 +113,6 @@
                         top: rem(3px);
                         left: 0;
                     }
-
-                    &.open::before {
-                        border-color: $color--a8;
-                        transform: rotate(45deg);
-                        top: 0;
-                    }
                 }
 
                 .accordion__title {
@@ -138,6 +132,30 @@
 
                 .accordion__item:first-child .accordion__content {
                     display: block;
+                }
+
+                .accordion__item {
+
+                    & + .accordion__item {
+                        margin-top: rem(60px);
+                    }
+
+                    &:first-child .accordion__content {
+                        display: block;
+                    }
+
+                    &.open {
+
+                        & + .accordion__item {
+                            margin-top: rem(30px);
+                        }
+
+                        .accordion__button::before {
+                            border-color: $color--a8;
+                            transform: rotate(45deg);
+                            top: 0;
+                        }
+                    }
                 }
             }
 
