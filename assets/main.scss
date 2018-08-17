@@ -163,6 +163,10 @@ a {
                 background-image: url(/cpricing/salesguides/assets/images/icons/link-types.png);
                 background-repeat: no-repeat;
                 background-position: 0 0;
+
+                @include media(ml) {
+                    top: rem(6px);
+                }
             }
         }
 
@@ -182,6 +186,10 @@ a {
                 width: 1.0625rem;
                 top: rem(1px);
                 background-position: 0 -4.625rem;
+
+                @include media(ml) {
+                    top: rem(5px);
+                }
             }
         }
     }
