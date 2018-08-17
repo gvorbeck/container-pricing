@@ -9,7 +9,7 @@ increase/decrease the amount of Help Links this include outputs.
     <ul class="footer__help-links">
         {% for item in site.help-links %}
         <li class="footer__help-link">
-            <a href="{{ item.link }}" title="{{ item.title }}">{{ item.title }}</a>
+            <a href="{{site.baseurl}}/{{ item.link }}" title="{{ item.title }}">{{ item.title }}</a>
         </li>
         {% endfor %}
     </ul>
