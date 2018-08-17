@@ -5,9 +5,7 @@ layout: default
 {% for section in page.page-sections %}
     <div class="content__block {{ section.type }}">
 
-        {% if section.title %}
-            <h3 class="content__title">{{ section.title }}</h3>
-        {% endif %}
+        {% if section.title %}<h3 class="content__title">{{ section.title }}</h3>{% endif %}
 
         <div class="content__text">{{ section.text | markdownify }}</div>
 
