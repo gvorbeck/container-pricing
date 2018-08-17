@@ -117,7 +117,7 @@ a {
 
         a.video-thumb {
             position: relative;
-            display: block;
+            display: inline-block;
 
             &::before,
             &::after {
@@ -130,7 +130,7 @@ a {
                 width: $dimension;
                 height: $dimension;
                 border-style: solid;
-                border-width: ($dimension / 2) 0 ($dimension / 2) (#{$dimension} * 0.865);
+                border-width: calc(#{$dimension} / 2) 0 calc(#{$dimension} / 2) calc(#{$dimension} * 0.865);
                 border-color: transparent transparent transparent #000000;
                 left: calc(50% - 5px);
                 top: #{calc(50% - (#{$dimension} / 2))};
