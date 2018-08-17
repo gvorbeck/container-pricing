@@ -226,6 +226,10 @@
 
             .tab-selector__tab-list {
                 margin-right: rem(10px);
+
+                @include media(ml) {
+                    margin-right: rem(60px);
+                }
             }
 
             .tab-selector__content-list {
