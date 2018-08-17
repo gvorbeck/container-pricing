@@ -137,7 +137,11 @@
                 .accordion__item {
 
                     & + .accordion__item {
-                        margin-top: rem(60px);
+                        margin-top: rem(30px);
+
+                        @include media(ml) {
+                            margin-top: rem(60px)
+                        }
                     }
 
                     &:first-child .accordion__content {
