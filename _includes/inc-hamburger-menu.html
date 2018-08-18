@@ -9,10 +9,10 @@
         4. For each Solution Step, split its permalink to find its group ID.
         5. If the two group IDs match, create a list item for it.
         {% endcomment %}
-        {%- assign solution_homes = (site.pages | where: "layout", "solution-home") -%}
+        {%- assign solution_landings = (site.pages | where: "layout", "solution-landing") -%}
         {%- assign solution_steps = (site.pages | where: "layout", "solution-step" | sort: "weight") -%}
         {%- assign this_page = (page.url | remove_first: "/" | split: "/") %}
-        {%- for solution in solution_homes -%}
+        {%- for solution in solution_landings -%}
             <li class="hamburger__item">
                 <ul class="solution">
                     {%- assign solution_name = solution.permalink | remove_first: "/" | split: "/" -%}

@@ -29,6 +29,13 @@ a {
     }
 }
 
+.site-header,
+main,
+.site-footer {
+    max-width: rem(1440px);
+    margin: 0 auto;
+}
+
 .site-header {
     margin-bottom: rem(30px);
 
@@ -231,6 +238,41 @@ main {
     @include media(ml) {
         @include header(3);
         line-height: rem(30px);
+    }
+}
+
+.button {
+    line-height: rem(30px);
+    border: rem(1px) solid #000000;
+    display: inline-block;
+    color: #000000;
+    padding: 0 rem(10px);
+
+    &:hover {
+        color: $color--8c;
+        border-color: $color--8c;
+    }
+
+    &:active {
+        color: #FFFFFF;
+        background-color: $color--8c;
+        border-color: $color--8c;
+    }
+}
+
+.button.button--light {
+    color: #FFFFFF;
+    border-color: #FFFFFF;
+
+    &:hover {
+        color: $color--eb;
+        border-color: $color--eb;
+    }
+
+    &:active {
+        color: #000000;
+        background-color: $color--eb;
+        border-color: $color--eb;
     }
 }
 
@@ -632,5 +674,5 @@ main {
 // }
 //
 @import "homepage";
-// @import "solution-home";
+@import "solution-landing";
 // @import "solution-step";

@@ -13,7 +13,7 @@ layout: default
             {% elsif section.component == "dive" %}
                 <ul class="{{ section.component }}__items">
                     {% for page in site.pages %}
-                        {% if page.layout == 'solution-home' %}
+                        {% if page.layout == 'solution-landing' %}
                             <li class="{{ section.component }}__item">
                                 <img alt="{{ page.title }}" class="{{ section.component }}__image" src="{{site.baseurl}}/assets/images/{{page.thumbnail}}">
                                 <div class="{{ section.component }}__text">

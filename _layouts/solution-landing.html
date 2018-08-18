@@ -1,10 +1,6 @@
 ---
 layout: default
 ---
-
-<!-- ---
-layout: default
----
 {% comment %}
 LAUYOUT: SOLUTION MODEL
 PARENT: DEFAULT
@@ -34,6 +30,6 @@ parameter is captured as a liquid variable and then passed to the liquid include
         {%- capture section_link -%}
             {{- site.baseurl -}}{{- step.permalink -}}
         {%- endcapture -%}
-        {%- include inc-solution-section.html title=section_title intro=section_intro button=section_button image=section_image link=section_link -%}
+        {%- include inc-solution-landing-section.html title=section_title intro=section_intro button=section_button image=section_image link=section_link -%}
     {%- endif -%}
-{%- endfor -%} -->
+{%- endfor -%}

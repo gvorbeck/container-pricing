@@ -2,7 +2,7 @@
 <html lang="en">
     {% include head.html %}
 
-    <body class="{{ page.slug }}">
+    <body class="{{ page.slug }} {% if page.layout != "home" %}{{ page.layout }}{% endif %}">
 
         {% include header.html %}
 
