@@ -2,11 +2,6 @@ body.home {
 
     .site-header {
         background-color: $color--bc;
-        margin-bottom: rem(30px);
-
-        @include media(ml) {
-            margin-bottom: rem(60px);
-        }
     }
 
     .site-header__title,
@@ -80,6 +75,114 @@ body.home {
 
     .banner__image {
         max-width: 100%;
+    }
+
+    .home-block {
+        margin: 0 rem(30px) rem(60px);
+
+        @include media(ml) {
+            margin: 0 rem(60px) rem(60px);
+        }
+    }
+
+    .home-block__header {
+        margin-bottom: rem(15px);
+
+        @include media(ml) {
+            margin-bottom: rem(30px);
+        }
+    }
+
+    .home-block__title {
+        @include header(2);
+        line-height: 1;
+        padding-bottom: rem(25px);
+        position: relative;
+
+        &::after {
+            @include pseudo;
+            bottom: 0;
+            left: 0;
+            width: rem(100px);
+            height: rem(10px);
+            background-color: $color--8c;
+        }
+    }
+
+    .whats-new {
+
+        ul {
+            list-style-type: disc;
+            margin-left: rem(17px);
+
+            @include media(ml) {
+                margin-left: rem(21px);
+            }
+        }
+
+        li {
+            position: relative;
+            padding-bottom: rem(26px);
+
+            @include media(ml) {
+                padding-bottom: rem(35px);
+            }
+
+            em {
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                line-height: 1;
+            }
+
+            & + li {
+                margin-top: rem(15px);
+            }
+        }
+    }
+
+    .dive {
+
+        .dive__item {
+
+            @include media(ml) {
+                display: flex;
+                align-items: flex-start;
+            }
+
+            & + .dive__item {
+                margin-top: rem(30px);
+
+                @include media(ml) {
+                    margin-top: rem(60px);
+                }
+            }
+        }
+
+        .dive__image {
+            max-width: rem(46px);
+            margin: 0 0 rem(15px);
+
+            @include media(ml) {
+                max-width: rem(65px);
+                margin: 0 rem(30px) 0 0;
+            }
+        }
+
+        .dive__title {
+            font-weight: bold;
+            margin-bottom: rem(15px);
+            line-height: 1;
+        }
+
+        .dive__button {
+            margin-top: rem(15px);
+            display: block;
+
+            @include media(ml) {
+                margin-top: rem(30px);
+            }
+        }
     }
 }
 
