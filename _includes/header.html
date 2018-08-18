@@ -1,19 +1,28 @@
-{% comment %}
-INCLUDE: HEADER
-- This include is used for the site's header and outputs a hamburger navigation
-and site/page titles.
-{% endcomment %}
-<header class="page__header header">
-    {% if page.layout != 'home' %}<div class="header__nav-wrapper">{% endif %}
-    <h1 class="header__title"><a href="{{ site.baseurl }}/" title="{{ site.title }}">{{ site.title }}</a></h1>
-    {% if page.layout == 'home' %}<p class="header__subtitle">{{ site.description }}</p>{% endif %}
-    {% if page.layout != 'home' %}
-        {% include inc-hamburger-menu.html %}
+<header class="site-header">
+    <{%- if page.layout == "home" -%}h1{%- else -%}h2{% endif %} class="site-header__title">
+        {%- if page.layout != "home" -%}<a class="site-header__home-link" title="{{ site.title }}" href="{{ site.baseurl }}/">{%- endif -%}
+            {{- site.title -}}
+        {%- if page.layout != "home" -%}</a>{%- endif -%}
+    </{%- if page.layout == "home" -%}h1{%- else -%}h2{%- endif -%}>
+    {% if page.layout == "home" %}
+        <p class="site-header__description">{{ site.description }}</p>
+        <div class="banner">
+            {% for banner in page.banners %}
+                <ul class="banner__items banner__items--{{ banner.size }}">
+                    {% for image in banner.images %}
+                        <li class="banner__item">
+                            <img alt="{{image}}" class="banner__image" src="{{ site.baseurl }}/assets/images/banner/{{ banner.size }}/{{ image }}">
+                        </li>
+                    {% endfor %}
+                </ul>
+            {% endfor %}
         </div>
-        <div class="header__subtitle">
-            <h2>{{ page.title | markdownify | remove: '<p>' | remove: '</p>' }}</h2>
+    {% else %}
+        {% include inc-hamburger-menu.html %}
+        <div class="site-header__title-wrapper">
+            <h1 class="site-header__page-title">{{ page.title | markdownify | remove: '<p>' | remove: '</p>' }}</h1>
             {% if page.page-logo %}
-              <img class="header__logo" alt="{{ page.title | remove: '_' }}" src="{{ site.baseurl}}/assets/images/{{ page.page-logo }}">
+              <img class="site-header__logo" alt="{{ page.title | remove: '_' }}" src="{{ site.baseurl}}/assets/images/{{ page.page-logo }}">
             {% endif %}
         </div>
     {% endif %}
