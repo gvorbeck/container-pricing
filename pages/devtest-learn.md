@@ -29,19 +29,19 @@ page-sections:
   content-type: video-list
   title: Watch these videos first
   # EDITORIAL NOTE:
-  # In this "text" parameter, please start every video item with a new list item (*), a linked video thumbnail with a ".video-thumb" class ({: .video-thumb}), and indenting each line for the video item with two spaces.
+  # In this "text" parameter, please start every video item with a new list item ("*"), a linked video thumbnail with a ".video-thumb" class ({": .video-thumb}"), an h2 title ("## Title Here ##"), and indenting each line for the video item with two spaces.
   text: |
     These sales training videos with walk your through the two key Container Pricing presentations you would give your clients.
 
     * [![Video Thumbnail](/cpricing/salesguides/assets/images/video-thumb.png)](https://example.com){: .video-thumb}
 
-      #### Executive summary ####
+      ## Executive summary ##
 
       Sales enablement training of the executive summary of Container Pricing for IBM Z.
 
     * [![Video Thumbnail](/cpricing/salesguides/assets/images/video-thumb.png)](https://example.com){: .video-thumb}
 
-      #### Executive overview ####
+      ## Executive overview ##
 
       Sales enablement training of the executive overview of Container Pricing for IBM Z.
 - title: Continue learning
