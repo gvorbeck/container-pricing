@@ -191,6 +191,15 @@ body.layout--solution-step {
                 }
             }
         }
+
+        &.step-section--alert {
+            $color: $color--8c;
+            border: rem(2px) solid $color;
+            margin: rem(-30px) rem(30px) rem(60px);
+            color: $color;
+            font-weight: bold;
+            padding: rem(15px);
+        }
     }
 
     .step-section__title {
