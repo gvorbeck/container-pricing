@@ -26,7 +26,7 @@ page-sections:
 
     We're empowering our clients to adopt agile practices by eliminating the fear of cost increase.
 - type: emphasis
-  content-type: video-list
+  content-type: grid-list
   title: Watch these videos first
   # EDITORIAL NOTE:
   # For things to look right in this "text" parameter, please start every video item with a new list item ("*"), a linked video thumbnail with a ".video-thumb" class ({": .video-thumb}"), an h2 title ("## Title Here ##"), and indenting each line for the video item with two spaces.
@@ -45,24 +45,27 @@ page-sections:
 
       Sales enablement training of the executive overview of Container Pricing for IBM Z.
 - title: Continue learning
+  content-type: grid-list
+    # EDITORIAL NOTE:
+    # For things to look right in this "text" parameter, please start every video item with a new list item ("*"), an h2 title ("## Title Here ##"), and indenting each line for the video item with two spaces. Any links can have a document-type icon if you add the doc-type link ("{: .document}"), see README for more documentation.
   text: |
-    #### Full DevTest announce ####
+    * ## Full DevTest announce ##
 
-    PDF of the complete Announcement letter, designed to be easier for clients to read.
+      PDF of the complete Announcement letter, designed to be easier for clients to read.
 
-    [Download PDF](https://www.google.com){: .document}
+      [Download PDF](https://www.google.com){: .document}
 
-    #### Solution setup demo ####
+    * ## Solution setup demo ##
 
-    Demonstration of the end to end process of contacting and setting up an solution in a dedicated LPAR.
+      Demonstration of the end to end process of contacting and setting up an solution in a dedicated LPAR.
 
-    [Watch demo](https://www.google.com){: .video}
+      [Watch demo](https://www.google.com){: .video}
 
-    #### ID setup walkthrough ####
+    * ## ID setup walkthrough ##
 
-    Demonstration of the end to end process of contacting and setting up an solution in a dedidcated LPAR.
+      Demonstration of the end to end process of contacting and setting up an solution in a dedidcated LPAR.
 
-    [View walkthrough](https://www.google.com){: .document}
+      [View walkthrough](https://www.google.com){: .document}
 - type: outro
   title: "Next Steps:"
   text: |

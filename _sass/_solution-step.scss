@@ -75,7 +75,7 @@ body.layout--solution-step {
             }
         }
 
-        &.step-section--video-list {
+        &.step-section--grid-list {
 
             .step-section__content > ul {
                 list-style-type: none;
@@ -115,6 +115,86 @@ body.layout--solution-step {
                     @include media (ml) {
                         margin-top: 0;
                     }
+                }
+            }
+        }
+
+        &.step-section--outro {
+            position: relative;
+            padding-bottom: calc(1em + #{rem(30px)});
+            margin-bottom: rem(30px);
+
+            @include media(ml) {
+                padding-bottom: calc(1em + #{rem(60px)});
+                margin-bottom: rem(60px);
+            }
+
+            .step-section__title {
+                font-size: 1em;
+
+                @include media(ml) {
+                    font-weight: bold;
+                }
+            }
+
+            .step-section__next-link {
+                $arrowWidth: 1rem;
+                $arrowHeight: $arrowWidth * 0.6;
+                @include media(ml) {
+                    $arrowWidth: $arrowWidth * 1.6;
+                    $arrowHeight: $arrowHeight * 1.6;
+                }
+
+                position: absolute;
+                bottom: 0;
+                right: rem(30px);
+                padding-right: calc(#{rem(15px)} + #{$arrowWidth});
+                color: #000000;
+                font-weight: bold;
+
+                @include media(ml) {
+                    right: rem(60px);
+                    padding-right: calc(#{rem(30px)} + #{$arrowWidth});
+                }
+
+                &::before,
+                &::after {
+                    @include pseudo;
+                    right: 0;
+                }
+
+                &::before {
+                    $height: rem(2px);
+                    width: $arrowWidth;
+                    height: $height;
+                    background-color: #000000;
+                    top: calc(50% - #{$height} / 2);
+
+                    @include media(ml) {
+                        top: 50%;
+                    }
+                }
+
+                &::after {
+                    $borderWidth: rem(2px);
+                    box-sizing: border-box;
+                    width: $arrowHeight;
+                    height: $arrowHeight;
+                    border-width: $borderWidth;
+                    border-top-width: 0;
+                    border-left-width: 0;
+                    border-color: #000000;
+                    border-style: solid;
+                    top: calc(50% - #{$arrowHeight} / 2);
+                    transform: rotate(-45deg);
+                }
+
+                em {
+                    color: #FFFFFF;
+                    background-color: $color--a8;
+                    line-height: 1;
+                    padding: rem(3px);
+                    font-style: normal;
                 }
             }
         }
@@ -182,6 +262,52 @@ body.layout--solution-step {
                     100% 50%,
                     0 100%
                 );
+            }
+        }
+
+        a.document,
+        a.presentation,
+        a.spreadsheet,
+        a.video {
+            position: relative;
+            padding-left: rem(31px);
+
+            &::before {
+                @include pseudo;
+                top: rem(2px);
+                left: 0;
+                width: rem(16px);
+                height: rem(16px);
+                background-image: url(/cpricing/salesguides/assets/images/icons/link-types.png);
+                background-repeat: no-repeat;
+                background-position: 0 0;
+
+                @include media(ml) {
+                    top: rem(6px);
+                }
+            }
+        }
+
+        a.presentation::before {
+            background-position: 0 rem(-50px);
+        }
+
+        a.spreadsheet::before {
+            background-position: 0 rem(-25px);
+        }
+
+        a.video {
+            padding-left: rem(32px);
+
+            &::before {
+                height: rem(17px);
+                width: rem(17px);
+                top: rem(1px);
+                background-position: 0 rem(-74px);
+
+                @include media(ml) {
+                    top: rem(5px);
+                }
             }
         }
     }
