@@ -25,41 +25,41 @@ page-sections:
   text: |
     NEVER position this offering as 'free'. There is a good chance the client will need to purchase additional IPLA entitlement. In order for the DevTest container to be most useful, it may also require additional hardware capacity. These can be discounted, but not 'free'.
 - title: Prepare for your meeting
+  content-type: grid-list
   text: |
     This section includes the PPT versions of the presentations above as well as the Excel file used to created the charts in the presentation.
 
-    #### Executive summary ####
+    * ## Executive summary ##
 
-    Use this presentation first.  If they are already familiar with Container Pricing you can skim through this presentation with them.
+      Use this presentation first.  If they are already familiar with Container Pricing you can skim through this presentation with them.
 
-    [Download PPT](https://www.google.com){: .presentation}
+      [Download PPT](https://www.google.com){: .presentation}
 
-    #### Executive overview ####
+    * ## Executive overview ##
 
-    Use this presentation for the majority of the meeting. Take questions as opportunities to add value to the presentation.
+      Use this presentation for the majority of the meeting. Take questions as opportunities to add value to the presentation.
 
-    [Download PPT](https://google.com){: .presentation}
+      [Download PPT](https://google.com){: .presentation}
 
-    #### DevTest charts ####
+    * ## DevTest charts ##
 
-    Customize the presentation to reflect your clients environment.  You can change the peak hours, or the size of the machines.
+      Customize the presentation to reflect your clients environment.  You can change the peak hours, or the size of the machines.
 
-    [Download excel](https://google.com){: .spreadsheet}
+      [Download excel](https://google.com){: .spreadsheet}
 
-    #### DevTest contract #####
+    * ## DevTest contract ###
 
-    Become familiar with the contract. You may want to leave a copy of this contract with your client as guidance.
+      Become familiar with the contract. You may want to leave a copy of this contract with your client as guidance.
 
-    [Download contract](https://google.com){: .document}
+      [Download contract](https://google.com){: .document}
+    * ## SCRT email template ##
+
+      Your goal for this first meeting is for the client to agree to send you their SCRT reports so that you can move to the next step.
+
+      [Download template](https://google.com){: .document}
 - type: alert
   text: |
     Your goal for this first meeting is for the client to agree to send you their SCRT reports so that you can move to the next step.
-- text: |
-    #### SCRT email template ####
-
-    Your goal for this first meeting is for the client to agree to send you their SCRT reports so that you can move to the next step.
-
-    [Download template](https://google.com){: .document}
 - type: outro
   title: "Next Steps:"
   text: |
