@@ -2,6 +2,26 @@
 layout: default
 ---
 
+{% for section in page.page-sections %}
+    {% assign section_class = "step-section" %}
+    {% if section.type %}
+        {% capture section_class %}{{ section_class | append: " step-section--" | append: section.type }}{% endcapture %}
+    {% endif %}
+
+    {% if section.content-type %}
+        {% capture section_class %}{{ section_class | append: " step-section--" | append: section.content-type }}{% endcapture %}
+    {% endif %}
+    <section class="{{ section_class }}">
+        {% if section.title %}<h1 class="step-section__title">{{ section.title }}</h1>{% endif %}
+
+        <div class="step-section__content">{{ section.text | markdownify }}</div>
+
+        {% if section.image and section.type == "intro" %}
+            <img class="step-section__illustration" alt="{{ section.title }}" src="{{ site.baseurl }}/assets/images/{{ section.image }}">
+        {% endif %}
+    </section>
+{% endfor %}
+
 <!-- ---
 layout: default
 ---

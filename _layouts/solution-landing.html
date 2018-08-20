@@ -1,14 +1,6 @@
 ---
 layout: default
 ---
-{% comment %}
-LAUYOUT: SOLUTION MODEL
-PARENT: DEFAULT
-- This is the layout for Solution Homepages. It outputs a series of Solution
-Sections that will link to Solution Section Pages.
-- Because liquid includes cannot contain parameters directly from YAML, each
-parameter is captured as a liquid variable and then passed to the liquid include
-{% endcomment %}
 
 {%- assign solution_steps = site.pages | where: "layout", "solution-step" | sort: "weight" -%}
 {%- assign solution_name = page.permalink | remove_first: "/" | split: "/" -%}

@@ -45,7 +45,7 @@ main,
     }
 }
 
-body:not(.home) .site-header {
+body:not(.layout--home) .site-header {
     $spaceVert: rem(10px);
     $spaceHorz: rem(30px);
     position: relative;
@@ -685,4 +685,4 @@ main {
 //
 @import "homepage";
 @import "solution-landing";
-// @import "solution-step";
+@import "solution-step";
