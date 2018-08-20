@@ -1,5 +1,7 @@
 <section class="solution-step">
-    <img class="solution-step__image" alt="{{ include.title }}" src="{{ site.baseurl }}/assets/images/{{ include.image }}">
+    <div class="solution-step__image-wrapper">
+        <img class="solution-step__image" alt="{{ include.title }}" src="{{ site.baseurl }}/assets/images/{{ include.image }}">
+    </div>
     <div class="solution-step__content">
         <h1 class="solution-step__title">{{ include.title }}</h1>
         {{ include.intro }}

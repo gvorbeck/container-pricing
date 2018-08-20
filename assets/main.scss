@@ -34,6 +34,7 @@ main,
 .site-footer {
     max-width: rem(1440px);
     margin: 0 auto;
+    box-sizing: border-box;
 }
 
 .site-header {
@@ -55,7 +56,7 @@ body:not(.home) .site-header {
         line-height: rem(20px);
         background-color: #FFFFFF;
         position: relative;
-        z-index: 1;
+        z-index: 3;
 
         @include media(ml) {
             @include header(3);
@@ -109,7 +110,7 @@ body:not(.home) .site-header {
         position: absolute;
         top: $spaceVert;
         right: $spaceHorz;
-        z-index: 1;
+        z-index: 3;
 
         @include media(ml) {
             top: rem(40px);
@@ -163,6 +164,7 @@ body:not(.home) .site-header {
         box-sizing: border-box;
         top: rem(-1000px);
         transition: all 0.5s ease-in-out;
+        z-index: 2;
 
         @include media(ml) {
             padding: rem(30px) rem(60px) rem(60px);
@@ -241,7 +243,7 @@ main {
     }
 }
 
-.button {
+%button {
     line-height: rem(30px);
     border: rem(1px) solid #000000;
     display: inline-block;
@@ -260,7 +262,11 @@ main {
     }
 }
 
-.button.button--light {
+.button {
+    @extend %button;
+}
+
+%button--light {
     color: #FFFFFF;
     border-color: #FFFFFF;
 
@@ -274,6 +280,10 @@ main {
         background-color: $color--eb;
         border-color: $color--eb;
     }
+}
+
+.button.button--light {
+    @extend %button--light;
 }
 
 .site-footer {
