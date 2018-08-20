@@ -80,41 +80,34 @@ body.layout--solution-step {
             .step-section__content > ul {
                 list-style-type: none;
                 margin-left: 0;
+                display: grid;
+                grid-gap: rem(30px);
+                grid-template-columns: repeat(auto-fill, 100%);
 
                 @include media(ml) {
-                    display: flex;
-                    flex-wrap: wrap;
+                    grid-gap: rem(60px);
+                    grid-template-columns: repeat(auto-fill, rem(294px));
                 }
 
                 h2 {
                     font-weight: bold;
-                    margin: rem(15px) 0;
+                    line-height: 1;
+                    margin: 0 0 rem(15px);
+
+                    @include media(ml) {
+                        margin: 0 0 rem(30px);
+                    }
                 }
 
                 li {
-                    max-width: rem(294px);
 
-                    &:nth-child(2n+2) {
-
-                        @include media(ml) {
-                            margin-left: rem(60px);
-                        }
-                    }
-
-                    &:nth-child(n+3) {
-
-                        @include media(ml) {
-                            margin-top: rem(60px);
-                        }
+                    @include media(ml) {
+                        max-width: rem(294px);
                     }
                 }
 
                 li + li {
-                    margin-top: rem(30px);
-
-                    @include media (ml) {
-                        margin-top: 0;
-                    }
+                    margin-top: 0;
                 }
             }
         }
@@ -234,6 +227,11 @@ body.layout--solution-step {
         a.video-thumb {
             display: inline-block;
             position: relative;
+            margin-bottom: rem(15px);
+
+            @include media(ml) {
+                margin-bottom: rem(30px);
+            }
 
             &::before,
             &::after {
@@ -262,6 +260,10 @@ body.layout--solution-step {
                     100% 50%,
                     0 100%
                 );
+            }
+
+            & > img {
+                display: block;
             }
         }
 
