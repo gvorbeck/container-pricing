@@ -1,20 +1,12 @@
-<!-- ---
+---
 layout: default
 ---
 
-<div class="content__faqs-header">
-    <h2>{{ page.faqs-title }}</h2>
-    <div class="content__faqs-intro">{{ page.faqs-intro | markdownify }}</div>
-</div>
-
-<ul class="content__faqs-groups">
-    {% for faq in page.faqs %}
-        <li class="faq-group">
-            <a class="faq-group__link" title="{{ faq.title }}">{{ faq.title }}</a>
+<ul class="faq-cats">
+    {% for cat in page.faqs %}
+        <li class="faq-cats__item">
+            <button class="faq-cats__button">{{ cat.title }}</button>
+            {% include inc-accordion.html items=cat.questions %}
         </li>
     {% endfor %}
 </ul>
-
-<ul class="content__faqs-list">
-    {% for faq in page.faqs %}
-        <li class="" {% endfor %} -->

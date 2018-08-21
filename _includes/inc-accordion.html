@@ -1,0 +1,9 @@
+<dl class="accordion">
+    {% for item in include.items %}
+        <dt class="accordion__term{% if forloop.first == true %} accordion__term--open{% endif %}">
+            <input type="radio" id="accordion__input-{{ forloop.index }}" class="accordion__input" name="accordion" {% if forloop.first == true %}checked{% endif %}>
+            <label for="accordion__input-{{ forloop.index }}" class="accordion__label"><span>{{ item.title }}</span></label>
+        </dt>
+        <dd class="accordion__definition">{{ item.text | markdownify }}</dd>
+    {% endfor %}
+</dl>

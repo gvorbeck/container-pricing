@@ -1,0 +1,58 @@
+body.layout--faqs {
+
+    .faq-cats {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .faq-cats__item {
+        width: 100%;
+
+        $section-colors: $color--8c $color--a8 $color--eb;
+        @for $i from 1 through 3 {
+            &:nth-child(3n+#{$i}) .faq-cats__button {
+                background-color: #{nth($section-colors, $i)};
+            }
+        }
+
+        &.faq-cats__item--open .faq-cats__button {
+            background: #FFFFFF;
+            @include header(2);
+        }
+    }
+
+    .faq-cats__button {
+        @include header(4);
+        width: 100%;
+        height: rem(110px);
+        margin: 0;
+        padding: rem(30px);
+        border: none;
+        background: none;
+        outline: none;
+        border-radius: 0;
+        cursor: pointer;
+        transition: all .5s ease-in-out;
+    }
+
+    .accordion {
+        padding: rem(30px) rem(30px) rem(60px);
+        display: none;
+
+        @include media(ml) {
+            padding: rem(60px);
+        }
+
+        .accordion__term::before {
+            top: rem(5px);
+        }
+
+        .accordion__label {
+            font-weight: normal;
+        }
+
+        .accordion__definition {
+            font-weight: bold;
+        }
+    }
+}

@@ -4,7 +4,43 @@
 @import "vars";
 @import "mixins";
 @import "fonts";
-//
+
+// EXTENDS
+%button {
+    line-height: rem(30px);
+    border: rem(1px) solid #000000;
+    display: inline-block;
+    color: #000000;
+    padding: 0 rem(10px);
+
+    &:hover {
+        color: $color--8c;
+        border-color: $color--8c;
+    }
+
+    &:active {
+        color: #FFFFFF;
+        background-color: $color--8c;
+        border-color: $color--8c;
+    }
+}
+
+%button--light {
+    color: #FFFFFF;
+    border-color: #FFFFFF;
+
+    &:hover {
+        color: $color--eb;
+        border-color: $color--eb;
+    }
+
+    &:active {
+        color: #000000;
+        background-color: $color--eb;
+        border-color: $color--eb;
+    }
+}
+
 // UNIVERSAL TAG STYLES
 body {
     font-family: $font--normal;
@@ -243,47 +279,110 @@ main {
     }
 }
 
-%button {
-    line-height: rem(30px);
-    border: rem(1px) solid #000000;
-    display: inline-block;
-    color: #000000;
-    padding: 0 rem(10px);
-
-    &:hover {
-        color: $color--8c;
-        border-color: $color--8c;
-    }
-
-    &:active {
-        color: #FFFFFF;
-        background-color: $color--8c;
-        border-color: $color--8c;
-    }
-}
-
 .button {
     @extend %button;
 }
 
-%button--light {
-    color: #FFFFFF;
-    border-color: #FFFFFF;
-
-    &:hover {
-        color: $color--eb;
-        border-color: $color--eb;
-    }
-
-    &:active {
-        color: #000000;
-        background-color: $color--eb;
-        border-color: $color--eb;
-    }
-}
-
 .button.button--light {
     @extend %button--light;
+}
+
+.accordion {
+    $arrowDimension: rem(8px);
+    $mediumMultiplier: 1.5;
+
+    .accordion__term {
+        position: relative;
+
+        &::before {
+            @include pseudo;
+            top: calc(50% - #{$arrowDimension} / 2);
+            left: 0;
+            width: $arrowDimension;
+            height: $arrowDimension;
+            border: rem(2px) solid #000000;
+            border-top-width: 0;
+            border-left-width: 0;
+            transition: all .5s ease-in-out;
+            transform: rotate(-45deg);
+
+            @include media(ml) {
+                height: calc(#{$arrowDimension} * #{$mediumMultiplier});
+                width: calc(#{$arrowDimension} * #{$mediumMultiplier});
+                top: calc(50% - (#{$arrowDimension} * #{$mediumMultiplier}) / 2);
+            }
+        }
+
+        &:first-child + .accordion__definition {
+            display: block;
+        }
+
+        &.accordion__term--open {
+
+            &::before {
+                transform: rotate(45deg);
+                top: rem(2px);
+                border-color: $color--a8;
+
+                @include media(ml) {
+                    top: 0;
+                }
+            }
+        }
+    }
+
+    .accordion__input {
+        display: none;
+    }
+
+    .accordion__label {
+        font-size: 1rem;
+        font-weight: bold;
+        line-height: 1;
+        padding-left: calc(#{rem(15px)} + #{$arrowDimension});
+
+        @include media(ml) {
+            @include header(4);
+            padding-left: calc(#{rem(30px)} + #{$arrowDimension} * #{$mediumMultiplier});
+        }
+    }
+
+    .accordion__definition {
+        display: none;
+        margin-top: rem(15px);
+
+        @include media(ml) {
+            margin-top: rem(30px);
+        }
+
+        & + .accordion__term {
+            margin-top: rem(15px);
+
+            @include media(ml) {
+                margin-top: rem(30px);
+            }
+        }
+
+        ul {
+            margin-left: rem(17px);
+            list-style-type: disc;
+
+            @include media(ml) {
+                margin-left: rem(21px);
+            }
+        }
+
+        p + p,
+        p + ul,
+        ul + p,
+        li + li {
+            margin-top: rem(15px);
+
+            @include media(ml) {
+                margin-top: rem(30px);
+            }
+        }
+    }
 }
 
 .site-footer {
@@ -319,3 +418,4 @@ main {
 @import "homepage";
 @import "solution-landing";
 @import "solution-step";
+@import "faqs";
