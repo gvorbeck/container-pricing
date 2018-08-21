@@ -29,22 +29,4 @@ $(document).ready(function() {
             }
         });
     });
-//     // Accordion behavior
-    // $('.accordion').find('.accordion__button').click( function() {
-    //     // Get content div of button clicked.
-    //     let thisContent = $(this).next('.accordion__content');
-    //     $(this).parent().parent().find('.accordion__content').each( function() {
-    //         // Go through each content div and open the relevant content and hide the other.
-    //         // Not using .slideToggle() here in order to keep from being able to close all content divs.
-    //         if ($(this).is(thisContent) && $(this).css('display') === 'none') {
-    //             $(this).parent().addClass('accordion__item--open');
-    //             $(this).slideDown();
-    //         }
-    //         else if(!$(this).is(thisContent)) {
-    //             $(this).parent().removeClass('accordion__item--open');
-    //             $(this).slideUp();
-    //         }
-    //     });
-    //
-    // });
 });
