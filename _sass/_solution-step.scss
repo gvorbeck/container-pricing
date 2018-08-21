@@ -399,6 +399,7 @@ body.layout--solution-step {
                 padding: rem(15px) rem(10px);
                 box-sizing: border-box;
                 display: none;
+                color: #FFFFFF;
 
                 @include media(ml) {
                     width: calc(100% - (#{$labelWidth} * 1.3 + #{rem(60px)}));
@@ -406,7 +407,7 @@ body.layout--solution-step {
                 }
 
                 a {
-                    color: #FFFFFF;
+                    color: #000000;
                 }
             }
 
