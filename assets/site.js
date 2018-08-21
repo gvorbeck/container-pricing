@@ -13,8 +13,6 @@ $(document).ready(function() {
 
     // Accordion behavior
     $(".accordion").find(".accordion__button").on("click", function() {
-        console.log("foo1");
-
         let thisContent = $(this).next(".accordion__content"),
             allContents = $(this).parent().parent().find(".accordion__content");
 
