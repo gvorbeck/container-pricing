@@ -1,51 +1,30 @@
 ---
 layout: default
 ---
-{% comment %}
-LAUYOUT: HOME
-PARENT: DEFAULT
-- This is the layout for the Guides Homepage. It outputs a banner, a changelog
-(whats-new), and a list of available Solutions (dive).
-- Adding Items to the "whats-new" variable in Home's YAML will increase/decrease
-the amount of Changes this layout outputs.
-- Adding Items to the "dive" variable in Home's YAML will increase/decrease
-the amount of Solutions this layout outputs.
 
-TO-DO: use type for content__block class names, like with solution step pages.
-{% endcomment %}
-<div class="content__block banner">
-    {% for banner in page.banners %}
-        <ul class="banner__list size-{{ banner.size }}">
-            {% for image in banner.images %}
-            <li class="banner__item">
-                <img alt="{{image}}" src="{{ site.baseurl }}/assets/images/banner/{{ banner.size }}/{{ image }}">
-            </li>
-            {% endfor %}
-        </ul>
-    {% endfor %}
-</div>
 {% for section in page.page-sections %}
-    <section class="content__block {{ section.component }}">
-        <header class="content__header">
-            <h1 class="content__title">{{ section.title }}</h1>
+    <section class="{{ section.component }} home-block">
+        <header class="home-block__header">
+            <h1 class="home-block__title">{{ section.title }}</h1>
         </header>
-        <div class="content__text">
-            {{ section.text | markdownify }}
-            {% if section.component == 'dive' %}
-              <ul class="content__solutions solutions">
-                {% for page in site.pages %}
-                    {% if page.layout == 'solution-home' %}
-                      <li class="solutions__item">
-                        <img class="solutions__image" alt="{{page.title}}" src="{{site.baseurl}}/assets/images/{{page.thumbnail}}">
-                        <div>
-                            <h2 class="solutions__title">{{- page.title -}}</h2>
-                            <div class="solutions__excerpt">{{- page.excerpt | markdownify -}}</div>
-                            <a class="content__link button" href="{{site.baseurl}}{{page.permalink}}" title="{{page.title}}">Start exploring</a>
-                        </div>
-                      </li>
-                    {% endif %}
-                {% endfor %}
-              </ul>
+        <div class="home-block__content">
+            {% if section.component == "whats-new" %}
+                {{ section.text | markdownify }}
+            {% elsif section.component == "dive" %}
+                <ul class="{{ section.component }}__items">
+                    {% for page in site.pages %}
+                        {% if page.layout == 'solution-landing' %}
+                            <li class="{{ section.component }}__item">
+                                <img alt="{{ page.title }}" class="{{ section.component }}__image" src="{{site.baseurl}}/assets/images/{{page.thumbnail}}">
+                                <div class="{{ section.component }}__text">
+                                    <h2 class="{{ section.component }}__title">{{ page.title }}</h2>
+                                    <div class="{{ section.component }}__description">{{ page.excerpt | markdownify }}</div>
+                                    <a class="{{ section.component }}__button button" title="Start exploring {{ page.title }}" href="{{site.baseurl}}{{page.permalink}}">Start exploring</a>
+                                </div>
+                            </li>
+                        {% endif %}
+                    {% endfor %}
+                </ul>
             {% endif %}
         </div>
     </section>

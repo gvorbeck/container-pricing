@@ -3,6 +3,75 @@ layout: default
 ---
 
 {% for section in page.page-sections %}
+    {% assign section_class = "step-section" %}
+    {% if section.type %}
+        {% capture section_class %}{{ section_class | append: " step-section--" | append: section.type }}{% endcapture %}
+    {% endif %}
+
+    {% if section.content-type %}
+        {% capture section_class %}{{ section_class | append: " step-section--" | append: section.content-type }}{% endcapture %}
+    {% endif %}
+    <section class="{{ section_class }}">
+        {% if section.title %}<h1 class="step-section__title">{{ section.title }}</h1>{% endif %}
+
+        <div class="step-section__content">
+            {{ section.text | markdownify }}
+
+            {% if section.tab-selector %}
+                <div class="tab-selector">
+                    {% for item in section.tab-selector %}
+                        <input type="radio" id="tab-{{ forloop.index }}" class="tab-selector__input" name="tabs" {% if forloop.first == true %}checked{% endif %}>
+                        <label for="tab-{{ forloop.index }}" class="tab-selector__label"><span>{{ item.title }}</span></label>
+                    {% endfor %}
+                    {% for item in section.tab-selector %}
+                        <section id="content-{{ forloop.index }}" class="tab-selector__content">
+                            <h2 class="tab-selector__title">{{ item.title }}</h2>
+                            {{ item.text | markdownify }}
+                        </section>
+                    {% endfor %}
+            {% endif %}
+
+            {% if section.type == 'accordion' %}
+                <ul class="accordion">
+                    {% for item in section.items %}
+                        <li class="accordion__item {% if forloop.first == true %}accordion__item--open{% endif %}">
+                            <button class="accordion__button"><h4 class="accordion__title">{{ item.title }}</h4></button>
+                            <div class="accordion__content">{{ item.text | markdownify }}</div>
+                        </li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+
+            {% if section.type == 'outro' %}
+                {% comment %}
+                  Programmatically determine next Step link.
+                  1) Break page's permalink down to find the Solution this page is a part of.
+                  2) Increment page's weight.
+                  3a) Search for pages that have the same Solution in their permalink.
+                  3b) AND have the incremented weight as their value.
+                {% endcomment %}
+                {% assign link_chunks = page.permalink | split: '/' %}
+                {% assign page_weight = page.weight | plus: 1 %}
+                {% for page in site.pages %}
+                    {% if page.permalink contains link_chunks[0] and page.weight == page_weight %}
+                        <a class="step-section__next-link" href="{{ site.baseurl }}{{ page.permalink }}" title="{{ page.title | remove: '_' }}">{{ page.title | markdownify | remove: '<p>' | remove: '</p>' }}</a>
+                    {% endif %}
+                {% endfor %}
+            {% endif %}
+        </div>
+
+        {% if section.image and section.content-type == "side-illustration" %}
+            <img class="step-section__illustration" alt="{{ section.title }}" src="{{ site.baseurl }}/assets/images/{{ section.image }}">
+        {% endif %}
+
+    </section>
+{% endfor %}
+
+<!-- ---
+layout: default
+---
+
+{% for section in page.page-sections %}
     <div class="content__block {{ section.type }}">
 
         {% if section.title %}<h3 class="content__title">{{ section.title }}</h3>{% endif %}
@@ -62,4 +131,4 @@ layout: default
         {% endif %}
 
     </div>
-{% endfor %}
+{% endfor %} -->

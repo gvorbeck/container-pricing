@@ -1,0 +1,197 @@
+body.layout--solution-landing {
+    $vertPathWidth: rem(5px);
+
+    .solution-step {
+        padding: 0 rem(30px) rem(120px);
+        position: relative;
+
+        @include media(ml) {
+            display: flex;
+            justify-content: center;
+
+            // VERTICAL PATH
+            &::after {
+                @include pseudo;
+                width: $vertPathWidth;
+                height: 100%;
+                background: #000000;
+                left: calc(50% - (#{$vertPathWidth} / 2));
+                top: rem(15px);
+                z-index: 2;
+            }
+        }
+
+        &:nth-child(even) {
+            text-align: right;
+
+            @include media(ml) {
+                text-align: right;
+                flex-direction: row-reverse;
+            }
+
+            .solution-step__image-wrapper {
+
+                @include media(ml) {
+                    $dimension: rem(30px);
+                    margin: 0 0 0 calc((#{$vertPathWidth} / 2) + #{$dimension});
+                    align-items: flex-start;
+                    padding: 0 0 0 $dimension;
+
+                    &::before {
+                        right: 0;
+                        left: calc(((#{$dimension} / 2) * -1) - #{$dimension} - (#{$vertPathWidth} / 2));
+                    }
+                }
+            }
+
+            .solution-step__content {
+
+                @include media(ml) {
+                    margin: 0 calc((#{$vertPathWidth} / 2) + #{rem(30px)}) 0 0;
+                }
+            }
+        }
+
+        $section-colors: '#FFFFFF' $color--eb $color--8c '#FFFFFF' $color--a8;
+        @for $i from 1 through 5 {
+            &:nth-child(5n+#{$i}) {
+                background-color: #{nth($section-colors, $i)};
+                @if $i == 3 or $i == 5 {
+                    color: #FFFFFF;
+
+                    .solution-step__button {
+                        @extend %button--light;
+                    }
+                }
+            }
+        }
+
+        &:first-child {
+
+            &::before {
+                display: none;
+            }
+
+            .solution-step__image {
+                margin-top: 0;
+            }
+        }
+
+        &:last-child {
+            padding-bottom: rem(60px);
+
+            @include media(ml) {
+
+                &::after {
+                    display: none;
+                }
+            }
+        }
+
+        &:nth-child(odd) {
+
+            &::before {
+                clip-path: polygon(
+                    100% 0,
+                    100% 100%,
+                    0 100%
+                );
+            }
+        }
+
+        // DIAGONAL EDGE
+        &::before {
+            $dimension: rem(60px);
+            @include pseudo;
+            width: 100%;
+            height: $dimension;
+            background-color: inherit;
+            top: calc(#{$dimension} * -1);
+            right: 0;
+            z-index: 1;
+            clip-path: polygon(
+                0 0,
+                0 100%,
+                100% 100%
+            );
+        }
+    }
+
+    .solution-step__content,
+    .solution-step__image-wrapper {
+
+        @include media(ml) {
+            width: rem(300px);
+            box-sizing: border-box;
+        }
+    }
+
+    .solution-step__image-wrapper {
+
+        @include media(ml) {
+            margin-right: calc((#{$vertPathWidth} / 2) + #{rem(30px)});
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            padding-right: rem(30px);
+
+            // VERTICAL PATH POINT
+            &::before {
+                $dimension: rem(30px);
+                @include pseudo;
+                width: $dimension;
+                height: $dimension;
+                background-color: #000000;
+                border-radius: 50%;
+                top: 0;
+                right: calc(((#{$dimension} / 2) * -1) - #{$dimension} - (#{$vertPathWidth} / 2));
+
+            }
+        }
+    }
+
+    .solution-step__image {
+        width: rem(112px);
+        margin-top: rem(-60px);
+        position: relative;
+        z-index: 1;
+
+        @include media(ml) {
+            margin-top: 0;
+            width: rem(150px);
+        }
+    }
+
+    .solution-step__content {
+
+        @include media(ml) {
+            margin-left: calc((#{$vertPathWidth} / 2) + #{rem(30px)});
+        }
+
+        p + p {
+            margin-top: rem(15px);
+
+            @include media(ml) {
+                margin-top: rem(30px);
+            }
+        }
+    }
+
+    .solution-step__title {
+        @include header(4);
+        margin: rem(15px) 0;
+
+        @include media(ml) {
+            margin: 0 0 rem(30px);
+        }
+    }
+
+    .solution-step__button {
+        margin-top: rem(15px);
+
+        @include media(ml) {
+            margin-top: rem(30px);
+        }
+    }
+}

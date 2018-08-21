@@ -1,5 +1,5 @@
 ---
-layout: solution-home
+layout: solution-landing
 title: lorem ipsum
 permalink: /lorem/
 weight: 00

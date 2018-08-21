@@ -12,9 +12,10 @@ button: Dive deeper
 
 page-sections:
 - type: intro
+  content-type: side-illustration
   image: visual_techline.png
   text: |
-    ### Engage techline
+    ## Engage techline
     Once you have the required SCRT reports, you must engage Techline (through your normal process).
 
     Techline has been trained to fulfill the the required steps to construct a container.

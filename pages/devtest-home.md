@@ -1,6 +1,6 @@
 ---
 # ADMIN SETTINGS
-layout: solution-home
+layout: solution-landing
 title: Application Development and Test Solution
 permalink: /devtest/
 weight: 00

@@ -1,208 +1,185 @@
-.page__home {
+body.page--home {
 
-    .header {
+    .site-header {
         background-color: $color--bc;
-        padding: rem(30px);
+    }
+
+    .site-header__title,
+    .site-header__description {
+        padding-left: rem(30px);
+        padding-right: rem(30px);
 
         @include media(ml) {
-            padding: rem(60px);
+            padding-left: rem(60px);
+            padding-right: rem(60px);
         }
+    }
 
-        .header__title {
-            @include header(2);
-            margin-bottom: rem(15px);
+    .site-header__title {
+        @include header(2);
+        padding-top: rem(30px);
+        line-height: 1;
+
+        @include media(ml) {
+            @include header(1);
+            padding-top: rem(60px);
+        }
+    }
+
+    .site-header__description {
+        padding-top: rem(15px);
+        line-height: rem(20px);
+        color: #FFFFFF;
+        font-weight: bold;
+
+        @include media(ml) {
+            @include header(4);
+            padding-top: rem(30px);
+        }
+    }
+
+    .banner {
+        margin-top: rem(30px);
+
+        @include media(ml) {
+            margin-top: rem(60px);
+        }
+    }
+
+    .banner__items {
+        display: none;
+    }
+
+    .banner__item {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .banner__items--small {
+        @include media(s) {
+            display: block;
+        }
+    }
+
+    .banner__items--medium {
+        @include media(m) {
+            display: block;
+        }
+    }
+
+    .banner__items--large {
+        @include media(l) {
+            display: block;
+        }
+    }
+
+    .banner__image {
+        max-width: 100%;
+    }
+
+    .home-block {
+        margin: 0 rem(30px) rem(60px);
+
+        @include media(ml) {
+            margin: 0 rem(60px) rem(60px);
+        }
+    }
+
+    .home-block__header {
+        margin-bottom: rem(15px);
+
+        @include media(ml) {
+            margin-bottom: rem(30px);
+        }
+    }
+
+    .home-block__title {
+        @include header(2);
+        line-height: 1;
+        padding-bottom: rem(25px);
+        position: relative;
+
+        &::after {
+            @include pseudo;
+            bottom: 0;
+            left: 0;
+            width: rem(100px);
+            height: rem(10px);
+            background-color: $color--8c;
+        }
+    }
+
+    .whats-new {
+
+        ul {
+            list-style-type: disc;
+            margin-left: rem(17px);
 
             @include media(ml) {
-                @include header(1);
-                margin-bottom: rem(30px);
-            }
-
-            a {
-                color: #000000;
+                margin-left: rem(21px);
             }
         }
 
-        .header__subtitle {
-            color: #FFFFFF;
-            font-weight: bold;
-            line-height: rem(20px);
+        li {
+            position: relative;
+            padding-bottom: rem(26px);
 
             @include media(ml) {
-                @include header(4);
+                padding-bottom: rem(35px);
+            }
+
+            em {
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                line-height: 1;
+            }
+
+            & + li {
+                margin-top: rem(15px);
             }
         }
     }
 
-    .content {
+    .dive {
 
-        .content__block {
-
-            .content__title {
-                padding-bottom: rem(25px);
-                position: relative;
-
-                @include media(ml) {
-                    padding-bottom: rem(40px);
-                }
-
-                &::after {
-                    @include pseudo;
-                    bottom: 0;
-                    left: 0;
-                    height: rem(10px);
-                    width: rem(100px);
-                    background-color: $color--8c;
-                }
-            }
-        }
-
-        .banner {
-            background-color: $color--bc;
-            padding: 0;
-            margin-bottom: rem(30px);
+        .dive__item {
 
             @include media(ml) {
-                margin-bottom: rem(60px);
-            }
-
-            .banner__list {
-                display: none;
-                margin: 0;
-
-                @include media(s) {
-                    &.size-small {
-                        display: block;
-                    }
-                }
-
-                @include media(m) {
-                    &.size-medium {
-                        display: block;
-                    }
-                }
-
-                @include media(l) {
-                    &.size-large {
-                        display: block;
-                    }
-                }
-            }
-
-            .banner__item {
                 display: flex;
-                flex-direction: column;
-                margin: 0;
+                align-items: flex-start;
             }
 
-            img {
-                max-width: 100%;
-            }
-        }
-
-        .whats-new {
-
-            .content__text {
-                line-height: rem(20px);
-
-                // @include media(ml) {
-                //     @include header(3);
-                //     line-height: rem(30px);
-                // }
-
-                ul {
-                    margin-left: rem(17px);
-                    display: flex;
-                    flex-direction: column;
-                    list-style-type: disc;
-
-                    @include media(ml) {
-                        margin-left: rem(21px);
-                    }
-                }
-
-                li {
-                    padding-bottom: rem(30px);
-                    position: relative;
-
-                    @include media(ml) {
-                        padding-bottom: rem(35px);
-                    }
-
-                    & + li {
-                        margin-top: rem(15px);
-
-                        @include media(ml) {
-                            margin-top: rem(30px);
-                        }
-                    }
-
-                    em {
-                        position: absolute;
-                        bottom: 0;
-                        right: 0;
-                        line-height: 1;
-                    }
-                }
-            }
-        }
-
-        .solutions {
-
-            .solutions__item {
-                line-height: rem(20px);
-
-                @include media(ml) {
-                    display: grid;
-                    grid-template: auto / rem(75px) auto;
-                    grid-column-gap: rem(30px);
-                }
-            }
-
-            .solutions__item + .solutions__item {
+            & + .dive__item {
                 margin-top: rem(30px);
 
                 @include media(ml) {
                     margin-top: rem(60px);
                 }
             }
+        }
 
-            .solutions__image {
-                max-width: rem(50px);
-                margin-bottom: rem(15px);
-
-                @include media(ml) {
-                    max-width: rem(75px);
-                    margin: 0;
-                    grid-column-start: 1;
-                    grid-column-end: 2;
-                    align-items: start;
-                }
-            }
-
-            .solutions__title {
-                font-weight: bold;
-                line-height: rem(20px);
-                margin-bottom: rem(15px);
-
-                @include media(ml) {
-                    @include header(4);
-                    margin-bottom: rem(30px);
-                }
-            }
+        .dive__image {
+            max-width: rem(46px);
+            margin: 0 0 rem(15px);
 
             @include media(ml) {
-                .solutions__title,
-                .solutions__excerpt,
-                .button {
-                    grid-column-start: 2;
-                    grid-column-end: 3;
-                    grid-row-start: 1;
-                }
+                max-width: rem(65px);
+                margin: 0 rem(30px) 0 0;
+            }
+        }
 
-                // .solutions__excerpt p {
-                //     @include header(3);
-                //     line-height: rem(30px);
-                // }
+        .dive__title {
+            font-weight: bold;
+            margin-bottom: rem(15px);
+            line-height: 1;
+        }
+
+        .dive__button {
+            margin-top: rem(15px);
+
+            @include media(ml) {
+                margin-top: rem(30px);
             }
         }
     }

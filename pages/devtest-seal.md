@@ -45,9 +45,11 @@ page-sections:
 
       It is strongly recommended you engage the Container Pricing during this stage to ensure you stay within the bounds of what is possible: [cpricing@us.ibm.com](mailto:cpricing@us.ibm.com)
 - type: emphasis
-  title: Getting approval
+  content-type: side-illustration
   image: visual_zachemail.png
   text: |
+    ## Getting Approval
+    
     Once you have conditional agreement, your final step before presenting a firm offer is to secure worldwide Z software pricing approval.
 
     You will need the completed CPS spreadsheet and completed contract addendum.

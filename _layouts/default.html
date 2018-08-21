@@ -1,15 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-
     {% include head.html %}
 
-    <body class="page page__{{ page.slug }} {{ page.layout }}">
+    {% capture class_list %}{{ "page--" | append: page.slug | append: " layout--" | append: page.layout }}{% endcapture %}
+
+    {% if page.layout == "solution-step" %}
+        {% assign solution_name = page.permalink | split: "/" %}
+        {% capture class_list %}{{ class_list | append: " solution--"  | append: solution_name[1] }}{% endcapture %}
+    {% endif %}
+
+    <body class="{{ class_list }}">
+
         {% include header.html %}
 
-        <main class="page__main content">
-            {{content}}
-        </main>
+        <main>{{ content }}</main>
 
         {% include footer.html %}
+
     </body>
+
 </html>
