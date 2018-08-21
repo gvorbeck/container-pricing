@@ -39,8 +39,9 @@ $(document).ready(function() {
                 thisAccordion.slideDown();
             }
             else if (!$(this).next().is(thisAccordion)) {
-                $(this).parent().removeClass("faq-cats__item--open");
-                $(this).slideUp();
+                $(this).slideUp(function() {
+                    $(this).parent().removeClass("faq-cats__item--open");
+                });
             }
         });
     });

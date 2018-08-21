@@ -3,10 +3,19 @@ body.layout--faqs {
     .faq-cats {
         display: flex;
         flex-direction: column;
+
+        @include media(ml) {
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
     }
 
     .faq-cats__item {
         width: 100%;
+
+        @include media(ml) {
+            width: 50%;
+        }
 
         $section-colors: $color--8c $color--a8 $color--eb;
         @for $i from 1 through 3 {
@@ -15,9 +24,27 @@ body.layout--faqs {
             }
         }
 
-        &.faq-cats__item--open .faq-cats__button {
-            background: #FFFFFF;
-            @include header(2);
+        &.faq-cats__item--open {
+
+            .faq-cats__button {
+                background: #FFFFFF;
+                @include header(2);
+            }
+
+            @include media(ml) {
+                .accordion {
+                    width: 100vw;
+                    box-sizing: border-box;
+                }
+
+                &:nth-child(even) {
+
+                    .accordion {
+                        position: relative;
+                        left: -50vw;
+                    }
+                }
+            }
         }
     }
 
@@ -38,6 +65,7 @@ body.layout--faqs {
     .accordion {
         padding: rem(30px) rem(30px) rem(60px);
         display: none;
+        box-sizing: border-box;
 
         @include media(ml) {
             padding: rem(60px);
