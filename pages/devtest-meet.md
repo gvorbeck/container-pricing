@@ -16,6 +16,7 @@ button: Start customizing
 
 page-sections:
 - type: intro
+  content-type: side-illustration
   image: visual_frame.png
   text: |
     Frame the conversation around removing the limitations on DevTest that are currently imposed due to cost to allow our customers to focus on the value of having a modern, agile, DevOps environment on the platform.

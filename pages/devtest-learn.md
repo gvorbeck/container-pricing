@@ -15,6 +15,7 @@ button: Learn more
 # PAGE CONTENT
 page-sections:
 - type: intro
+  content-type: side-illustration
   image: visual_devops.png
   text: |
     Many clients are operating with severely capped Development and Test environments compromising best practices.
