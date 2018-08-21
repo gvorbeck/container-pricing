@@ -56,7 +56,7 @@ body:not(.layout--home) .site-header {
         line-height: rem(20px);
         background-color: #FFFFFF;
         position: relative;
-        z-index: 3;
+        z-index: 4;
 
         @include media(ml) {
             @include header(3);
@@ -110,7 +110,7 @@ body:not(.layout--home) .site-header {
         position: absolute;
         top: $spaceVert;
         right: $spaceHorz;
-        z-index: 3;
+        z-index: 4;
 
         @include media(ml) {
             top: rem(40px);
@@ -164,7 +164,7 @@ body:not(.layout--home) .site-header {
         box-sizing: border-box;
         top: rem(-1000px);
         transition: all 0.5s ease-in-out;
-        z-index: 2;
+        z-index: 3;
 
         @include media(ml) {
             padding: rem(30px) rem(60px) rem(60px);
