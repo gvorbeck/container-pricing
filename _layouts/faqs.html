@@ -5,7 +5,8 @@ layout: default
 <ul class="faq-cats">
     {% for cat in page.faqs %}
         <li class="faq-cats__item">
-            <button class="faq-cats__button">{{ cat.title }}</button>
+            <input type="radio" id="faq-cats__input-{{ forloop.index }}" class="faq-cats__input" name="faq-cats__item">
+            <label for="faq-cats__input-{{ forloop.index }}" class="faq-cats__label"><span>{{ cat.title }}</span></label>
             {% include inc-accordion.html items=cat.questions %}
         </li>
     {% endfor %}

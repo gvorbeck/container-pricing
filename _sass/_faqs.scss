@@ -1,86 +1,201 @@
 body.layout--faqs {
 
     .faq-cats {
-        display: flex;
-        flex-direction: column;
-
-        @include media(ml) {
-            flex-direction: row;
-            flex-wrap: wrap;
-        }
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
     }
 
     .faq-cats__item {
-        width: 100%;
+        grid-column: 1 / span 4;
 
-        @include media(ml) {
-            width: 50%;
-        }
-
-        $section-colors: $color--8c $color--a8 $color--eb;
+        $opacity: 1;
         @for $i from 1 through 3 {
-            &:nth-child(3n+#{$i}) .faq-cats__button {
-                background-color: #{nth($section-colors, $i)};
+            &:nth-child(3n + #{$i}) .faq-cats__label {
+                @if $i == 1 {
+                    $opacity: .7;
+                }
+                @else if $i == 2 {
+                    $opacity: .5;
+                }
+                @else {
+                    $opacity: .25;
+                }
+                background-color: rgba($color--8c, $opacity);
             }
         }
 
-        &.faq-cats__item--open {
+        @include media(m) {
+            grid-column: auto / span 2;
 
-            .faq-cats__button {
-                background: #FFFFFF;
-                @include header(2);
-            }
-
-            @include media(ml) {
                 .accordion {
                     width: 100vw;
-                    box-sizing: border-box;
                 }
 
                 &:nth-child(even) {
 
                     .accordion {
-                        position: relative;
                         left: -50vw;
                     }
                 }
+        }
+
+        @include media(ml) {
+            position: relative;
+
+            .accordion {
+                box-sizing: border-box;
+            }
+
+            &:nth-child(even) {
+
+                .accordion {
+                    position: relative;
+                }
+            }
+        }
+
+        @include media(l) {
+            grid-column: auto / span 1;
+        }
+
+        &.faq-cats__item--open {
+
+            .faq-cats__label {
+                background: #FFFFFF;
+                @include header(2);
+                padding: rem(10px);
+            }
+        }
+
+        .accordion {
+            padding: rem(30px);
+            display: none;
+
+            .accordion__term::before {
+                top: rem(5px);
             }
         }
     }
 
-    .faq-cats__button {
+    .faq-cats__input {
+        display: none;
+    }
+
+    .faq-cats__label {
         @include header(4);
+        padding: rem(15px) rem(30px);
+        box-sizing: border-box;
+        line-height: rem(30px);
         width: 100%;
         height: rem(110px);
-        margin: 0;
-        padding: rem(30px);
-        border: none;
-        background: none;
-        outline: none;
-        border-radius: 0;
-        cursor: pointer;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         transition: all .5s ease-in-out;
     }
-
-    .accordion {
-        padding: rem(30px) rem(30px) rem(60px);
-        display: none;
-        box-sizing: border-box;
-
-        @include media(ml) {
-            padding: rem(60px);
-        }
-
-        .accordion__term::before {
-            top: rem(5px);
-        }
-
-        .accordion__label {
-            font-weight: normal;
-        }
-
-        .accordion__definition {
-            font-weight: bold;
-        }
-    }
 }
+
+// body.layout--faqs {
+//
+//     .faq-cats {
+//         display: flex;
+//         flex-direction: column;
+//
+//         @include media(ml) {
+//             flex-direction: row;
+//             flex-wrap: wrap;
+//         }
+//     }
+//
+//     .faq-cats__item {
+//         width: 100%;
+//
+//         @include media(ml) {
+//             width: 50%;
+//         }
+//
+//         @include media(l) {
+//             width: 25%;
+//         }
+//
+//         $section-colors: $color--8c $color--a8 $color--eb;
+//         @for $i from 1 through 3 {
+//             &:nth-child(3n+#{$i}) .faq-cats__button {
+//                 background-color: #{nth($section-colors, $i)};
+//             }
+//         }
+//
+//         &.faq-cats__item--open {
+//
+//             .faq-cats__button {
+//                 background: #FFFFFF;
+//                 padding: rem(5px);
+//                 @include header(2);
+//             }
+//
+//             @include media(ml) {
+//                 .accordion {
+//                     width: 100vw;
+//                     box-sizing: border-box;
+//                     position: relative;
+//                 }
+//
+//                 &:nth-child(even) {
+//
+//                     .accordion {
+//                         left: -50vw;
+//                     }
+//                 }
+//             }
+//
+//             @include media (l) {
+//                 @for $i from 1 through 4 {
+//                     &:nth-child(4n + #{$i}) {
+//                         @if $i >= 2 {
+//                             .accordion {
+//                                 left: calc((25 * #{$i} - 25) * -#{1vw});
+//                             }
+//                         }
+//                     }
+//                 }
+//             }
+//         }
+//     }
+//
+//     .faq-cats__button {
+//         @include header(4);
+//         width: 100%;
+//         height: rem(110px);
+//         margin: 0;
+//         padding: rem(30px);
+//         border: none;
+//         background: none;
+//         outline: none;
+//         border-radius: 0;
+//         cursor: pointer;
+//         transition: all .5s ease-in-out;
+//     }
+//
+//     .accordion {
+//         padding: rem(30px) rem(30px) rem(60px);
+//         display: none;
+//         box-sizing: border-box;
+//
+//         @include media(ml) {
+//             padding: rem(60px);
+//         }
+//
+//         .accordion__term::before {
+//             top: rem(5px);
+//         }
+//
+//         .accordion__label {
+//             font-weight: normal;
+//         }
+//
+//         .accordion__definition {
+//             font-weight: bold;
+//         }
+//     }
+// }

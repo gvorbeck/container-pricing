@@ -54,7 +54,7 @@ body.layout--solution-landing {
 
         $section-colors: '#FFFFFF' $color--eb $color--8c '#FFFFFF' $color--a8;
         @for $i from 1 through 5 {
-            &:nth-child(5n+#{$i}) {
+            &:nth-child(5n + #{$i}) {
                 background-color: #{nth($section-colors, $i)};
                 @if $i == 3 or $i == 5 {
                     color: #FFFFFF;

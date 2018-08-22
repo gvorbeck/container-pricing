@@ -30,7 +30,7 @@ $(document).ready(function() {
     });
 
     // Faqs behavior
-    $("body.layout--faqs").find(".faq-cats__button").on("click", function() {
+    $("body.layout--faqs").find(".faq-cats__label").on("click", function() {
         let thisAccordion = $(this).next(),
             thisItem = $(this).parent();
         $("body.layout--faqs").find(".accordion").each(function() {
@@ -39,9 +39,9 @@ $(document).ready(function() {
                 thisAccordion.slideDown();
             }
             else if (!$(this).next().is(thisAccordion)) {
-                $(this).slideUp(function() {
-                    $(this).parent().removeClass("faq-cats__item--open");
-                });
+                $(this).slideUp();
+                $(this).parent().removeClass("faq-cats__item--open");
+
             }
         });
     });
