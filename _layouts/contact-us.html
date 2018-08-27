@@ -1,0 +1,21 @@
+---
+layout: default
+---
+
+<div class="intro">{{ page.intro | markdownify }}</div>
+<section class="contact-info">
+    <h1>The Team</h1>
+    <ul class="contact-list">
+        {% for team in page.teams %}
+        <li class="contact-list__item team">
+            <h4 class="team__name">{{ team.title }}</h4>
+            <dl class="team__roster">
+                {% for member in team.roster %}
+                    <dt class="team__contact-name">{{ member.name }}</dt>
+                    <dd class="team__contact-email">{{ member.email }}</dd>
+                {% endfor %}
+            </dl>
+        </li>
+        {% endfor %}
+    </ul>
+</section>

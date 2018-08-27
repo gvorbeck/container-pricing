@@ -5,10 +5,7 @@ title: Frequently Asked Questions
 permalink: /faqs/
 slug: faqs
 
-# faqs-title: Frequently Asked Questions
-# faqs-intro: |
-  # Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce imperdiet leo quis erat convallis ullamcorper.
-
+# PAGE CONTENT
 faqs:
   - title: General questions
     questions:

@@ -1,0 +1,67 @@
+body.layout--contact-us {
+
+    .intro,
+    .contact-info {
+        padding: 0 rem(30px) rem(60px);
+
+        @include media(ml) {
+            padding: 0 rem(60px) rem(60px);
+        }
+    }
+
+    .intro {
+
+        p + p {
+            margin-top: rem(15px);
+
+            @include media(ml) {
+                margin-top: rem(30px);
+            }
+        }
+    }
+
+    .contact-info {
+
+        h1 {
+            margin-bottom: rem(15px);
+            @include header(4);
+
+            @include media(ml) {
+                margin-bottom: rem(30px);
+            }
+        }
+    }
+
+    .contact-list {
+
+        @include media(ml) {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, rem(294px));
+            column-gap: rem(60px);
+            row-gap: rem(60px);
+        }
+    }
+
+    .contact-list__item {
+
+        & + .contact-list__item {
+            margin-top: rem(15px);
+
+            @include media(ml) {
+                margin-top: 0;
+            }
+        }
+    }
+
+    .team__name {
+        font-weight: bold;
+    }
+
+    .team__contact-email + .team__contact-name {
+        margin-top: rem(15px);
+
+        @include media(ml) {
+            margin-top: rem(30px);
+        }
+    }
+}
