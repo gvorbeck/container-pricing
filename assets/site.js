@@ -45,10 +45,4 @@ $(document).ready(function() {
             }
         });
     });
-
-    // $($("body.layout--faqs").find(".faq-cats__button").get().reverse()).each(function(i) {
-    //     if (i === 0) {
-    //         $(this).delay((i + 1) * 50).fadeOut();
-    //     }
-    // });
 });

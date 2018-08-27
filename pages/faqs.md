@@ -12,11 +12,11 @@ slug: faqs
 faqs:
   - title: General questions
     questions:
-      - title: Proin bibendum vel turpis non commodo. Integer nec magna eu nisl condimentum facilisis.
+      - title: Proin bibendum vel turpis non commodo. Integer nec magna eu nisl condimentum facilisis?
         text: Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-      - title: Maecenas egestas diam ac arcu elementum, sit amet facilisis felis ultricies. Nullam non risus at purus vestibulum mattis. Cras imperdiet quam nec interdum varius. Sed at tincidunt dolor, et rhoncus nulla.
+      - title: Maecenas egestas diam ac arcu elementum, sit amet facilisis felis ultricies. Nullam non risus at purus vestibulum mattis. Cras imperdiet quam nec interdum varius. Sed at tincidunt dolor, et rhoncus nulla?
         text: Morbi sagittis turpis dui, ut volutpat tellus bibendum nec. Pellentesque nec diam at sem pellentesque condimentum vel id massa.
-      - title: Pellentesque vehicula aliquam turpis, nec blandit augue molestie nec.
+      - title: Pellentesque vehicula aliquam turpis, nec blandit augue molestie nec?
         text: |
           Nullam consequat interdum ornare. Nunc rutrum pulvinar odio, auctor placerat velit porta tristique. Integer id placerat sapien. Morbi pharetra tellus lorem, non iaculis dolor tristique quis. Phasellus sollicitudin scelerisque massa, at placerat justo feugiat nec. Duis tempus mi ligula, a vulputate tortor vulputate in.
 

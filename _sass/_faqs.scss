@@ -3,6 +3,10 @@ body.layout--faqs {
     .faq-cats {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
+
+        @include media(l) {
+            width: 50%;
+        }
     }
 
     .faq-cats__item {
@@ -25,25 +29,29 @@ body.layout--faqs {
         }
 
         @include media(m) {
-            grid-column: auto / span 2;
+
+            &:nth-child(even) {
 
                 .accordion {
-                    width: 100vw;
+                    left: -50vw;
                 }
-
-                &:nth-child(even) {
-
-                    .accordion {
-                        left: -50vw;
-                    }
-                }
+            }
         }
 
         @include media(ml) {
+            grid-column: auto / span 2;
             position: relative;
+
+            &:nth-child(even) {
+
+                .accordion {
+                    left: -25vw;
+                }
+            }
 
             .accordion {
                 box-sizing: border-box;
+                    width: 100vw;
             }
 
             &:nth-child(even) {
@@ -55,7 +63,22 @@ body.layout--faqs {
         }
 
         @include media(l) {
-            grid-column: auto / span 1;
+            // grid-column: auto / span 1;
+        }
+
+        @include media(xl) {
+
+            .accordion {
+                max-width: rem(1440px);
+            }
+
+
+            &:nth-child(even) {
+
+                .accordion {
+                    left: rem(-358px);
+                }
+            }
         }
 
         &.faq-cats__item--open {
