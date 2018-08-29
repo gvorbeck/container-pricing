@@ -12,7 +12,7 @@ $(document).ready(function() {
     });
 
     // Accordion behavior
-    $(".accordion").find(".accordion__label").on("click", function() {
+    $(".accordion").on("click", ".accordion__label", function() {
         let thisDefinition = $(this).parent().next(".accordion__definition"),
             thisTerm = $(this).parent();
 
@@ -31,18 +31,26 @@ $(document).ready(function() {
 
     // Faqs behavior
     $("body.layout--faqs").find(".faq-cats__label").on("click", function() {
-        let thisAccordion = $(this).next(),
-            thisItem = $(this).parent();
-        $("body.layout--faqs").find(".accordion").each(function() {
-            if ($(this).is(thisAccordion) && thisAccordion.css("display") === "none") {
-                thisAccordion.parent().addClass("faq-cats__item--open");
-                thisAccordion.slideDown();
-            }
-            else if (!$(this).next().is(thisAccordion)) {
-                $(this).slideUp();
-                $(this).parent().removeClass("faq-cats__item--open");
+        let thisCat = $(this).parent();
 
-            }
-        });
+        if ($(window).width() >= 1024) {
+            $(".faq-content").find(".accordion").each(function() {
+                if ($(this).css("display") === "block") {
+                    $(this).slideUp();
+                }
+
+                if (thisCat.index() == $(this).index()) {
+                    $(this).slideDown();
+                }
+            });
+        }
+        else {
+            $(".faq-cats").find(".accordion").each(function() {
+                if (!thisCat.is($(this).parent())) {
+                    $(this).slideUp();
+                }
+            });
+            thisCat.find(".accordion").slideDown();
+        }
     });
 });

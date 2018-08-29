@@ -11,3 +11,8 @@ layout: default
         </li>
     {% endfor %}
 </ul>
+<section class="faq-content">
+    {% for cat in page.faqs %}
+        {% include inc-accordion.html items=cat.questions %}
+    {% endfor %}
+</section>
