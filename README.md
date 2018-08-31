@@ -5,7 +5,7 @@ The new home of Container Pricing solutions.
 * [Code organization](#code-org)
 * [YAML setup](#yaml-setup)
     * [Homepage](#yaml-homepage)
-    * [Solution Homepages](#yaml-solution-homepage)
+    * [Solution Landing Pages](#yaml-solution-landing)
     * [Step Pages](#yaml-step-pages)
 * [Links to Documentation](#docs)
 
@@ -31,14 +31,14 @@ The YAML for CPGS 2.0 is a lot more dynamic. This allows the editor many more op
 
 For terminology's sake, I will refer to four different page types while I discuss this site's YAML implementation:
 * __Homepage__ - This is the CPGS homepage (ex: https://pages.github.ibm.com/cpricing/salesguides/)
-* __Solution Homepage(s)__ - These are the landing pages for each Solution (ex: https://pages.github.ibm.com/cpricing/salesguides/devtest/)
+* __Solution Landing Page(s)__ - These are the landing pages for each Solution. They list links to Solution Step Pages (ex: https://pages.github.ibm.com/cpricing/salesguides/devtest/)
 * __Solution Step__ pages - These are the pages devoted to individual steps within a Solution (ex: https://pages.github.ibm.com/cpricing/salesguides/devtest/learn/)
 * __Help__ pages - 404, FAQs, and Contact Us pages.
 
 In general these page's YAML will be set up with the following sections:
 * __Admin Settings__ - YAML parameters that are related to the development and functioning of the site. Changing these parameter's values will greatly alter how several parts of the site work. Edit these carefully.
 
-* __Parent-page Content__ - Many pages feed eachother in CPGS 2.0. For instance, the Homepage gets the content for the __Dive into a solution__ section directly from the Solution Homepage's markdown file. This is done to keep content together and not spread around several files. An editor should not have to remember that changing the content for devtest is _also_ required within the Homepage's markdown. Instead, the homepage gets all its info for devtest _directly_ from the devtest Solution Homepage markdown file. Simple.
+* __Parent-page Content__ - Many pages feed eachother in CPGS 2.0. For instance, the Homepage gets the content for the __Dive into a solution__ section directly from the Solution Landing Page's markdown file. This is done to keep content together and not spread around several files. An editor should not have to remember that changing the content for devtest is _also_ required within the Homepage's markdown. Instead, the homepage gets all its info for devtest _directly_ from the devtest Solution Landing Page markdown file. Simple.
 
 * __Page Content__ - This is where you'll find the parameters for content appearing directly on the page. Most editorial work will be done here.
 
@@ -63,10 +63,10 @@ For the __What's new__ section, the `title` parameter is self-explanatory. The `
 
 The __What's new__ `page-section` has a markdown `text` parameter for updates.
 
-The __Dive into a solution__ section content is retrieved from Solution Homepage markdown files, so there isn't much here.
+The __Dive into a solution__ section content is retrieved from Solution Landing Page markdown files, so there isn't much here.
 
-<a name="yaml-solution-homepage"></a>
-### Solution Homepages' YAML Setup
+<a name="yaml-solution-landing"></a>
+### Solution Landing Pages' YAML Setup
 __\_pages/[SOLUTION]-home.md__ - These are the landing/homepages for individual solutions (ex: `_pages/devtest-home.md`).
 
 #### Admin Settings
@@ -83,10 +83,10 @@ Again, the `layout` parameter controls the layout template for this page. This p
 
 `permalink` and `slug` work exactly as described above in the CPGS Homepage markdown file.
 
-The `weight` parameter is part of the infrastructure that populates the CPGS navigation/hamburger menu. Solution Homepages should always have a `weight` value of `00`. Any other value will break the CPGS navigation menu.
+The `weight` parameter is part of the infrastructure that populates the CPGS navigation/hamburger menu. Solution Landing Pages should always have a `weight` value of `00`. Any other value will break the CPGS navigation menu.
 
 #### Parent-page Content
-The last parameters on Solution Homepages are `thumbnail` and `excerpt`. These are only output on the CPGS Homepage and control what is seen in the __Dive into a solution__ section.
+The last parameters on Solution Landing Pages are `thumbnail` and `excerpt`. These are only output on the CPGS Homepage and control what is seen in the __Dive into a solution__ section.
 
 <a name="yaml-step-pages"></a>
 ### Solution Step Pages' YAML Setup
@@ -107,7 +107,7 @@ The `title` parameter takes advantage of markdown formatting to set where the co
 The `weight` parameter is set to `01` to show the order in which this page should be listed in the navigation/hamburger menu. Make sure not to duplicate numbers here or the nav menu will get very complicated to read.
 
 #### Parent-page Content
-On the Solution Homepages, each step in the process has a `logo`, `excerpt`, and `button`. That content is found here. Changing anything here will not show up on the Solution Step page. Instead this content feeds directly to the Step's Solution Hompage.
+On the Solution Landing Pages, each step in the process has a `logo`, `excerpt`, and `button`. That content is found here. Changing anything here will not show up on the Solution Step page. Instead this content feeds directly to the Step's Solution Hompage.
 
 #### Page Content
 The content for Solution Step pages is contained within the `page-sections` parameter. Each item in `page-sections` controls a block of the content. These "content blocks" can be presented in several ways:
