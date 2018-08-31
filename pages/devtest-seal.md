@@ -1,15 +1,18 @@
 ---
+# ADMIN SETTINGS
 layout: solution-step
 title: Seal the _deal_
 permalink: /devtest/seal/
 weight: 04
 slug: seal
 
+# SOLUTION LANDING PAGE CONTENT
 page-logo: visual_seal.png
 excerpt: |
   Access and complete the contract for your customer to review, sign, and send back.
 button: Start contract
 
+# PAGE CONTENT
 page-sections:
 - type: accordion
   items:
@@ -49,7 +52,7 @@ page-sections:
   image: visual_zachemail.png
   text: |
     ## Getting Approval
-    
+
     Once you have conditional agreement, your final step before presenting a firm offer is to secure worldwide Z software pricing approval.
 
     You will need the completed CPS spreadsheet and completed contract addendum.

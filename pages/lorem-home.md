@@ -1,14 +1,17 @@
 ---
+# ADMIN SETTINGS
 layout: solution-landing
 title: lorem ipsum
 permalink: /lorem/
 weight: 00
 slug: lorem
 
+# HOMEPAGE CONTENT
 thumbnail: visual_newapp.png
 excerpt: |
   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae augue ligula. Vestibulum consequat malesuada pulvinar. Quisque molestie ipsum vel malesuada porttitor.
 
+# PAGE CONTENT
 page-sections:
 - title: "Learn about the solution"
   text: |

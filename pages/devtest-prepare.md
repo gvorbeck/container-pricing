@@ -1,15 +1,18 @@
 ---
+# ADMIN SETTINGS
 layout: solution-step
 title: Prepare your _offering_
 permalink: /devtest/prepare/
 weight: 03
 slug: prepare
 
+# SOLUTION LANDING PAGE CONTENT
 page-logo: visual_prepare.png
 excerpt: |
   Get the checklist of all the items you need to put together a Dev/ Test quote. Understand all the steps to calculating a quote: Set the baseline, calculate the IPLA entitlements, complete and submit the approval spreadsheet.
 button: Dive deeper
 
+# PAGE CONTENT
 page-sections:
 - type: intro
   content-type: side-illustration

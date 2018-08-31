@@ -1,15 +1,18 @@
 ---
+# ADMIN SETTINGS
 layout: solution-step
 title: Finalize the _deal_
 permalink: /devtest/finalize/
 weight: 05
 slug: finalize
 
+# SOLUTION LANDING PAGE CONTENT
 page-logo: visual_finalize.png
 excerpt: |
   Work with techline to populate a Solution ID that your customer will use to identify the container in the reporting. Work with techline to start billing the customer.
 button: Learn more
 
+# PAGE CONTENT
 page-sections:
 - type: accordion
   items:

@@ -1,10 +1,12 @@
 ---
+# ADMIN SETTINGS
 layout: solution-step
 title: Meet your _customer_
 permalink: /devtest/meet/
 weight: 02
 slug: meet
 
+# SOLUTION LANDING PAGE CONTENT
 page-logo: visual_meet.png
 excerpt: |
   Customize these materials as they relate to your client (can be shared via email, phone, or in-person.)
@@ -14,6 +16,7 @@ excerpt: |
   Note: Do not position this offering as ‘free’. It may require additional IPLA entitlement or hardware capacity at a discount.
 button: Start customizing
 
+# PAGE CONTENT
 page-sections:
 - type: intro
   content-type: side-illustration
