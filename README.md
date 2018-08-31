@@ -7,6 +7,13 @@ The new home of Container Pricing solutions.
     * [Homepage](#yaml-homepage)
     * [Solution Landing Pages](#yaml-solution-landing)
     * [Step Pages](#yaml-step-pages)
+* Tutorials
+    * How to create a new solution.
+        1. Create a Solution Landing Page
+        2. Create a Solution Step Page
+    * Markdown Tips
+        * Create a link
+        * Show an image
 * [Links to Documentation](#docs)
 
 <a name="code-org"></a>
