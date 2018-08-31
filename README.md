@@ -71,13 +71,13 @@ __\_pages/[SOLUTION]-home.md__ - These are the landing/homepages for individual 
 
 #### Admin Settings
 ```
-layout: solution-home
+layout: solution-landing
 title: Application Development and Test Solution
 permalink: /devtest/
 weight: 00
 slug: devtest
 ```
-Again, the `layout` parameter controls the layout template for this page. This parameter value is what causes this solution to be listed on the CPGS Homepage, since the Homepage looks for all other pages with `solution-home` as their layout template before listing the results on the __Dive into a solution__ section.
+Again, the `layout` parameter controls the layout template for this page. This parameter value is what causes this solution to be listed on the CPGS Homepage, since the Homepage looks for all other pages with `solution-landing` as their layout template before listing the results on the __Dive into a solution__ section.
 
 `title` is the title of the solution. The CPGS Homepage's markdown file did not have this as it uses the site's title (found in `_config.yml`) for its title.
 
