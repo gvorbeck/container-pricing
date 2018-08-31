@@ -55,6 +55,8 @@ $(document).ready(function() {
         }
     });
 
+    // Check to see if an element is in view. Expects a jQuery element object.
+    // Borrowed/tweaked from here: https://stackoverflow.com/a/22480938
     function isScrolledIntoView(el) {
         var rect = el[0].getBoundingClientRect();
         var elemTop = rect.top;
