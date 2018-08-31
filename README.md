@@ -117,3 +117,5 @@ The content for Solution Step pages is contained within the `page-sections` para
 * `type: intro` - This is the first block of content on a Solution Step page. It does not have a title (the `title` parameter in the Admin Settings section handles this). 
 * `type: outro` - This is the last block of content on a Solution Step page.
 * [no type listed] - If no `type` parameter is listed, this page section will be a normal, borderless area of content.
+
+__NOTE:__ When a `page-sections` item has a `content-type` parameter, __this means the `text` parameter may have very specific formatting in order to maintain a specific design layout__. Changing the value of the `content-type` parameter or deviating drastically from the existing formatting within the `text` parameter could greatly alter the layout of the site.
