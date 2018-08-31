@@ -157,7 +157,7 @@ body.layout--solution-landing {
         position: relative;
         z-index: 1;
         opacity: 0;
-        transition: opacity .25s ease-out;
+        transition: opacity .5s ease-out;
 
         @include media(ml) {
             margin-top: 0;
