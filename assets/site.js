@@ -1,4 +1,5 @@
 $(document).ready(function() {
+
     // Tab Selector behavior
     $(".tab-selector").find(".tab-selector__label").on("click", function() {
         // Get index # of clicked label.
@@ -53,4 +54,28 @@ $(document).ready(function() {
             thisCat.find(".accordion").slideDown();
         }
     });
+
+    function isScrolledIntoView(el) {
+        var rect = el[0].getBoundingClientRect();
+        var elemTop = rect.top;
+        var elemBottom = rect.bottom;
+
+        // Only completely visible elements return true:
+        var isVisible = (elemTop >= 0) && (elemBottom <= window.innerHeight);
+        // Partially visible elements return true:
+        //isVisible = elemTop < window.innerHeight && elemBottom >= 0;
+        return isVisible;
+    };
+
+    $(window).scroll(function() {
+        if ($("body.layout--solution-landing").length){
+            $(".solution-step__image").each(function() {
+                if (isScrolledIntoView($(this)) && $(this).css("opacity") == 0) {
+                    $(this).css("opacity", 1);
+                };
+            });
+        };
+    });
+    $(window).scroll();
+
 });
