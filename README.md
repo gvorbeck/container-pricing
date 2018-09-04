@@ -7,8 +7,8 @@ The new home of Container Pricing solutions.
     * [Homepage](#yaml-homepage)
     * [Solution Landing Pages](#yaml-solution-landing)
     * [Step Pages](#yaml-step-pages)
-* Tutorials
-    * How to create a new solution.
+* [Tutorials](#tutorials)
+    * [How to create a new solution](#tutorials-new-solution)
         1. Create a Solution Landing Page
         2. Create a Solution Step Page
     * Markdown Tips
@@ -129,3 +129,62 @@ __NOTE:__ When a `page-sections` item has a `content-type` parameter, __this mea
 
 <a name="tutorials"></a>
 ## Tutorials
+
+<a name="tutorials-new-solution"></a>
+### How to create a new solution
+
+1. In order to create a new solution for the CPGS, first __create a new Solution Landing Page__ for the solution. In the __pages/ directory__ create a new markdown files as `SOLUTION_SHORT_NAME-home.md` (ex: `devtest-home.md`)
+
+    * In the new Solution Landing Page's markdown files, __add the opening and closing `---` marks__.
+    
+    * Inside there, __add the solution's Admin Settings__:
+      ```
+      # ADMIN SETTINGS
+      layout: solution-landing
+      title: FULL_TITLE_OF_NEW_SOLUTION
+      permalink: /SOLUTION_SHORT_NAME/
+      weight: 00
+      slug: SOLUTION_SHORT_NAME
+      ```
+      
+    * __Upload a thumbnail icon image__ for the solution in the `assets/images` directory.
+    
+    * Finally, __create the homepage content__ for your solution's listing on the CPGS Homepage:
+      ```
+      # HOMEPAGE CONTENT ("DIVE INTO A SOLUTION")
+      thumbnail: SOLUTION-THUMBNAIL.png
+      excerpt: |
+        Lorem ipsum dolor sit amet...
+      ```
+      
+2. After that, __create the various Solution Step pages'__ markdown files in the `pages/`. They should be named as `SOLUTION_SHORT_NAME-STEP_SHORT_NAME.cd` (ex: `devtest-learn.md`)
+
+    * Add __Admin Settings__ sections to each Solution Step page's markdown file inside of opening and closing `---` marks. (ex: `devtest-learn.md`):
+      ```
+      # ADMIN SETTINGS
+      layout: solution-step
+      title: Learn about _the solution_
+      permalink: /devtest/learn/
+      weight: 01
+      slug: learn
+      ```
+      
+      For the `title` parameter, add underscores around the part of the title that you want shown with purple background. The `permalink` parameter should follow the structure of `/SOLUTION_SHORT_NAME/STEP_SHORT_NAME/`. To build the navigation links for this site, each Solution Step Page's `weight` attribute should have an incrementing two digit number, starting with `01` - __make sure not to create any duplicates__. The `slug` attribute should be the `STEP_SHORT_NAME`.
+      
+    * Upload a thumbnail icon image for the step in the assets/images directory.
+    
+    * The content for this solution's Landing Page is taken from its Solution Step Pages' markdown files in the Parent-page Content:
+      ```
+      # SOLUTION LANDING PAGE CONTENT
+      page-logo: SOLUTION_STEP_ICON.png
+      excerpt: |
+        Lorem Ipsum...
+      button: Learn more
+      ```
+      
+    * Finally, create a Page Content section in each Solution Step Page's markdown:
+      ```# PAGE CONTENT
+      page-sections:
+      ```
+      
+      You can create that Solution Step page's various page sections using the existing pages as template's and notes from the [Solution Step Pages' YAML Setup](#yaml-step-pages).
