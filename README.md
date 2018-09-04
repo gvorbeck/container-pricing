@@ -181,7 +181,8 @@ __NOTE:__ When a `page-sections` item has a `content-type` parameter, __this mea
       ```
       
     * Finally, create a Page Content section in each Solution Step Page's markdown:
-      ```# PAGE CONTENT
+      ```
+      # PAGE CONTENT
       page-sections:
       ```
       
