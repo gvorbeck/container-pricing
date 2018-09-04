@@ -9,8 +9,6 @@ The new home of Container Pricing solutions.
     * [Step Pages](#yaml-step-pages)
 * [Tutorials](#tutorials)
     * [How to create a new solution](#tutorials-new-solution)
-        1. Create a Solution Landing Page
-        2. Create a Solution Step Page
     * Markdown Tips
         * Create a link
         * Show an image
