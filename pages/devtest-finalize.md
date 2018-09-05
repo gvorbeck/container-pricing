@@ -31,28 +31,28 @@ page-sections:
       Curabitur non luctus libero, eu vulputate eros. Curabitur eu dui finibus, varius elit at, pellentesque dolor.
 
       Phasellus tellus enim, vestibulum at venenatis eget, cursus condimentum neque.
-  - title: "Step 2: Configure in the systems"
+  - title: "Step 2: Curabitur sollicitudin euismod leo ac ullamcorper"
     text: |
-      Techline will create the DevTest inventory profile for the DevTest container and ensure it accurately aligns with the contract, so it is important you submitted both the final CPS spreadsheet and the signed contract to Techline as per the previous step.
+      Ut lacus lacus, mattis a maximus bibendum, faucibus tincidunt mauris. Praesent sit amet dui eget justo condimentum convallis. Donec interdum massa ut elit maximus, at tincidunt nulla hendrerit. Pellentesque ac pellentesque felis. Maecenas venenatis interdum nunc, nec feugiat mauris dignissim a.
 
-      Techline will build the MLC configuration at 3x the DevTest MSU base (regardless of the container size), ensuring the client will not incur additional MLC charges unless they exceed the contractual 3x maximum.
+      Etiam a velit at lorem iaculis volutpat ut ac augue. Sed convallis, mauris ut hendrerit efficitur, turpis turpis lacinia magna, ac porta orci mauris elementum dui. Sed id mattis sem. Curabitur et magna laoreet, suscipit nisl vitae, posuere est. Nam eu nibh a arcu fringilla porta vitae eu tortor.
+      
+      Nam ac leo neque. Nam euismod lobortis facilisis. In ac volutpat nibh. Nullam vehicula nisi id nunc dictum, quis volutpat velit vulputate. Curabitur commodo hendrerit mi, ut venenatis nisi auctor vehicula.
 
-      The IPLA entitlement will be configured to the DevTest Solution MSU value (i.e., chosen container size).
+      Etiam a velit at lorem iaculis volutpat ut ac augue. Sed convallis, mauris ut hendrerit efficitur, turpis turpis lacinia magna, ac porta orci mauris elementum dui.
 
-      Q2C will then be responsible for processing the configurations and ensuring that the data will flow from iERP/ESW to LMS along with the creation of the Solution ID which is typically created within 4-6 hours after configuration processing.
-
-      Keep your Techline representative engaged to review changes and ensure inventory validity.
-  - title: "Step 3: Circle back with your client"
+      Pellentesque ac pellentesque felis. Maecenas venenatis interdum nunc, nec feugiat mauris dignissim a.
+  - title: "Step 3: Nunc vulputate erat eget purus pharetra iaculis"
     text: |
-      Once the Solution ID is in the system, your client will be able to access it through the standard LMS ibm.com/software/lms portal.
+      Pellentesque pretium turpis eget nisi egestas hendrerit. Fusce et [Lorem Ipsum](http://example.com) rhoncus metus.
 
-      Confirm with your client that they can see their Solution ID and check if they have any outstanding questions.
+      Etiam turpis sapien, viverra quis quam sit amet, blandit elementum leo.
 
-      Your client can use that Solution ID to establish the container on their next SCRT submission, even if the contract was signed midway through the reporting period.
+      Duis pretium molestie orci non imperdiet. Quisque lobortis nisl non dui interdum consequat. Fusce ornare elit velit, nec porta enim cursus id.
 
-      The container is not effective until a valid SCRT report with the Container configuration is received by IBM.
-
-      Once a valid SCRT report has been received, the Q2C SCRT team and Techline will monitor and track the reported Container Solution on a monthly basis to ensure compliance with the signed contract.
+      Nunc vulputate erat eget purus pharetra iaculis. Pellentesque pretium turpis eget nisi egestas hendrerit. Fusce et rhoncus metus. Etiam turpis sapien, viverra quis quam sit amet, blandit elementum leo.
+      
+      Nunc vulputate erat eget purus pharetra iaculis. Pellentesque pretium turpis eget nisi egestas hendrerit. Fusce et rhoncus metus. Etiam turpis sapien, viverra quis quam sit amet, blandit elementum leo. Duis pretium molestie orci non imperdiet. Quisque lobortis nisl non dui interdum consequat. Fusce ornare elit velit, nec porta enim cursus id.
 - type: emphasis
   title: Congratulations!
   text: |
