@@ -9,7 +9,7 @@ slug: learn
 # SOLUTION LANDING PAGE CONTENT
 page-logo: visual_learn.png
 excerpt: |
-  Learn how to help customers with severely capped Dev/Test environments expand their capacity by alleviating cost limitations. Alleviating costs will allow developers to increase productivity and leverage modern, agile, DevOps on Z.
+  Fusce sem diam, mollis sed justo id, condimentum mollis ipsum. Nullam felis risus, facilisis ut magna a, eleifend convallis odio. Curabitur tristique interdum ex lobortis tempor.
 button: Learn more
 
 # PAGE CONTENT
