@@ -155,7 +155,7 @@ __NOTE:__ When a `page-sections` item has a `content-type` parameter, __this mea
         Lorem ipsum dolor sit amet...
       ```
       
-2. After that, __create the various Solution Step pages'__ markdown files in the `pages/`. They should be named as `SOLUTION_SHORT_NAME-STEP_SHORT_NAME.cd` (ex: `devtest-learn.md`)
+2. After that, __create the various Solution Step pages'__ markdown files in the `pages/`. They should be named as `SOLUTION_SHORT_NAME-STEP_SHORT_NAME.md` (ex: `devtest-learn.md`)
 
     * Add __Admin Settings__ sections to each Solution Step page's markdown file inside of opening and closing `---` marks. (ex: `devtest-learn.md`):
       ```
