@@ -1,7 +1,7 @@
 ---
 # ADMIN SETTINGS
 layout: solution-landing
-title: Application Development and Test Solution
+title: Nam eu Justo Sodales urna Euismod Efficitur
 permalink: /devtest/
 weight: 00
 slug: devtest
