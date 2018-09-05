@@ -38,7 +38,7 @@ page-sections:
 
       ## Quisque non felis lobortis ##
 
-      Sales enablement training of the executive summary of Container Pricing for IBM Z.
+      Cras fermentum risus dui. Fusce porttitor condimentum fringilla. Nam dictum erat et arcu iaculis ultrices.
 
     * [![Video Thumbnail](/container-pricing/assets/images/video-thumb.png)](https://example.com){: .video-thumb}
 
