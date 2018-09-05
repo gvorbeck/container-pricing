@@ -56,7 +56,7 @@ page-sections:
 - type: emphasis
   title: Congratulations!
   text: |
-    You've completed the deal.
+    Etiam a velit at lorem iaculis volutpat ut ac augue!
 
-    ![Congratulations](/cpricing/salesguides/assets/images/visual_congrats.png)
+    ![Congratulations](/container-pricing/assets/images/visual_congrats.png)
 ---
