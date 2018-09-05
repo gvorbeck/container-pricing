@@ -20,7 +20,7 @@ page-sections:
     text: |
       Vivamus semper erat in dictum porta. Curabitur non luctus libero, eu vulputate eros. Curabitur eu dui finibus, varius elit at, pellentesque dolor. Phasellus tellus enim, vestibulum at venenatis eget, cursus condimentum neque.
 
-      ![Hi Patricia](/cpricing/salesguides/assets/images/visual_patemail.png)
+      ![Hi Patricia](/container-pricing/assets/images/visual_patemail.png)
 
       Donec at malesuada orci, posuere tristique magna. Maecenas commodo dapibus sapien et tincidunt.:
       * [lorem.ipsum@example.com](mailto:lorem.ipsum@example.com)
