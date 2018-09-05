@@ -18,57 +18,57 @@ page-sections:
   content-type: side-illustration
   image: visual_devops.png
   text: |
-    Many clients are operating with severely capped Development and Test environments compromising best practices.
+    Nulla a lorem non magna scelerisque finibus vel id mi.
 
     For example:
 
-    * Forcing it off hours.
-    * Bypassing critical pre-production testing.
+    * Vestibulum scelerisque leo gravida.
+    * Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.
 
-    We're empowering our clients to adopt agile practices by eliminating the fear of cost increase.
+    Curabitur vitae velit congue, gravida mauris et, laoreet neque.
 - type: emphasis
   content-type: grid-list
   title: Watch these videos first
   # EDITORIAL NOTE:
   # For things to look right in this "text" parameter, please start every video item with a new list item ("*"), a linked video thumbnail with a ".video-thumb" class ({": .video-thumb}"), an h2 title ("## Title Here ##"), and indenting each line for the video item with two spaces.
   text: |
-    These sales training videos with walk your through the two key Container Pricing presentations you would give your clients.
+    Cras fermentum risus dui. Fusce porttitor condimentum fringilla. Nam dictum erat et arcu iaculis ultrices.
 
-    * [![Video Thumbnail](/cpricing/salesguides/assets/images/video-thumb.png)](https://example.com){: .video-thumb}
+    * [![Video Thumbnail](/container-pricing/assets/images/video-thumb.png)](https://example.com){: .video-thumb}
 
-      ## Executive summary ##
+      ## Quisque non felis lobortis ##
 
       Sales enablement training of the executive summary of Container Pricing for IBM Z.
 
-    * [![Video Thumbnail](/cpricing/salesguides/assets/images/video-thumb.png)](https://example.com){: .video-thumb}
+    * [![Video Thumbnail](/container-pricing/assets/images/video-thumb.png)](https://example.com){: .video-thumb}
 
-      ## Executive overview ##
+      ## Nam sollicitudin pulvinar ##
 
-      Sales enablement training of the executive overview of Container Pricing for IBM Z.
+      Quisque non felis lobortis, accumsan turpis eget, viverra dui.
 - title: Continue learning
   content-type: grid-list
     # EDITORIAL NOTE:
     # For things to look right in this "text" parameter, please start every video item with a new list item ("*"), an h2 title ("## Title Here ##"), and indenting each line for the video item with two spaces. Any links can have a document-type icon if you add the doc-type link ("{: .document}"), see README for more documentation.
   text: |
-    * ## Full DevTest announce ##
+    * ## Nam eu justo sodales ##
 
-      PDF of the complete Announcement letter, designed to be easier for clients to read.
+      Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Curabitur vitae velit congue, gravida mauris et, laoreet neque.
 
-      [Download PDF](https://www.google.com){: .document}
+      [Download PDF](https://www.example.com){: .document}
 
-    * ## Solution setup demo ##
+    * ## Nulla a lorem non magna ##
 
-      Demonstration of the end to end process of contacting and setting up an solution in a dedicated LPAR.
+      Nam dictum erat et arcu iaculis ultrices.
 
-      [Watch demo](https://www.google.com){: .video}
+      [Watch demo](https://example.com){: .video}
 
-    * ## ID setup walkthrough ##
+    * ## Vestibulum scelerisque leo gravida  ##
 
-      Demonstration of the end to end process of contacting and setting up an solution in a dedidcated LPAR.
+      Cras fermentum risus dui. Fusce porttitor condimentum fringilla.
 
-      [View walkthrough](https://www.google.com){: .document}
+      [View walkthrough](https://example.org){: .document}
 - type: outro
   title: "Next Steps:"
   text: |
-    Customize these presentations and meet with your client. Include a senior representation from development who understands the pain points caused by severely capped DevTest environments.
+    Nam vestibulum orci ut dui lacinia, ac cursus ligula pharetra. Ut at tristique lorem, bibendum accumsan lorem. Nunc quis pellentesque ligula. Aliquam scelerisque iaculis iaculis.
 ---
