@@ -17,7 +17,7 @@ title: Container Pricing Guide
 email: cpricing@us.ibm.com
 description: "Understand the journey of a successful Container Pricing deal"
 baseurl: "/container-pricing" # the subpath of your site, e.g. /blog
-url: "https://pages.github.ibm.com" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://gvorbeck.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 #twitter_username: jekyllrb
 #github_username:  jekyll
 help-links:
