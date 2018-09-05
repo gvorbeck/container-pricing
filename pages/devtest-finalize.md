@@ -9,28 +9,28 @@ slug: finalize
 # SOLUTION LANDING PAGE CONTENT
 page-logo: visual_finalize.png
 excerpt: |
-  Work with techline to populate a Solution ID that your customer will use to identify the container in the reporting. Work with techline to start billing the customer.
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut blandit facilisis neque, sed condimentum mi rhoncus aliquam. Donec suscipit posuere arcu, et malesuada mauris malesuada non.
 button: Learn more
 
 # PAGE CONTENT
 page-sections:
 - type: accordion
   items:
-  - title: "Step 1: Submit key documents"
+  - title: "Step 1: In nisi risus, tempor eu tristique eget"
     text: |
-      The signed contract, pricing approval and completed CPS spreadsheet needs to be sent to the Q2C team (formally called STS) and Techline for processing.
+      Vivamus semper erat in dictum porta. Curabitur non luctus libero, eu vulputate eros. Curabitur eu dui finibus, varius elit at, pellentesque dolor. Phasellus tellus enim, vestibulum at venenatis eget, cursus condimentum neque.
 
       ![Hi Patricia](/cpricing/salesguides/assets/images/visual_patemail.png)
 
-      First, send the documents to Patricia Hadbavna from Q2C, copying the Container Pricing team to ensure a smooth process:
-      * [phadbavn@sk.ibm.com](mailto:phadbavn@sk.ibm.com)
-      * [cpricing@us.ibm.com](mailto:cpricing@us.ibm.com)
+      Donec at malesuada orci, posuere tristique magna. Maecenas commodo dapibus sapien et tincidunt.:
+      * [lorem.ipsum@example.com](mailto:lorem.ipsum@example.com)
+      * [lorem.ipsum@example.com](mailto:lorem.ipsum@example.com)
 
-      Next, raise a Techline request via your normal process, for example the online TSRG form.
+      Vivamus semper erat in dictum porta.
 
-      If your client has an ELA, please also send the contract to the ECM team.
+      Curabitur non luctus libero, eu vulputate eros. Curabitur eu dui finibus, varius elit at, pellentesque dolor.
 
-      If your client does not have an ELA, please also send the contract to the ESW team.
+      Phasellus tellus enim, vestibulum at venenatis eget, cursus condimentum neque.
   - title: "Step 2: Configure in the systems"
     text: |
       Techline will create the DevTest inventory profile for the DevTest container and ensure it accurately aligns with the contract, so it is important you submitted both the final CPS spreadsheet and the signed contract to Techline as per the previous step.
