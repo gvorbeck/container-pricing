@@ -9,7 +9,7 @@ slug: prepare
 # SOLUTION LANDING PAGE CONTENT
 page-logo: visual_prepare.png
 excerpt: |
-  Get the checklist of all the items you need to put together a Dev/ Test quote. Understand all the steps to calculating a quote: Set the baseline, calculate the IPLA entitlements, complete and submit the approval spreadsheet.
+  Nam nec sem ac libero dictum molestie. Donec lectus orci, congue aliquam velit eget, tincidunt commodo leo. Fusce ante arcu, dapibus sit amet ex et, lobortis aliquet justo. Aliquam sed malesuada eros. Suspendisse vel sem commodo, consequat est convallis, tincidunt neque. 
 button: Dive deeper
 
 # PAGE CONTENT
@@ -18,68 +18,68 @@ page-sections:
   content-type: side-illustration
   image: visual_techline.png
   text: |
-    ## Engage techline
-    Once you have the required SCRT reports, you must engage Techline (through your normal process).
+    ## Mauris pellentesque
+    Maecenas ac nunc id tortor mattis maximus vitae sit amet elit (Aliquam erat volutpat).
 
-    Techline has been trained to fulfill the the required steps to construct a container.
+    Nulla tempor nibh ac diam eleifend consequat. Mauris quis lacinia urna. Suspendisse eu ex lectus. Nunc sodales vitae velit vitae accumsan. Curabitur lorem massa, auctor in convallis a, semper ut elit.
 - type: emphasis
-  title: Gather these items
+  title: Maecenas vel orci
   tab-selector:
-  - title: SCRT reports
+  - title: Phasellus a ipsum
     text: |
-      * 3 consecutive months of Business as Usual Reports
-      * 3 consecutive months of Production only Reports
-      * 3 consecutive months of DevTest only reports
+      * 3 lorem commodo tincidunt vitae varius augue
+      * 3 cursus vehicula nisl at tincidunt
+      * 3 sodales nulla quis felis tempor, at ultrices mi efficitur
 
-      In the case of Standalone machine(s) or Sysplex configurations, nine (9) SCRT reports are required for each machine (i.e. each HW serial number).
+      Proin non lectus elementum, sagittis leo in, molestie tortor. Quisque massa nibh, pretium sed velit non, ultricies facilisis nisi. In bibendum lacus augue, sed ultricies risus varius et (Nam suscipit arcu eu orci mollis, non congue quam hendrerit).
 
-      For Multiplex clients, SCRT can calculate the container size across machines (i.e. combined HW serial numbers) and so only nine (9) reports are required.
+      Nulla porta orci felis, eget malesuada tortor molestie vel. Phasellus laoreet mauris purus, sed sollicitudin ipsum gravida eget. Nam vulputate sed risus id vehicula. Nunc vitae euismod diam, nec eleifend magna.
 
-      If you are in any doubt about what the client needs to provide, please revisit the 'SCRT email template (PDF)' in the 'Learn' section above.
-  - title: WLP reports
+      Aenean sit amet volutpat massa. Proin a aliquet erat. Duis eget lobortis odio. Nullam quis dolor elit. Aenean leo tortor, tincidunt ut hendrerit id, pellentesque ut ligula.
+  - title: Nullam vitae
     text: |
-      You will need to create two (2) sets of Workload Pricer (WLP) files to calculate the MLC price requirements:
+      Etiam at eleifend nunc, ut faucibus enim. Integer egestas accumsan sapien id dictum. Aliquam vulputate eu neque nec auctor:
 
-      * 3 BAU WLP files
-      * 3 PROD (only) WLP files
+      * 3 lacinia porttitor augue
+      * 3 pretium ullamcorper nulla
 
-      From these WLP files, you can generate the six (6) custom reports ready to be imported into the CPS spreadsheet. The CPS spreadsheet will automatically calculate all the MLC pricing you need from these reports.
+      Aliquam a ligula nec lorem ultricies eleifend quis quis tellus. Nullam maximus urna est. Mauris tristique arcu id elit vulputate, et placerat neque efficitur. Etiam ornare risus sed massa aliquet, ut aliquam ex auctor. Nam sagittis pulvinar ultrices.
 
-      Note that Flat and Tiered MLC products continue to be priced per machine. There is no change to how Flat and Tiered MLC programs are priced when adding a DevTest container.
-  - title: CPS spreadsheet
+      In hac habitasse platea dictumst. Nulla facilisi. Mauris pretium euismod justo in interdum. Nulla vitae arcu nulla. Nunc convallis vehicula urna, quis maximus orci lobortis id. Ut ullamcorper sem in ex luctus maximus.
+  - title: Donec ut justo
     text: |
-      The CPS Spreadsheet has been created by the CIO organization to establish the DevTest container baseline, derive MLC and OTC pricing, automate the approval process and to create the factors required for our billing systems.
+      Fusce pellentesque, leo quis efficitur iaculis, elit libero pulvinar ante, quis lacinia erat mauris scelerisque risus. Integer in eros sem. In hac habitasse platea dictumst.
 
-      The required SCRT submissions combined with the WLP price reports are all that is needed. Once these items are imported, the CPS spreadsheet will calculate all the MLC pricing required to close the deal.
+      Fusce venenatis ex neque. Cras viverra vel justo eu pretium. Maecenas varius, tellus sit amet tincidunt tincidunt, dui nisl accumsan lectus, quis elementum purus nisi sed ligula.
 
-      The latest version of the spreadsheet and the eduction on how to use it can be downloaded from the CPS spreadsheet box folder.
-  - title: IPLA discounting
+      Suspendisse vulputate vehicula augue, eu ultricies libero fringilla a. Cras tincidunt malesuada tristique. Nullam sollicitudin tincidunt suscipit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.
+  - title: Nullam in leo
     text: |
-      Unless your client is full capacity on IBM IPLA, or they already have substantial additional entitlements, they will very likely need to purchase additional capacity.
+      Mauris diam velit, aliquam nec accumsan non, condimentum non odio. Vestibulum sodales, leo nec fermentum pellentesque, sapien dui ultricies tellus, vel pharetra urna mauris finibus diam.
 
       We have support for:
-      * Special bids at very aggressive discounts (up to 95%) for fully licensed required products
-      * Special bids for Limited Use Licenses (LULs) at an even higher discount, if need be
+      * Fusce venenatis ex neque. Cras viverra vel justo eu pretium. 
+      * Maecenas varius, tellus sit amet tincidunt tincidunt, dui nisl accumsan lectus, quis elementum purus nisi sed ligula
 
-      For IPLA discounts that exceed local delegation, you should request approval directly from [zmiller@us.ibm.com](mailto:zmiller@us.ibm.com) copying the [cpricing@us.ibm.com](mailto:cpricing@us.ibm.com) ID.  
-  - title: Contract creations
+      Suspendisse vulputate vehicula augue, eu ultricies libero fringilla [lorem.ipsum@example.com](mailto:lorem.ipsum@example.com) copying the [lorem.ipsum@example.com](mailto:lorem.ipsum@example.com) ID.  
+  - title: Ut at rutrum
     text: |
-      Create a draft of the contract, completing the tables with the MLC and IPLA products required. You will not know the desired container size yet, so leave that blank for now.
+      Nullam in leo nec leo iaculis dapibus a in ligula. Mauris diam velit, aliquam nec accumsan non, condimentum non odio.
 
-      If the contract has already been localized for your country, you can download it from the ww Std Contracts and SOW Templates web portal.
+      Vestibulum sodales, leo nec fermentum pellentesque, sapien dui ultricies tellus, vel pharetra urna mauris finibus diam. Pellentesque nec elit enim. Nunc dapibus neque eu mi scelerisque, convallis convallis augue semper.
 
-      If the contract does not yet exist for your country:
-      * Send an email to the BOD Management and Localization team [BODMGLOC@hu.ibm.com](mailto:BODMGLOC@hu.ibm.com) to request it.
-      * Ensure all your relevant local contract teams are copied on the request.
-  - title: Approval requests
+      Mauris pellentesque at nisi nec tempor:
+      * Proin risus nisl, molestie at tortor eu, finibus facilisis augue [lorem.ipsum@example.com](mailto:lorem.ipsum@example.com) quis eros diam.
+      * Proin molestie nunc ligula, quis dignissim magna volutpat ut.
+  - title: Nunc rutrum
     text: |
-      The requirement for a separate, manually created 'DevTest Approval Request' spreadsheet has been removed. It has been replaced with an auto-generated 'PricingApproval_Form' tab in V1.8 of the CPS Spreadsheet.
+      Nunc rutrum, nulla quis pellentesque commodo, purus neque lobortis diam, nec egestas tellus massa at velit. Quisque venenatis tellus ut nunc cursus, sit amet pulvinar diam porttitor.
 
-      This 'PricingApproval_Form' tab should provide all the key numbers you need to present a conditional offer. If you would like to validate you have correctly used the tool before presenting a conditional pricing proposal to your client, you may send your input files to [cpricing@us.ibm.com](mailto:cpricing@us.ibm.com) for validation.
+      Integer nec accumsan magna. In a purus tempor, ultrices velit quis, rutrum justo. Integer eget viverra nisl. Vivamus vulputate dapibus lectus sed commodo. Sed et sem viverra, suscipit nulla molestie, egestas erat. [lorem.ipsum@example.com](mailto:lorem.ipsum@example.com) for pharetra.
 
-      Worldwide approval is still required in order to present a firm offer.
+      Proin molestie nunc ligula, quis dignissim magna volutpat ut.
 - type: outro
   title: "Next Steps:"
   text: |
-    Once you have built your internal team and collected these items, you may need to iterate through the next step a few times as part of the client negotiations.
+    Nunc rutrum, nulla quis pellentesque commodo, purus neque lobortis diam, nec egestas tellus massa at velit.
 ---
